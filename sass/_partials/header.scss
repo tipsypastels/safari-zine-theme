@@ -1,0 +1,52 @@
+header#wrapper {
+  color: $dark-green;
+  background-color: $dark-grey;
+  height: 3em;
+  padding: 0.25em;
+  box-shadow: 10px 1px 10px $dark-grey;
+  z-index: 3;
+  position: relative;
+
+  header#content {
+    max-width: $width;
+    margin: auto;
+
+    .site-name {
+      display: block;
+      font-size: 1.8em;
+
+      i.fa {
+        margin-right: 0.1em;
+      }
+    }
+
+    ul#navbar {
+      li {
+        display: inline-block;
+        box-sizing: border-box;
+        border-bottom: 4px solid transparent;
+        transition: 0.25s;
+
+        &.active, &:hover {
+          border-bottom-color: white;
+        }
+
+
+        a {
+          line-height: 3em;
+          padding: 0 0.75em;
+
+          &:before {
+            content: '#';
+          }
+        }
+      }
+    }
+
+    .menu-opener {
+      line-height: 1.6em;
+      font-size: 2em;
+      cursor: pointer;
+    }
+  }
+}

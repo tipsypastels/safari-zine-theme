@@ -1,0 +1,564 @@
+/*
+Theme Name: safari-zine
+Author: Safari Zone Design Team
+Description: A theme for the Safari Zine.
+*/
+/* PICK ONE */
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:700");
+/* line 5, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* utility partials */
+/* define all variables here */
+/* line 1, sass/_partials/util.scss */
+a {
+  color: #658b5f;
+}
+
+/* line 5, sass/_partials/util.scss */
+.flex, .card .thumbnail.expanded div.thumbnail-image-wrapper, .expanding-author-credit {
+  display: flex;
+}
+/* line 8, sass/_partials/util.scss */
+.flex > .vertically-centered, .card .thumbnail.expanded div.thumbnail-image-wrapper > .vertically-centered, .expanding-author-credit > .vertically-centered, .card .thumbnail.expanded .flex > div.thumbnail-image-wrapper, .card .thumbnail.expanded div.thumbnail-image-wrapper > div.thumbnail-image-wrapper, .card .thumbnail.expanded .expanding-author-credit > div.thumbnail-image-wrapper {
+  align-items: auto;
+  align-self: center;
+}
+/* line 14, sass/_partials/util.scss */
+.flex.one-growing-element > *, .card .thumbnail.expanded div.one-growing-element.thumbnail-image-wrapper > *, .one-growing-element.expanding-author-credit > * {
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+/* line 19, sass/_partials/util.scss */
+.flex.one-growing-element .grows, .card .thumbnail.expanded div.one-growing-element.thumbnail-image-wrapper .grows, .one-growing-element.expanding-author-credit .grows {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+/* line 25, sass/_partials/util.scss */
+.flex.vertically-centered, .card .thumbnail.expanded div.thumbnail-image-wrapper, .vertically-centered.expanding-author-credit {
+  align-items: center;
+  align-self: auto;
+}
+/* line 30, sass/_partials/util.scss */
+.flex.wraps, .card .thumbnail.expanded div.wraps.thumbnail-image-wrapper, .wraps.expanding-author-credit {
+  flex-wrap: wrap;
+}
+/* line 34, sass/_partials/util.scss */
+.flex.responsive-two-columns, .card .thumbnail.expanded div.responsive-two-columns.thumbnail-image-wrapper, .responsive-two-columns.expanding-author-credit {
+  justify-content: space-between;
+}
+/* line 37, sass/_partials/util.scss */
+.flex.responsive-two-columns > *, .card .thumbnail.expanded div.responsive-two-columns.thumbnail-image-wrapper > *, .responsive-two-columns.expanding-author-credit > * {
+  width: 49%;
+}
+@media screen and (max-width: 900px) {
+  /* line 37, sass/_partials/util.scss */
+  .flex.responsive-two-columns > *, .card .thumbnail.expanded div.responsive-two-columns.thumbnail-image-wrapper > *, .responsive-two-columns.expanding-author-credit > * {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  /* line 46, sass/_partials/util.scss */
+  .flex.wraps-on-mobile, .card .thumbnail.expanded div.wraps-on-mobile.thumbnail-image-wrapper, .wraps-on-mobile.expanding-author-credit {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* line 52, sass/_partials/util.scss */
+  .flex.wraps-on-computer, .card .thumbnail.expanded div.wraps-on-computer.thumbnail-image-wrapper, .wraps-on-computer.expanding-author-credit {
+    flex-direction: column;
+  }
+}
+
+/* line 59, sass/_partials/util.scss */
+.centered {
+  text-align: center;
+}
+
+/* line 63, sass/_partials/util.scss */
+.centered-block {
+  margin: auto;
+}
+
+/* line 67, sass/_partials/util.scss */
+.page-width {
+  max-width: 1110px;
+  margin: auto;
+}
+
+/* line 72, sass/_partials/util.scss */
+.has-invisible-links a, ul.vertical-links a, ul.horizontal-links a, .pagination a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 77, sass/_partials/util.scss */
+img.avatar {
+  border-radius: 25%;
+}
+/* line 80, sass/_partials/util.scss */
+img.avatar.tiny {
+  height: 2em;
+}
+/* line 84, sass/_partials/util.scss */
+img.avatar.standard {
+  height: 5em;
+}
+/* line 88, sass/_partials/util.scss */
+img.avatar.huge {
+  height: 15em;
+}
+
+/* line 93, sass/_partials/util.scss */
+.hide-on-computer {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  /* line 98, sass/_partials/util.scss */
+  .hide-on-mobile, .pagination div.pagination-area a.pagination-area-card .pagination-title {
+    display: none;
+  }
+
+  /* line 102, sass/_partials/util.scss */
+  .hide-on-computer {
+    display: initial;
+  }
+
+  /* line 106, sass/_partials/util.scss */
+  .center-on-mobile {
+    text-align: center;
+  }
+
+  /* line 110, sass/_partials/util.scss */
+  .slight-mobile-margin, .pagination {
+    margin-left: 0.75em !important;
+    margin-right: 0.75em !important;
+  }
+}
+/* some pages (like index/single.php) should allow the header to overflow onto their banners*/
+/* to *prevent* that behavior, use this class */
+/* line 118, sass/_partials/util.scss */
+main.header-cant-overflow {
+  margin-top: 4em;
+}
+
+/* line 122, sass/_partials/util.scss */
+.block {
+  display: block;
+}
+
+/* line 3, sass/_partials/components.scss */
+.site-name {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Comfortaa';
+}
+
+/* line 10, sass/_partials/components.scss */
+.rule {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(12, 13, 13, 0.1);
+  margin: 1em 0;
+}
+
+/* line 19, sass/_partials/components.scss */
+.card, .button, .pagination div.pagination-area a.pagination-area-card {
+  display: block;
+  transition: 0.5s;
+  border-radius: 0.3em;
+  box-shadow: 3px 3px 1px rgba(12, 13, 13, 0.1);
+  position: relative;
+}
+/* line 26, sass/_partials/components.scss */
+.card:hover, .button:hover, .pagination div.pagination-area a.pagination-area-card:hover {
+  box-shadow: 5px 5px 1px rgba(12, 13, 13, 0.1);
+}
+
+/* line 31, sass/_partials/components.scss */
+.card {
+  color: #23282d;
+  background-color: white;
+  text-decoration: none;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+@media screen and (max-width: 900px) {
+  /* line 31, sass/_partials/components.scss */
+  .card {
+    margin-bottom: 1em;
+  }
+}
+/* line 45, sass/_partials/components.scss */
+.card .thumbnail {
+  display: block;
+  background-position: center;
+  background-size: cover;
+  height: 8em;
+  width: 100%;
+}
+/* line 53, sass/_partials/components.scss */
+.card .thumbnail.expanded {
+  height: 35em;
+}
+/* line 56, sass/_partials/components.scss */
+.card .thumbnail.expanded div.thumbnail-image-wrapper {
+  height: 100%;
+  background-color: rgba(35, 40, 45, 0.5);
+}
+/* line 63, sass/_partials/components.scss */
+.card .thumbnail.expanded div.thumbnail-image-wrapper img.thumbnail-image {
+  display: block;
+  margin: auto;
+  height: 90%;
+}
+/* line 72, sass/_partials/components.scss */
+.card .content {
+  padding: 2em;
+}
+/* line 75, sass/_partials/components.scss */
+.card .content .h2 {
+  padding-top: 0.25em;
+  line-height: 1.1em;
+}
+/* line 80, sass/_partials/components.scss */
+.card .content h3 {
+  display: inline-block;
+}
+/* line 84, sass/_partials/components.scss */
+.card .content .category-featured-name {
+  color: #f1f3f2;
+  background-color: rgba(101, 139, 95, 0.8);
+  padding: 0.1em 0.3em;
+  border-radius: 7px;
+}
+
+/* line 93, sass/_partials/components.scss */
+.button {
+  border-radius: 2.5em;
+  width: max-content;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  padding: 4px 12px;
+  font-size: 1.15em;
+  text-decoration: none;
+  background-color: #f1f3f2;
+  color: #23282d;
+}
+/* line 108, sass/_partials/components.scss */
+.button.primary {
+  background-color: #658b5f;
+  color: #f1f3f2;
+}
+/* line 113, sass/_partials/components.scss */
+.button:not(.centered-block) {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+/* line 118, sass/_partials/components.scss */
+.button i.fa {
+  margin-right: 0.1em;
+}
+
+/* line 125, sass/_partials/components.scss */
+ul.vertical-links, ul.horizontal-links {
+  display: block;
+  padding: 0 1em;
+  list-style: none;
+  color: #f1f3f2;
+}
+/* line 132, sass/_partials/components.scss */
+ul.vertical-links li, ul.horizontal-links li {
+  margin: 0.5em;
+  border-bottom: 1px dashed rgba(241, 243, 242, 0.1);
+}
+/* line 136, sass/_partials/components.scss */
+ul.vertical-links li:hover, ul.horizontal-links li:hover {
+  border-bottom-color: #658b5f;
+}
+/* line 140, sass/_partials/components.scss */
+ul.vertical-links li a, ul.horizontal-links li a {
+  display: block;
+  text-align: center;
+}
+
+/* line 151, sass/_partials/components.scss */
+ul.vertical-links li {
+  width: 100%;
+}
+
+/* line 156, sass/_partials/components.scss */
+ul.horizontal-links {
+  margin: auto;
+  width: max-content;
+}
+/* line 163, sass/_partials/components.scss */
+ul.horizontal-links li {
+  display: inline-block;
+}
+
+/* line 170, sass/_partials/components.scss */
+aside#sidebar {
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -25em;
+  overflow-x: hidden;
+  transition: 0.5s;
+  width: 20em;
+}
+/* line 180, sass/_partials/components.scss */
+aside.active#sidebar {
+  right: 0;
+}
+
+/* line 187, sass/_partials/components.scss */
+.expanding-author-credit {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+}
+/* line 193, sass/_partials/components.scss */
+.expanding-author-credit span.name {
+  display: block;
+  text-align: right;
+  line-height: 2em;
+  width: 0;
+  overflow: hidden;
+  transition: 0.75s;
+}
+/* line 204, sass/_partials/components.scss */
+.expanding-author-credit:hover span.name {
+  width: 10em;
+  padding-right: 0.25em;
+}
+
+/* line 210, sass/_partials/components.scss */
+.pagination {
+  display: flex;
+  margin-bottom: 4em;
+}
+/* line 217, sass/_partials/components.scss */
+.pagination div.pagination-area {
+  flex-grow: 1;
+  display: block;
+}
+/* line 221, sass/_partials/components.scss */
+.pagination div.pagination-area a.pagination-area-card {
+  background-color: white;
+  color: #23282d;
+  font-size: 1.7em;
+  width: max-content;
+  padding: 0.2em 1em;
+}
+/* line 231, sass/_partials/components.scss */
+.pagination div.pagination-area a.pagination-area-card.pagination-area-card-right {
+  float: right;
+}
+/* line 235, sass/_partials/components.scss */
+.pagination div.pagination-area a.pagination-area-card .pagination-title {
+  line-height: 3em;
+  font-weight: 300;
+}
+/* line 242, sass/_partials/components.scss */
+.pagination div.pagination-area a.pagination-area-card i.fa {
+  color: #658b5f;
+}
+@media screen and (max-width: 900px) {
+  /* line 242, sass/_partials/components.scss */
+  .pagination div.pagination-area a.pagination-area-card i.fa {
+    font-size: 2em;
+  }
+}
+
+/* line 7, sass/_partials/texts.scss */
+h2, .h2 {
+  display: block;
+  font-size: 1.7em;
+  font-weight: 300;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 16, sass/_partials/texts.scss */
+h3, .h3 {
+  font-size: 90%;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+}
+
+/* component partials */
+/* line 1, sass/_partials/header.scss */
+header#wrapper {
+  color: #8eae88;
+  background-color: #23282d;
+  height: 3em;
+  padding: 0.25em;
+  box-shadow: 10px 1px 10px #23282d;
+  z-index: 3;
+  position: relative;
+}
+/* line 10, sass/_partials/header.scss */
+header#wrapper header#content {
+  max-width: 1110px;
+  margin: auto;
+}
+/* line 14, sass/_partials/header.scss */
+header#wrapper header#content .site-name {
+  display: block;
+  font-size: 1.8em;
+}
+/* line 18, sass/_partials/header.scss */
+header#wrapper header#content .site-name i.fa {
+  margin-right: 0.1em;
+}
+/* line 24, sass/_partials/header.scss */
+header#wrapper header#content ul#navbar li {
+  display: inline-block;
+  box-sizing: border-box;
+  border-bottom: 4px solid transparent;
+  transition: 0.25s;
+}
+/* line 30, sass/_partials/header.scss */
+header#wrapper header#content ul#navbar li.active, header#wrapper header#content ul#navbar li:hover {
+  border-bottom-color: white;
+}
+/* line 35, sass/_partials/header.scss */
+header#wrapper header#content ul#navbar li a {
+  line-height: 3em;
+  padding: 0 0.75em;
+}
+/* line 39, sass/_partials/header.scss */
+header#wrapper header#content ul#navbar li a:before {
+  content: '#';
+}
+/* line 46, sass/_partials/header.scss */
+header#wrapper header#content .menu-opener {
+  line-height: 1.6em;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* line 1, sass/_partials/aside.scss */
+aside#sidebar {
+  padding-top: 6em;
+  color: #f1f3f2;
+  background-color: #23282d;
+  box-shadow: 0 -10px 10px #23282d;
+}
+/* line 9, sass/_partials/aside.scss */
+aside#sidebar #side-navbar {
+  margin-bottom: 3em;
+}
+
+/* page partials */
+/* global styles */
+/* line 34, sass/style.scss */
+body {
+  font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: 0.05em;
+  color: #23282d;
+  background-color: #f1f3f2;
+  position: relative;
+}
+/* line 43, sass/style.scss */
+body div.container {
+  width: 100%;
+  position: relative;
+}
+/* line 47, sass/style.scss */
+body div.container div.main-container {
+  width: 100%;
+}
+/* line 50, sass/style.scss */
+body div.container div.main-container main {
+  max-width: 900px;
+  margin: auto;
+  padding-top: 3em;
+}
+@media screen and (max-width: 900px) {
+  /* line 50, sass/style.scss */
+  body div.container div.main-container main {
+    padding-top: 1em;
+  }
+}
+
+/* line 63, sass/style.scss */
+::-moz-selection {
+  color: white;
+  background: #658b5f;
+}
+
+/* line 68, sass/style.scss */
+::selection {
+  color: white;
+  background: #658b5f;
+}

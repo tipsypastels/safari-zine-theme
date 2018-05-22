@@ -1,0 +1,71 @@
+/*
+Theme Name: safari-zine
+Author: Safari Zone Design Team
+Description: A theme for the Safari Zine.
+*/
+
+/* PICK ONE */
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+// @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:700');
+
+@import 'compass';
+@import 'compass/reset';
+
+/* utility partials */
+@import '_partials/vars';
+@import '_partials/util';
+@import '_partials/components';
+@import '_partials/texts';
+
+/* component partials */
+@import '_partials/header';
+@import '_partials/postbit';
+@import '_partials/aside';
+
+/* page partials */
+@import '_partials/index';
+@import '_partials/single';
+@import '_partials/author';
+@import '_partials/page';
+
+/* global styles */
+body {
+  font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: 0.05em;
+  color: $dark-grey;
+  background-color: $grey;
+  position: relative;
+
+  div.container {
+    width: 100%;
+    position: relative;
+
+    div.main-container {
+      width: 100%;
+
+      main {
+        max-width: $main-width;
+        margin: auto;
+        padding-top: 3em;
+
+        @media screen and (max-width: $mobile-breakpoint) {
+          padding-top: 1em;
+        }
+      }
+    }
+  }
+}
+
+::-moz-selection {
+  color: white;
+  background: $very-dark-green;
+}
+
+::selection {
+  color: white;
+  background: $very-dark-green;
+}

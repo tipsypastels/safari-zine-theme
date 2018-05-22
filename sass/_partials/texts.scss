@@ -1,0 +1,20 @@
+// used for section headings
+h1, .h1 {
+
+}
+
+// used for card titles
+h2, .h2 {
+  display: block;
+  font-size: 1.7em;
+  font-weight: 300;
+  text-decoration: none;
+  color: inherit;
+}
+
+// used for card categories and other misc single-word text
+h3, .h3 {
+  font-size: 90%;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+}

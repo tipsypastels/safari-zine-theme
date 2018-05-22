@@ -1,0 +1,15 @@
+/* line 7, ../sass/_partials/texts.scss */
+h2, .h2 {
+  display: block;
+  font-size: 1.7em;
+  font-weight: 300;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 16, ../sass/_partials/texts.scss */
+h3, .h3 {
+  font-size: 90%;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+}

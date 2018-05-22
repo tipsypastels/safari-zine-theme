@@ -1,0 +1,12 @@
+aside#sidebar {
+  @extend %generic-sidebar;
+
+  padding-top: 6em;
+  color: $grey;
+  background-color: $dark-grey;
+  box-shadow: 0 -10px 10px $dark-grey;
+
+  #side-navbar {
+    margin-bottom: 3em;
+  }
+}
