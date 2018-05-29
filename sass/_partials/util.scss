@@ -43,6 +43,18 @@ a {
     }
   }
 
+  &.responsive-three-columns {
+    justify-content: space-around;
+
+    & > * {
+      width: 33.333333%;
+
+      @media screen and (max-width: $mobile-breakpoint) {
+        width: 100%;
+      }
+    }
+  }
+
   &.wraps-on-mobile {
     @media screen and (max-width: $mobile-breakpoint) {
       flex-direction: column;

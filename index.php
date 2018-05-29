@@ -4,7 +4,9 @@
 ?>
 
 <main id="index">
-  <section id="posts-featured">
+  <h1 class="image-postbit-title">Featured Articles</h1><div class="rule"></div>
+  <section id="posts-featured" class="flex wraps responsive-three-columns image-postbit-block">
+
     <?php
       $paged = get_query_var('paged');
 
@@ -18,15 +20,13 @@
           $exclude_from_latest[] = get_the_ID();
           $author_id = get_the_author_meta('ID');
 
-          postbit(
+          image_postbit(
             get_the_permalink(),
             get_the_post_thumbnail_url(),
             get_the_title(),
             get_the_excerpt(),
             get_the_date(),
             get_the_author(),
-            get_author_posts_url($author_id),
-            get_wp_user_avatar_src($author_id),
             get_the_category()
           );
         }
@@ -37,11 +37,13 @@
     ?>
   </section>
 
-  <section id="posts-latest" class="flex wraps responsive-two-columns">
+  <h1 class="image-postbit-title">Latest Articles</h1><div class="rule"></div>
+  <section id="posts-latest" class="flex wraps responsive-three-columns image-postbit-block">
+
     <?php
       
       $paginated_query = new WP_Query([
-        "posts_per_page" => 6,
+        "posts_per_page" => 9,
         "paged" => $paged
       ]);
 
@@ -52,15 +54,13 @@
   
         $author_id = get_the_author_meta('ID');
 
-        postbit(
+        image_postbit(
           get_the_permalink(),
           get_the_post_thumbnail_url(),
           get_the_title(),
           get_the_excerpt(),
           get_the_date(),
           get_the_author(),
-          get_author_posts_url($author_id),
-          get_wp_user_avatar_src($author_id),
           get_the_category()
         );
       }
@@ -71,24 +71,6 @@
 
   <section class="pagination">
     <?php
-
-      // echo get_previous_posts_page_link($paginated_query->max_num_pages) . 'asdf';
-      // $pagination = [
-      //   "prev" => get_previous_posts_link('«', $paginated_query->max_num_pages),
-      //   "next" => get_next_posts_link('»', $paginated_query->max_num_pages)
-      // ];
-
-      // if ($pagination['prev']) {
-      //   echo $pagination['prev'];
-      // } else { 
-      //   no_pagination('first', "«"); 
-      // }
-
-      // if ($pagination['next']) {
-      //   echo $pagination['next'];
-      // } else {
-      //   no_pagination('last', "»"); 
-      // }
       if (get_previous_posts_link(null, $paginated_query->max_num_pages)) {
         paginate(
           "left", 

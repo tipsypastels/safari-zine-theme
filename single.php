@@ -29,4 +29,8 @@
         }
       ?>
     </section>
+
+    <?php comments_template(); ?>
 </main>
+
+<?php get_footer();?>

@@ -2,6 +2,10 @@
 
   // PART 0: WORDPRESS SETUP
 
+  @ini_set( 'upload_max_size' , '64M' );
+  @ini_set( 'post_max_size', '64M');
+  @ini_set( 'max_execution_time', '300' );
+
   function scratch_setup() {
     add_theme_support('post-thumbnails');
     register_nav_menus(array('main-menu' => 'Main Menu'));
@@ -49,8 +53,8 @@
   // temporary icon
   function site_name($class = "") { ?>
     <a class="site-name <?php echo $class ?>" href="<?php echo get_home_url() ?>">
-      <?php echo ifa('newspaper-o') ?>
-      Safari Zine
+      <?php require 'logo.svg' ?>
+      <div>Safari Zine</div>
     </a>
   <?php }
 
@@ -74,7 +78,7 @@
     $author_img, $categories, $content = null, $class = null, $thumbnail_callback = null
   ) { 
     ?>
-    <article class="card slight-mobile-margin $class">
+    <article class="card slight-mobile-margin has-invisible-links $class">
       <?php if ($img): ?>  
         <?php if (is_null($thumbnail_callback)): ?>
           <a class="thumbnail" style="background-image: url(<?php echo $img ?>)" href="<?php echo $href ?>"></a>
@@ -86,10 +90,13 @@
       <?php endif; ?>
 
       <div class="content">
-        <?php foreach($categories as $category): ?>
-          <h3 class="category-<?php echo $category->slug ?>-name">
+        <?php foreach($categories as $category):
+            $id = get_cat_ID($category->name);
+            $url = get_category_link($id);
+          ?>
+          <a class="h3 category category-<?php echo $category->slug ?>-name" href="<?php echo $url ?>">
             <?php echo $category->name ?>
-          </h3>
+          </a>
         <?php endforeach ?>
           <h3><?php if ($categories): ?> – <?php endif ?><?php echo $date ?></h3>
 
@@ -115,6 +122,26 @@
         } 
       ?>
     </article>
+  <?php }
+
+  function image_postbit($href, $img, $title, $excerpt, $date, $author, $categories) { ?>
+    <a class="image-postbit" href="<?php echo $href ?>" 
+      style="background-image: url(<?php echo $img ?>">
+      <div class="image-postbit-shading">
+        <div class="image-postbit-spacer">
+
+        </div>
+
+        <div class="image-postbit-content">
+          <h2><?php echo $title ?></h2>
+
+          <?php if ($excerpt): ?>
+            <div class="rule"></div>
+            <p><?php echo $excerpt ?></p>
+          <?php endif; ?>
+        </div>
+      </div>
+    </a>
   <?php }
 
   function expanding_author_credit($name, $href, $img) { ?>

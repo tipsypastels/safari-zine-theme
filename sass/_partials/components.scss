@@ -77,7 +77,7 @@
       line-height: 1.1em;
     }
 
-    h3 {
+    a.category, h3 {
       display: inline-block;
     }
 
@@ -219,10 +219,6 @@ ul.horizontal-links {
     display: block;
 
     a.pagination-area-card {
-      @extend %cardlike;
-
-      background-color: white;
-      color: $dark-grey;
       font-size: 1.7em;
 
       width: max-content;
@@ -240,8 +236,6 @@ ul.horizontal-links {
       }
 
       i.fa {
-        color: $very-dark-green;
-
         @media screen and (max-width: $mobile-breakpoint) {
           font-size: 2em;
         }

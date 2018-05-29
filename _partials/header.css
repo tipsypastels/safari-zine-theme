@@ -1,14 +1,14 @@
 /*
-Error: Undefined variable: "$dark-green".
+Error: Undefined variable: "$dark-grey".
         on line 2 of C:/xampp/htdocs/Zine/wp-content/themes/safari-zine/sass/_partials/header.scss
 
 1: header#wrapper {
-2:   color: $dark-green;
-3:   background-color: $dark-grey;
-4:   height: 3em;
-5:   padding: 0.25em;
-6:   box-shadow: 10px 1px 10px $dark-grey;
-7:   z-index: 3;
+2:   color: $dark-grey;
+3:   height: 3em;
+4:   padding: 2em 0.25em;
+5:   z-index: 3;
+6:   position: relative;
+7:   border-bottom: 1px solid $dark-transparent-grey;
 
 Backtrace:
 C:/xampp/htdocs/Zine/wp-content/themes/safari-zine/sass/_partials/header.scss:2
@@ -60,4 +60,4 @@ D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$dark-green\".\A         on line 2 of C:/xampp/htdocs/Zine/wp-content/themes/safari-zine/sass/_partials/header.scss\A \A 1: header#wrapper {\A 2:   color: $dark-green;\A 3:   background-color: $dark-grey;\A 4:   height: 3em;\A 5:   padding: 0.25em;\A 6:   box-shadow: 10px 1px 10px $dark-grey;\A 7:   z-index: 3;"; }
+  content: "Error: Undefined variable: \"$dark-grey\".\A         on line 2 of C:/xampp/htdocs/Zine/wp-content/themes/safari-zine/sass/_partials/header.scss\A \A 1: header#wrapper {\A 2:   color: $dark-grey;\A 3:   height: 3em;\A 4:   padding: 2em 0.25em;\A 5:   z-index: 3;\A 6:   position: relative;\A 7:   border-bottom: 1px solid $dark-transparent-grey;"; }

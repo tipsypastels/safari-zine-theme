@@ -1,22 +1,22 @@
 header#wrapper {
-  color: $dark-green;
-  background-color: $dark-grey;
+  color: $dark-grey;
   height: 3em;
-  padding: 0.25em;
-  box-shadow: 10px 1px 10px $dark-grey;
+  padding: 2em 0.25em;
   z-index: 3;
   position: relative;
+  border-bottom: 1px solid $dark-transparent-grey;
 
   header#content {
     max-width: $width;
     margin: auto;
 
     .site-name {
-      display: block;
       font-size: 1.8em;
+      display: flex;
+      align-items: center;
 
-      i.fa {
-        margin-right: 0.1em;
+      svg {
+        margin-right: 0.25em;
       }
     }
 
@@ -47,6 +47,16 @@ header#wrapper {
       line-height: 1.6em;
       font-size: 2em;
       cursor: pointer;
+
+      i.fa {
+        transition: 0.5s;
+        color: $very-dark-green;
+      }
     }
   }
+}
+
+body.sidebar-open .menu-opener i.fa {
+  transform: rotate(90deg);
+  &:before { content: '\f00d' }
 }
