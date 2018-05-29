@@ -1,5 +1,7 @@
+        <aside class="menu">
+          <h1>HELLO WORLDxs</h1>
+        </aside>
       </div> <!-- end main container -->
-      <?php include ('aside.php') ?>
     </div> <!-- end container -->
     <?php wp_footer(); ?>
   </body>

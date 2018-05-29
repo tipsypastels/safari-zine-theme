@@ -3,7 +3,7 @@
   $exclude_from_latest = [];
 ?>
 
-<main id="index">
+<main id="index" class="">
   <h1 class="image-postbit-title">Featured Articles</h1><div class="rule"></div>
   <section id="posts-featured" class="flex wraps responsive-three-columns image-postbit-block">
 

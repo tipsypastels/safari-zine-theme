@@ -1,0 +1,31 @@
+#flippable-wrapper {
+  perspective: 1000;
+  z-index: 1;
+  position: relative;
+
+  #flippable {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+
+    &:hover {
+      transform: rotateY(180deg);
+    }
+
+    .flippable-card {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &.front {
+        z-index: 2;
+        transform: rotateY(0deg);
+      }
+
+      &.back {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}

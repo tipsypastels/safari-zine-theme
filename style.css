@@ -611,9 +611,42 @@ aside#sidebar #side-navbar {
   margin-bottom: 3em;
 }
 
+/* line 1, sass/_partials/menu-flip.scss */
+#flippable-wrapper {
+  perspective: 1000;
+  z-index: 1;
+  position: relative;
+}
+/* line 6, sass/_partials/menu-flip.scss */
+#flippable-wrapper #flippable {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+/* line 11, sass/_partials/menu-flip.scss */
+#flippable-wrapper #flippable:hover {
+  transform: rotateY(180deg);
+}
+/* line 15, sass/_partials/menu-flip.scss */
+#flippable-wrapper #flippable .flippable-card {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 21, sass/_partials/menu-flip.scss */
+#flippable-wrapper #flippable .flippable-card.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+/* line 26, sass/_partials/menu-flip.scss */
+#flippable-wrapper #flippable .flippable-card.back {
+  transform: rotateY(180deg);
+}
+
 /* page partials */
 /* global styles */
-/* line 34, sass/style.scss */
+/* line 35, sass/style.scss */
 body {
   font-family: 'Work Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -623,35 +656,35 @@ body {
   background-color: whitesmoke;
   position: relative;
 }
-/* line 43, sass/style.scss */
+/* line 44, sass/style.scss */
 body div.container {
   width: 100%;
   position: relative;
 }
-/* line 47, sass/style.scss */
+/* line 48, sass/style.scss */
 body div.container div.main-container {
   width: 100%;
 }
-/* line 50, sass/style.scss */
+/* line 51, sass/style.scss */
 body div.container div.main-container main {
   max-width: 1000px;
   margin: auto;
   padding-top: 3em;
 }
 @media screen and (max-width: 900px) {
-  /* line 50, sass/style.scss */
+  /* line 51, sass/style.scss */
   body div.container div.main-container main {
     padding-top: 1em;
   }
 }
 
-/* line 63, sass/style.scss */
+/* line 64, sass/style.scss */
 ::-moz-selection {
   color: white;
   background: #658b5f;
 }
 
-/* line 68, sass/style.scss */
+/* line 69, sass/style.scss */
 ::selection {
   color: white;
   background: #658b5f;
