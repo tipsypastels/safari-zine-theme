@@ -1,0 +1,287 @@
+// PART 0: GENERIC ELEMENTS
+
+.site-name {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Comfortaa';
+  font-size: 1.8em;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 0.25em;
+  }
+}
+
+.rule {
+  height: 1px;
+  width: 100%;
+  background-color: $dark-transparent-grey;
+  margin: 1em 0;
+}
+
+// PART 1: COMPONENTS
+
+%cardlike {
+  display: block;
+  transition: 0.5s;
+  border-radius: 0.3em;
+  box-shadow: 3px 3px 1px $dark-transparent-grey;
+  position: relative;
+
+  &:hover {
+    box-shadow: 5px 5px 1px $dark-transparent-grey;
+  }
+}
+
+.card {
+  @extend %cardlike;
+
+  color: $dark-grey;
+  background-color: white;
+  text-decoration: none;
+  overflow: hidden;
+
+  margin-bottom: 2em;
+
+  @media screen and (max-width: $mobile-breakpoint) {
+    margin-bottom: 1em;
+  }
+
+  .thumbnail {
+    display: block;
+    background-position: center;
+    background-size: cover;
+
+    height: 8em;
+    width: 100%;
+
+    &.expanded {
+      height: 35em;
+
+      div.thumbnail-image-wrapper {
+        @extend .flex;
+        @extend .vertically-centered;
+
+        height: 100%;
+        background-color: mix($dark-grey, transparent, 50%);
+
+        img.thumbnail-image {
+          display: block;
+          margin: auto;
+          height: 90%;
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 2em;
+
+    .h2 {
+      padding-top: 0.25em;
+      line-height: 1.1em;
+    }
+
+    a.category, h3 {
+      display: inline-block;
+    }
+
+    .category-featured-name {
+      color: $grey;
+      background-color: mix($very-dark-green, transparent, 80%);
+      padding: 0.1em 0.3em;
+      border-radius: 7px;
+    }
+  }
+}
+
+.button-group {
+  width: 100%;
+
+  &.flex.buttons-expand {
+    & > * {
+      width: 28%;
+    }
+  }
+
+  & > * {
+    @extend .button;
+  }
+}
+
+.button {
+  @extend %cardlike;
+
+  width: max-content;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  padding: 4px 12px;
+  border-bottom: 4px solid $mid-grey;
+
+  font-size: 1.15em;
+  text-decoration: none;
+  
+  background-color: $grey;
+  color: $dark-grey;
+
+  &.primary, &:hover {
+    background-color: $very-dark-green;
+    border-bottom-color: darken($very-dark-green, 20%);
+    color: $grey;
+  }
+
+  &:not(.centered-block) {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+  }
+
+  i.fa {
+    margin-right: 0.1em;
+  }
+}
+
+// PART 2: LISTS
+
+%basic-formatted-list {
+  display: block;
+  padding: 0 1em;
+
+  list-style: none;
+  color: $grey;
+
+  li {
+    margin: 0.5em;
+    border-bottom: 1px dashed $transparent-grey;
+
+    &:hover {
+      border-bottom-color: $very-dark-green;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+ul.vertical-links {
+  @extend .has-invisible-links;
+  @extend %basic-formatted-list;
+
+  li {
+    width: 100%;
+  }
+}
+
+ul.horizontal-links {
+  @extend .has-invisible-links;
+  @extend %basic-formatted-list;
+
+  margin: auto;
+  width: max-content;
+
+  li {
+    display: inline-block;
+  }
+}
+
+// PART 3: SIDEBAR
+
+%generic-sidebar {
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: -25em;
+  overflow-x: hidden;
+  transition: 0.5s;
+  width: 20em;
+
+  &.active {
+    right: 0;
+  }
+}
+
+// PART 4: AUTHOR
+
+.expanding-author-credit {
+  @extend .flex; 
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+
+  span.name {
+    display: block;
+    text-align: right;
+
+    line-height: 2em;
+
+    width: 0;
+    overflow: hidden;
+    transition: 0.75s;
+  }
+
+  &:hover span.name {
+    width: 10em;
+    padding-right: 0.25em;
+  }
+}
+
+.pagination {
+  @extend .has-invisible-links;
+  @extend .slight-mobile-margin;
+
+  display: flex;
+  margin-bottom: 4em;
+
+  div.pagination-area {
+    flex-grow: 1;
+    display: block;
+
+    a.pagination-area-card {
+      font-size: 1.7em;
+
+      width: max-content;
+      padding: 0.2em 1em;
+
+      &.pagination-area-card-right {
+        float: right;
+      }
+
+      .pagination-title {
+        @extend .hide-on-mobile; 
+
+        line-height: 3em;
+        font-weight: 300;
+      }
+
+      i.fa {
+        @media screen and (max-width: $mobile-breakpoint) {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+
+// SOCIAL MEDIA
+
+@mixin sm-link($fa, $var) {
+  i.fa-#{$fa} {
+    color: $var;
+  }
+} 
+
+ul.has-social-media-menu {
+  span.fontawesome-class {
+    border: 1px solid;
+  }
+
+  @include sm-link('home', $forums);
+  @include sm-link('twitter', $twitter);
+  @include sm-link('facebook', $facebook);
+  @include sm-link('instagram', $instagram);
+  @include sm-link('crosshairs', $showdown);
+}

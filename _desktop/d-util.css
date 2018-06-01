@@ -1,0 +1,4 @@
+/* line 2, ../sass/_desktop/d-util.scss */
+.flex.wraps-on-computer {
+  flex-direction: column;
+}

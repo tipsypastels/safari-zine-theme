@@ -1,0 +1,26 @@
+// used for section headings
+h1, .h1 {
+  font-family: 'Comfortaa';
+  font-size: 2em;
+}
+
+// used for card titles
+h2, .h2 {
+  display: block;
+  font-weight: bold;
+  font-size: 1.7em;
+  text-decoration: none;
+  color: inherit;
+}
+
+// used for card categories and other misc single-word text
+h3, .h3 {
+  font-size: 90%;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  margin-top: 1em;
+  margin-bottom: 0;
+  border-bottom: 1px dashed $grey;
+}

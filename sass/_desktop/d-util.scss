@@ -1,0 +1,5 @@
+.flex {
+  &.wraps-on-computer {
+    flex-direction: column;
+  }
+}

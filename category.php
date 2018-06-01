@@ -1,15 +1,17 @@
 <?php 
   get_header();
+  $category = get_category(get_query_var('cat'));
 ?>
 
 <main id="index">
-  <section id="posts-latest" class="flex wraps responsive-two-columns">
+  <h1 class="image-postbit-title"><?php echo $category->name ?></h1><div class="rule"></div>
+  <section id="posts-latest" class="flex wraps image-postbit-block">
+
     <?php
       
-      $paged = get_query_var('paged');
       $paginated_query = new WP_Query([
         "category_name" => get_category(get_query_var('cat'))->slug,
-        "posts_per_page" => 6,
+        "posts_per_page" => 9,
         "paged" => $paged
       ]);
 
@@ -17,15 +19,13 @@
   
         $author_id = get_the_author_meta('ID');
 
-        postbit(
+        image_postbit(
           get_the_permalink(),
           get_the_post_thumbnail_url(),
           get_the_title(),
           get_the_excerpt(),
           get_the_date(),
           get_the_author(),
-          get_author_posts_url($author_id),
-          get_wp_user_avatar_src($author_id),
           get_the_category()
         );
       }

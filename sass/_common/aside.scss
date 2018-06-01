@@ -1,0 +1,34 @@
+aside#modal {
+  opacity: 0;
+  transition: 0.45s;
+  pointer-events: none;
+  z-index: 3;
+
+  position: fixed;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+
+  width: max-content;
+  background-color: $dark-grey;
+  color: $grey;
+
+  width: 45em;
+  max-width: 70vw;
+  padding: 1em;
+  border-radius: 2em;
+  border: 4px solid $grey;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+body.modal-open main {
+  filter: blur(5px);
+}

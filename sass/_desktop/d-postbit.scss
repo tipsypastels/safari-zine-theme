@@ -1,0 +1,14 @@
+.image-postbit-block {
+  .image-postbit {
+    width: 33.333%;
+
+    &:nth-last-child(3n+2):first-child,
+    &:nth-last-child(3n+1):nth-child(2) {
+      width: 50%;
+    }
+
+    &:nth-last-child(3n+1):first-child {
+      width: 100%;
+    }
+  }
+}

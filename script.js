@@ -1,11 +1,15 @@
-jQuery(document).ready(function($){
-  const toggleSidebar = () => {
-    $('aside#sidebar').toggleClass('active');
-    $('body').toggleClass('sidebar-open');
+jQuery(document).ready(function($) {
+  const toggleModal = () => {
+    $('aside#modal').toggleClass('active');
+    $('body').toggleClass('modal-open');
   }
 
-  $('.menu-opener').click(toggleSidebar);
-  $('.container').click(e => {
-    if ($('body').hasClass('sidebar-open')) toggleSidebar();
-  })
+  $('.menu-opener').click(toggleModal);
+
+  // i have no idea why this works but it just does
+  // don't touch it
+  $('body.modal-open main').live("click", function(e) {
+    e.preventDefault();
+    toggleModal();
+  });
 });

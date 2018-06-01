@@ -14,22 +14,39 @@ Description: A theme for the Safari Zine.
 @import 'compass/reset';
 
 /* utility partials */
-@import '_partials/vars';
-@import '_partials/util';
-@import '_partials/components';
-@import '_partials/texts';
+@import '_common/vars';
+@import '_common/util';
+@import '_common/components';
+@import '_common/texts';
 
 /* component partials */
-@import '_partials/header';
-@import '_partials/postbit';
-@import '_partials/aside';
-@import '_partials/menu-flip';
+@import '_common/header';
+@import '_common/footer';
+@import '_common/postbit';
+@import '_common/aside';
 
 /* page partials */
-@import '_partials/index';
-@import '_partials/single';
-@import '_partials/author';
-@import '_partials/page';
+@import '_common/index';
+@import '_common/single';
+@import '_common/author';
+@import '_common/page';
+
+@media screen and (min-width: $mobile-breakpoint) {
+  @import '_desktop/d-util';
+
+  @import '_desktop/d-postbit';
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  @import '_mobile/m-util';
+  @import '_mobile/m-components';
+
+  @import '_mobile/m-header';
+  @import '_mobile/m-footer';
+  @import '_mobile/m-postbit';
+
+  @import '_mobile/m-author';
+}
 
 /* global styles */
 body {
@@ -49,13 +66,11 @@ body {
       width: 100%;
 
       main {
+        @extend .slight-mobile-margin;
+
         max-width: $main-width;
         margin: auto;
         padding-top: 3em;
-
-        @media screen and (max-width: $mobile-breakpoint) {
-          padding-top: 1em;
-        }
       }
     }
   }

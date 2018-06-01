@@ -1,0 +1,15 @@
+/* line 1, ../sass/_mobile/m-header.scss */
+header#wrapper {
+  padding: 1em 0.25em;
+}
+/* line 6, ../sass/_mobile/m-header.scss */
+header#wrapper header#content .site-name {
+  flex-grow: 1;
+  justify-content: center;
+  /* account for centering of the logo */
+  margin-left: 30px;
+}
+/* line 14, ../sass/_mobile/m-header.scss */
+header#wrapper header#content #navbar-wrapper {
+  flex-grow: 0;
+}

@@ -1,0 +1,34 @@
+.flex {
+  &.responsive-two-columns {
+    & > * {
+      width: 100%;
+    }
+  }
+
+  &.responsive-three-columns {
+    & > * {
+      width: 100%;
+    }
+  }
+
+  &.wraps-on-mobile {
+    flex-direction: column;
+  }
+}
+
+.hide-on-mobile {
+  display: none;
+}
+
+.hide-on-computer {
+  display: initial;
+}
+
+.center-on-mobile {
+  text-align: center;
+}
+
+.slight-mobile-margin {
+  margin-left: 0.75em !important;
+  margin-right: 0.75em !important;
+}

@@ -1,0 +1,36 @@
+footer#footer {
+  border-top: 1px solid $dark-transparent-grey;
+  background-color: $slight-grey;
+  padding: 2em 0.25em;
+
+  #footer-sm {
+    text-align: center;
+
+    h4 {
+      font-family: Comfortaa;
+      padding-bottom: 0.5em;
+    }
+
+    a.site-name { 
+      justify-content: center;
+    }
+
+    li {
+      display: inline-block;
+
+      a {
+        line-height: 3em;
+        padding: 0 0.75em;
+      }
+    }
+  }
+
+  #footer-legal {
+    width: 42em;
+    max-width: 80%;
+    margin: auto;
+    border-top: 1px solid $dark-transparent-grey;
+    padding: 1em 1.5em 0 1.5em;
+    text-align: center;
+  }
+}

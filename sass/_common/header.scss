@@ -1,0 +1,53 @@
+header#wrapper {
+  color: $dark-grey;
+  height: 3em;
+  padding: 2em 0.25em;
+  z-index: 3;
+  position: relative;
+  border-bottom: 1px solid $dark-transparent-grey;
+  background-color: $slight-grey;
+
+  header#content {
+    max-width: $width;
+    margin: auto;
+
+    .site-name {
+      font-size: 1.8em;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 0.25em;
+      }
+    }
+
+    ul#navbar {
+      li {
+        display: inline-block;
+
+        a {
+          line-height: 3em;
+          padding: 0 0.75em;
+        }
+      }
+    }
+
+    .menu-opener {
+      line-height: 1.6em;
+      font-size: 2em;
+      cursor: pointer;
+      width: 30px;
+      text-align: center;
+
+      i.fa {
+        transition: 0.5s;
+        color: $very-dark-green;
+      }
+    }
+  }
+}
+
+body.modal-open .menu-opener i.fa {
+  transform: rotate(180deg);
+  &:before { content: '\f00d' }
+}

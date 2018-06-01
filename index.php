@@ -3,9 +3,9 @@
   $exclude_from_latest = [];
 ?>
 
-<main id="index" class="">
+<main id="index">
   <h1 class="image-postbit-title">Featured Articles</h1><div class="rule"></div>
-  <section id="posts-featured" class="flex wraps responsive-three-columns image-postbit-block">
+  <section id="posts-featured" class="flex wraps image-postbit-block">
 
     <?php
       $paged = get_query_var('paged');
@@ -38,7 +38,7 @@
   </section>
 
   <h1 class="image-postbit-title">Latest Articles</h1><div class="rule"></div>
-  <section id="posts-latest" class="flex wraps responsive-three-columns image-postbit-block">
+  <section id="posts-latest" class="flex wraps image-postbit-block">
 
     <?php
       

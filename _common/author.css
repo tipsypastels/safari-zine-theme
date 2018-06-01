@@ -1,0 +1,22 @@
+/* line 2, ../sass/_common/author.scss */
+main#author section.author-info {
+  margin-bottom: 4em;
+}
+/* line 5, ../sass/_common/author.scss */
+main#author section.author-info .avatar-block {
+  padding-right: 0.5em;
+}
+/* line 9, ../sass/_common/author.scss */
+main#author section.author-info .meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* line 14, ../sass/_common/author.scss */
+main#author section.author-info .meta h1 {
+  padding-bottom: 0.25em;
+}
+/* line 18, ../sass/_common/author.scss */
+main#author section.author-info .meta .profile-user-roles {
+  padding-bottom: 0.5em;
+}

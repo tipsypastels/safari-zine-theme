@@ -5,42 +5,75 @@
   $avatar  = get_wp_user_avatar_src($curauth->ID);
 ?>
 
-<main id="page" class="page-width author flex one-growing-element wraps-on-mobile">
-  <section class="author-info flex one-growing-element wraps wraps-on-computer">
-    <div class="avatar">
+<main id="author">
+  <section class="author-info flex one-growing-element">
+    <div class="avatar-block">
       <img class="avatar huge" src="<?php echo $avatar ?>">
     </div>
 
-    <div class="author-meta grows">
-      <h1 class="lesser title"><?php echo $curauth->display_name ?></h1>
-      <?php if ($curauth->first_name): ?>
-        <h2 class="subtitle"><?php echo $curauth->first_name ?></h2>
-      <?php endif; ?>
+    <div class="meta grows">
+      <h1><?php echo $curauth->display_name ?></h1>
 
-      <p class="biography">
+      <?php
+        user_roles($curauth->roles);
+      ?>
+
+      <p>
         <?php echo $curauth->description ?>
       </p>
     </div>
   </section>
 
-  <section class="author-posts grows">
-    <h2 class="subtitle">
-      Articles by <?php echo $curauth->display_name ?>
-    </h2>
+  <h1 class="image-postbit-title">Articles by <?php echo $curauth->display_name ?></h1><div class="rule"></div>
+  <section id="posts-author" class="flex wraps image-postbit-block">
 
-    <div class="small-divider with-margin"></div>
+    <?php
+      
+      $paginated_query = new WP_Query([
+        'author' => $curauth->ID,
+        "posts_per_page" => 9,
+        "paged" => $paged
+      ]);
 
-    <?php while(have_posts()): the_post(); ?>
-      <?php postbit(
-        get_the_permalink(), 
-        get_the_title(),
-        get_the_excerpt(),
-        null, // passing author info is redundant on author pages
-        get_the_date(),
-        get_the_post_thumbnail_url()
-      ); ?>
-    <?php endwhile; ?>
+      while($paginated_query->have_posts()) { $paginated_query->the_post();
+        $author_id = get_the_author_meta('ID');
+
+        image_postbit(
+          get_the_permalink(),
+          get_the_post_thumbnail_url(),
+          get_the_title(),
+          get_the_excerpt(),
+          get_the_date(),
+          get_the_author(),
+          get_the_category()
+        );
+      }
+
+      wp_reset_postdata();
+    ?>
+  </section>
+
+  <section class="pagination">
+    <?php
+      if (get_previous_posts_link(null, $paginated_query->max_num_pages)) {
+        paginate(
+          "left", 
+          "Newer",
+          get_previous_posts_page_link($paginated_query->max_num_pages)
+        );
+      }
+
+      if (get_next_posts_link(null, $paginated_query->max_num_pages)) {
+        paginate(
+          "right", 
+          "Older",
+          get_next_posts_page_link($paginated_query->max_num_pages)
+        );
+      }
+    ?>
   </section>
 </main>
+
+<?php get_footer();?>
 
 <?php get_footer();?>

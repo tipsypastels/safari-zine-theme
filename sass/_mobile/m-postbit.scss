@@ -1,0 +1,26 @@
+.image-postbit-block {
+
+
+  .image-postbit {
+    height: 15em;
+    width: 50%;
+
+    &:nth-last-child(2n+1):first-child {
+      width: 100%;
+    }
+
+    .image-postbit-content {
+      div.title-wrapper {
+        align-items: center !important;
+        
+        h2 {
+          text-align: center;
+        }
+      }
+
+      div.rule, p {
+        display: none;
+      }
+    }
+  }
+}

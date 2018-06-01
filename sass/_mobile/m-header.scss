@@ -1,0 +1,18 @@
+header#wrapper {
+  padding: 1em 0.25em;
+
+
+  header#content {
+    .site-name {
+      flex-grow: 1;
+      justify-content: center;
+
+      /* account for centering of the logo */
+      margin-left: 30px;
+    }
+
+    #navbar-wrapper {
+      flex-grow: 0;
+    }
+  }
+}
