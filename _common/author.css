@@ -4,7 +4,7 @@ main#author section.author-info {
 }
 /* line 5, ../sass/_common/author.scss */
 main#author section.author-info .avatar-block {
-  padding-right: 0.5em;
+  padding-right: 1em;
 }
 /* line 9, ../sass/_common/author.scss */
 main#author section.author-info .meta {

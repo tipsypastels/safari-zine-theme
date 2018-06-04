@@ -1,19 +1,20 @@
-/* line 4, ../sass/_mobile/m-postbit.scss */
+/* line 3, ../sass/_mobile/m-postbit.scss */
 .image-postbit-block .image-postbit {
   height: 15em;
   width: 50%;
 }
-/* line 8, ../sass/_mobile/m-postbit.scss */
+/* line 7, ../sass/_mobile/m-postbit.scss */
 .image-postbit-block .image-postbit:nth-last-child(2n+1):first-child {
   width: 100%;
 }
-/* line 13, ../sass/_mobile/m-postbit.scss */
+/* line 12, ../sass/_mobile/m-postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-content div.title-wrapper {
   align-items: center !important;
 }
-/* line 16, ../sass/_mobile/m-postbit.scss */
+/* line 15, ../sass/_mobile/m-postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-content div.title-wrapper h2 {
   text-align: center;
+  width: 100%;
 }
 /* line 21, ../sass/_mobile/m-postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-content div.rule, .image-postbit-block .image-postbit .image-postbit-content p {

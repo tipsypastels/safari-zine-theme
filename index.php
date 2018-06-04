@@ -27,7 +27,8 @@
             get_the_excerpt(),
             get_the_date(),
             get_the_author(),
-            get_the_category()
+            get_the_category(),
+            get_the_content()
           );
         }
 
@@ -61,7 +62,8 @@
           get_the_excerpt(),
           get_the_date(),
           get_the_author(),
-          get_the_category()
+          get_the_category(),
+          get_the_content()
         );
       }
 

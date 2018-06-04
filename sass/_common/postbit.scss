@@ -19,6 +19,11 @@
   border-radius: 2em;
   overflow: hidden;
 
+  &.no-bottom-curve {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
   .image-postbit {
     height: 25em;
     background-size: cover;
@@ -68,6 +73,26 @@
 
         p {
           min-height: 30%;
+        }
+      }
+    }
+
+    &.image-only {
+      .image-postbit-shading {
+        align-items: center;
+        justify-content: center;
+
+        background: linear-gradient(
+          to bottom,
+          transparent, 
+          mix(transparent, black, 30%)
+        );
+
+        img.postbit-embedded-image {
+          height: 90%;
+          width: auto;
+
+          border-radius: 2em;
         }
       }
     }

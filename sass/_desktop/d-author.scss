@@ -1,0 +1,17 @@
+main#single {
+	.image-postbit-content {
+		div.title-wrapper {
+		  align-items: center !important;
+		  
+		  h2 {
+		    text-align: center;
+		    width: 100%;
+		    font-size: 2.4em;
+		  }
+		}
+
+		div.rule, p {
+		  display: none;
+		}
+	}
+}

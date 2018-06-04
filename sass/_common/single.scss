@@ -1,0 +1,17 @@
+main#single {
+	.image-postbit-block {
+		margin-bottom: 0;
+	}
+
+	.postbit-content {
+		padding: 1em;
+		margin-bottom: 3em;
+
+		background-color: $slight-grey;
+
+		box-sizing: border-box;
+		border: 1px solid $dark-transparent-grey;
+		border-bottom-left-radius: 2em;
+		border-bottom-right-radius: 2em;
+	}
+}

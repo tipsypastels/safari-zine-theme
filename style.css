@@ -7,7 +7,7 @@ Description: A theme for the Safari Zine.
 /* PICK ONE */
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:700");
-/* line 5, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -29,45 +29,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -159,17 +159,20 @@ img.avatar {
 /* line 78, sass/_common/util.scss */
 img.avatar.tiny {
   height: 2em;
+  width: 2em;
 }
-/* line 82, sass/_common/util.scss */
+/* line 83, sass/_common/util.scss */
 img.avatar.standard {
   height: 5em;
+  width: 5em;
 }
-/* line 86, sass/_common/util.scss */
+/* line 88, sass/_common/util.scss */
 img.avatar.huge {
   height: 10em;
+  width: 10em;
 }
 
-/* line 91, sass/_common/util.scss */
+/* line 94, sass/_common/util.scss */
 .hide-on-computer {
   display: none;
 }
@@ -459,7 +462,7 @@ header#wrapper {
 }
 /* line 10, sass/_common/header.scss */
 header#wrapper header#content {
-  max-width: 1110px;
+  max-width: 870px;
   margin: auto;
 }
 /* line 14, sass/_common/header.scss */
@@ -564,24 +567,29 @@ footer#footer #footer-legal {
   overflow: hidden;
 }
 /* line 22, sass/_common/postbit.scss */
+.image-postbit-block.no-bottom-curve {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* line 27, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit {
   height: 25em;
   background-size: cover;
   background-position: center;
   overflow: hidden;
 }
-/* line 28, sass/_common/postbit.scss */
+/* line 33, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading {
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
   display: flex;
   flex-direction: column;
 }
-/* line 39, sass/_common/postbit.scss */
+/* line 44, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading:hover {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 }
-/* line 47, sass/_common/postbit.scss */
+/* line 52, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content {
   padding: 1em;
   height: 100%;
@@ -589,21 +597,33 @@ footer#footer #footer-legal {
   display: flex;
   flex-direction: column;
 }
-/* line 56, sass/_common/postbit.scss */
+/* line 61, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content .title-wrapper {
   flex-grow: 1;
   display: flex;
   align-items: flex-end;
 }
-/* line 63, sass/_common/postbit.scss */
+/* line 68, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content .rule {
   background-color: whitesmoke;
   width: 3em;
   height: 0.15em;
 }
-/* line 69, sass/_common/postbit.scss */
+/* line 74, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content p {
   min-height: 30%;
+}
+/* line 81, sass/_common/postbit.scss */
+.image-postbit-block .image-postbit.image-only .image-postbit-shading {
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+/* line 91, sass/_common/postbit.scss */
+.image-postbit-block .image-postbit.image-only .image-postbit-shading img.postbit-embedded-image {
+  height: 90%;
+  width: auto;
+  border-radius: 2em;
 }
 
 /* line 1, sass/_common/aside.scss */
@@ -640,13 +660,28 @@ body.modal-open main {
 }
 
 /* page partials */
+/* line 2, sass/_common/single.scss */
+main#single .image-postbit-block {
+  margin-bottom: 0;
+}
+/* line 6, sass/_common/single.scss */
+main#single .postbit-content {
+  padding: 1em;
+  margin-bottom: 3em;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  border: 1px solid rgba(16, 16, 16, 0.1);
+  border-bottom-left-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
 /* line 2, sass/_common/author.scss */
 main#author section.author-info {
   margin-bottom: 4em;
 }
 /* line 5, sass/_common/author.scss */
 main#author section.author-info .avatar-block {
-  padding-right: 0.5em;
+  padding-right: 1em;
 }
 /* line 9, sass/_common/author.scss */
 main#author section.author-info .meta {
@@ -680,6 +715,21 @@ main#author section.author-info .meta .profile-user-roles {
   /* line 10, sass/_desktop/d-postbit.scss */
   .image-postbit-block .image-postbit:nth-last-child(3n+1):first-child {
     width: 100%;
+  }
+
+  /* line 3, sass/_desktop/d-author.scss */
+  main#single .image-postbit-content div.title-wrapper {
+    align-items: center !important;
+  }
+  /* line 6, sass/_desktop/d-author.scss */
+  main#single .image-postbit-content div.title-wrapper h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 2.4em;
+  }
+  /* line 13, sass/_desktop/d-author.scss */
+  main#single .image-postbit-content div.rule, main#single .image-postbit-content p {
+    display: none;
   }
 }
 @media screen and (max-width: 900px) {
@@ -742,22 +792,23 @@ main#author section.author-info .meta .profile-user-roles {
     display: none;
   }
 
-  /* line 4, sass/_mobile/m-postbit.scss */
+  /* line 3, sass/_mobile/m-postbit.scss */
   .image-postbit-block .image-postbit {
     height: 15em;
     width: 50%;
   }
-  /* line 8, sass/_mobile/m-postbit.scss */
+  /* line 7, sass/_mobile/m-postbit.scss */
   .image-postbit-block .image-postbit:nth-last-child(2n+1):first-child {
     width: 100%;
   }
-  /* line 13, sass/_mobile/m-postbit.scss */
+  /* line 12, sass/_mobile/m-postbit.scss */
   .image-postbit-block .image-postbit .image-postbit-content div.title-wrapper {
     align-items: center !important;
   }
-  /* line 16, sass/_mobile/m-postbit.scss */
+  /* line 15, sass/_mobile/m-postbit.scss */
   .image-postbit-block .image-postbit .image-postbit-content div.title-wrapper h2 {
     text-align: center;
+    width: 100%;
   }
   /* line 21, sass/_mobile/m-postbit.scss */
   .image-postbit-block .image-postbit .image-postbit-content div.rule, .image-postbit-block .image-postbit .image-postbit-content p {
@@ -781,7 +832,7 @@ main#author section.author-info .meta .profile-user-roles {
   }
 }
 /* global styles */
-/* line 52, sass/style.scss */
+/* line 54, sass/style.scss */
 body {
   font-family: 'Work Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -791,29 +842,29 @@ body {
   background-color: whitesmoke;
   position: relative;
 }
-/* line 61, sass/style.scss */
+/* line 63, sass/style.scss */
 body div.container {
   width: 100%;
   position: relative;
 }
-/* line 65, sass/style.scss */
+/* line 67, sass/style.scss */
 body div.container div.main-container {
   width: 100%;
 }
-/* line 68, sass/style.scss */
+/* line 70, sass/style.scss */
 body div.container div.main-container main {
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
   padding-top: 3em;
 }
 
-/* line 79, sass/style.scss */
+/* line 81, sass/style.scss */
 ::-moz-selection {
   color: white;
   background: #658b5f;
 }
 
-/* line 84, sass/style.scss */
+/* line 86, sass/style.scss */
 ::selection {
   color: white;
   background: #658b5f;

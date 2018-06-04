@@ -14,7 +14,7 @@ function site_name(array $array = []) {
 
   ?>
   <a target="<?php echo $target ?>" class="site-name <?php echo $class ?>" href="<?php echo $href ?>">
-    <?php require __DIR__ . "\..\\$logo" ?>
+    <?php echo file_get_contents(__DIR__ . "/../$logo") ?>
     <div><?php echo $name ?></div>
   </a>
 <?php }
@@ -32,60 +32,9 @@ function user_roles($roles) { ?>
   </div>
 <?php }
 
-function postbit(
-  $href, $img, $title, $excerpt, $date, $author, $author_href, 
-  $author_img, $categories, $content = null, $class = null, $thumbnail_callback = null
-) { 
-  ?>
-  <article class="card slight-mobile-margin has-invisible-links $class">
-    <?php if ($img): ?>  
-      <?php if (is_null($thumbnail_callback)): ?>
-        <a class="thumbnail" style="background-image: url(<?php echo $img ?>)" href="<?php echo $href ?>"></a>
-      <?php 
-        else:
-          $thumbnail_callback($img);
-        endif;
-      ?>
-    <?php endif; ?>
-
-    <div class="content">
-      <?php foreach($categories as $category):
-          $id = get_cat_ID($category->name);
-          $url = get_category_link($id);
-        ?>
-        <a class="h3 category category-<?php echo $category->slug ?>-name" href="<?php echo $url ?>">
-          <?php echo $category->name ?>
-        </a>
-      <?php endforeach ?>
-        <h3><?php if ($categories): ?> – <?php endif ?><?php echo $date ?></h3>
-
-      <a class="h2" href="<?php echo $href ?>"><?php echo $title ?></a>
-      
-      <?php if($excerpt): ?>
-        <div class="rule"></div>
-        <p><?php echo $excerpt ?></p>
-      <?php endif; ?>
-
-      <?php if(!is_null($content)): ?>
-        <div class="rule"></div>
-        <div class="post-content">
-          <?php echo $content ?>
-        </div>
-      <?php endif; ?>
-
-    </div>
-
-    <?php 
-      if($author and $author_href and $author_img) {
-        expanding_author_credit($author, $author_href, $author_img);
-      } 
-    ?>
-  </article>
-<?php }
-
-function image_postbit($href, $img, $title, $excerpt, $date, $author, $categories) { ?>
-  <a class="image-postbit" href="<?php echo $href ?>" 
-    style="background-image: url(<?php echo $img ?>">
+function image_postbit($href, $img, $title, $excerpt, $date, $author, $categories, $content, $class = "") { ?>
+  <a class="image-postbit <?php echo $class ?>" href="<?php echo $href ?>" 
+    style="background-image: url(<?php echo $img ?>)">
     <div class="image-postbit-shading">
       <div class="image-postbit-content">
         <div class="title-wrapper">
@@ -101,15 +50,24 @@ function image_postbit($href, $img, $title, $excerpt, $date, $author, $categorie
   </a>
 <?php }
 
-function expanding_author_credit($name, $href, $img) { ?>
-  <a class="expanding-author-credit" href="<?php echo $href ?>">
-    <span class="name">
-      <?php echo $name ?>
-    </span>
-    <img class="avatar tiny" src="<?php echo $img ?>">
-  </a>
+function image_only_postbit($img, $class = "image-only") { ?>
+  <div class="image-postbit <?php echo $class ?>" style="background-image: url(<?php echo $img ?>)">
+    <div class="image-postbit-shading">
+      <img class="postbit-embedded-image" src="<?php echo $img ?>">
+    </div>
+  </div>
 <?php }
 
+function postbit_content($href, $img, $title, $excerpt, $date, $author, $categories, $content, $class = "") { ?>
+  <div class="postbit-content $class">
+    <?php if ($excerpt): ?>
+      <?php echo $excerpt ?>
+      <div class="rule"></div>
+    <?php endif; ?>
+
+    <?php echo $content ?>
+  </div>
+<?php }
 
 function paginate($dir, $word, $url) { ?>
   <div class="pagination-area">

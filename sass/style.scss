@@ -35,6 +35,8 @@ Description: A theme for the Safari Zine.
   @import '_desktop/d-util';
 
   @import '_desktop/d-postbit';
+
+  @import '_desktop/d-author';
 }
 
 @media screen and (max-width: $mobile-breakpoint) {
