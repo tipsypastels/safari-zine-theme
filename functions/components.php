@@ -59,7 +59,7 @@ function image_banner($img, $class = "") { ?>
 <?php }
 
 function postbit_content($href, $img, $title, $excerpt, $date, $author, $categories, $content_cb, $class = "") { ?>
-  <div class="postbit-content <?php echo $class ?>">
+  <div class="postbit-content <?php echo $class ?> ">
     <h2 class="line-height"><?php echo $title ?></h2>
     <?php if ($excerpt): ?>
       <?php echo $excerpt ?>

@@ -20,6 +20,9 @@
   border-radius: 2em;
   overflow: hidden;
 
+  box-shadow: 0 3px 3px 1px $dark-grey;
+  background-color: $dark-grey;
+
   &.no-bottom-curve {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -27,6 +30,7 @@
 
   .image-postbit {
     height: 25em;
+    background-color: white;
     background-size: cover;
     background-position: center;
     overflow: hidden;

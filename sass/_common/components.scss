@@ -284,4 +284,5 @@ ul.has-social-media-menu {
   @include sm-link('facebook', $facebook);
   @include sm-link('instagram', $instagram);
   @include sm-link('crosshairs', $showdown);
+  @include sm-link('comments', $discord);
 }

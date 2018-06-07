@@ -422,6 +422,10 @@ ul.has-social-media-menu i.fa-instagram {
 ul.has-social-media-menu i.fa-crosshairs {
   color: #ff6347;
 }
+/* line 272, sass/_common/components.scss */
+ul.has-social-media-menu i.fa-comments {
+  color: #7186d7;
+}
 
 /* line 2, sass/_common/texts.scss */
 h1, .h1 {
@@ -576,31 +580,34 @@ footer#footer #footer-legal {
   margin-bottom: 3em;
   border-radius: 2em;
   overflow: hidden;
+  box-shadow: 0 3px 3px 1px #23282d;
+  background-color: #23282d;
 }
-/* line 23, sass/_common/postbit.scss */
+/* line 26, sass/_common/postbit.scss */
 .image-postbit-block.no-bottom-curve {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 28, sass/_common/postbit.scss */
+/* line 31, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit {
   height: 25em;
+  background-color: white;
   background-size: cover;
   background-position: center;
   overflow: hidden;
 }
-/* line 34, sass/_common/postbit.scss */
+/* line 38, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading {
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
   display: flex;
   flex-direction: column;
 }
-/* line 45, sass/_common/postbit.scss */
+/* line 49, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading:hover {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 }
-/* line 53, sass/_common/postbit.scss */
+/* line 57, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content {
   padding: 1em;
   height: 100%;
@@ -609,19 +616,19 @@ footer#footer #footer-legal {
   display: flex;
   flex-direction: column;
 }
-/* line 63, sass/_common/postbit.scss */
+/* line 67, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content .title-wrapper {
   flex-grow: 1;
   display: flex;
   align-items: flex-end;
 }
-/* line 70, sass/_common/postbit.scss */
+/* line 74, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content .rule {
   background-color: whitesmoke;
   width: 3em;
   height: 0.15em;
 }
-/* line 76, sass/_common/postbit.scss */
+/* line 80, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content p {
   min-height: 30%;
 }
