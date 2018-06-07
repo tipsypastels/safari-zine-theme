@@ -7,7 +7,7 @@ Description: A theme for the Safari Zine.
 /* PICK ONE */
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:700");
-/* line 5, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -29,45 +29,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -425,20 +425,26 @@ ul.has-social-media-menu i.fa-crosshairs {
 
 /* line 2, sass/_common/texts.scss */
 h1, .h1 {
-  font-family: 'Comfortaa';
   font-size: 2em;
 }
+/* line 5, sass/_common/texts.scss */
+h1.line-height, .h1.line-height {
+  line-height: 2em;
+}
 
-/* line 8, sass/_common/texts.scss */
+/* line 9, sass/_common/texts.scss */
 h2, .h2 {
   display: block;
-  font-weight: bold;
   font-size: 1.7em;
   text-decoration: none;
   color: inherit;
 }
+/* line 15, sass/_common/texts.scss */
+h2.line-height, .h2.line-height {
+  line-height: 1.7em;
+}
 
-/* line 17, sass/_common/texts.scss */
+/* line 19, sass/_common/texts.scss */
 h3, .h3 {
   font-size: 90%;
   font-weight: bold;
@@ -447,6 +453,10 @@ h3, .h3 {
   margin-top: 1em;
   margin-bottom: 0;
   border-bottom: 1px dashed whitesmoke;
+}
+/* line 29, sass/_common/texts.scss */
+h3.line-height, .h3.line-height {
+  line-height: 90%;
 }
 
 /* component partials */
@@ -462,7 +472,7 @@ header#wrapper {
 }
 /* line 10, sass/_common/header.scss */
 header#wrapper header#content {
-  max-width: 870px;
+  max-width: 1000px;
   margin: auto;
 }
 /* line 14, sass/_common/header.scss */
@@ -550,8 +560,9 @@ footer#footer #footer-legal {
   font-size: 2em;
   margin-bottom: 1em;
   text-align: center;
+  font-family: 'Comfortaa';
 }
-/* line 6, sass/_common/postbit.scss */
+/* line 7, sass/_common/postbit.scss */
 .image-postbit-title + .rule {
   height: 0.15em;
   width: 3em;
@@ -560,70 +571,85 @@ footer#footer #footer-legal {
   margin-bottom: 1.5em;
 }
 
-/* line 15, sass/_common/postbit.scss */
+/* line 16, sass/_common/postbit.scss */
 .image-postbit-block {
   margin-bottom: 3em;
   border-radius: 2em;
   overflow: hidden;
 }
-/* line 22, sass/_common/postbit.scss */
+/* line 23, sass/_common/postbit.scss */
 .image-postbit-block.no-bottom-curve {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-/* line 27, sass/_common/postbit.scss */
+/* line 28, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit {
   height: 25em;
   background-size: cover;
   background-position: center;
   overflow: hidden;
 }
-/* line 33, sass/_common/postbit.scss */
+/* line 34, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading {
   height: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
   display: flex;
   flex-direction: column;
 }
-/* line 44, sass/_common/postbit.scss */
+/* line 45, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading:hover {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 }
-/* line 52, sass/_common/postbit.scss */
+/* line 53, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content {
   padding: 1em;
   height: 100%;
   color: whitesmoke;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
 }
-/* line 61, sass/_common/postbit.scss */
+/* line 63, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content .title-wrapper {
   flex-grow: 1;
   display: flex;
   align-items: flex-end;
 }
-/* line 68, sass/_common/postbit.scss */
+/* line 70, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content .rule {
   background-color: whitesmoke;
   width: 3em;
   height: 0.15em;
 }
-/* line 74, sass/_common/postbit.scss */
+/* line 76, sass/_common/postbit.scss */
 .image-postbit-block .image-postbit .image-postbit-shading .image-postbit-content p {
   min-height: 30%;
 }
-/* line 81, sass/_common/postbit.scss */
-.image-postbit-block .image-postbit.image-only .image-postbit-shading {
+
+/* line 1, sass/_common/banner.scss */
+.image-banner {
+  height: 25em;
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+/* line 13, sass/_common/banner.scss */
+.image-banner .image-banner-shading {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
 }
-/* line 91, sass/_common/postbit.scss */
-.image-postbit-block .image-postbit.image-only .image-postbit-shading img.postbit-embedded-image {
-  height: 90%;
+/* line 27, sass/_common/banner.scss */
+.image-banner .image-banner-shading img.image-banner-embedded-image {
+  height: 88%;
   width: auto;
-  border-radius: 2em;
 }
 
 /* line 1, sass/_common/aside.scss */
@@ -660,19 +686,19 @@ body.modal-open main {
 }
 
 /* page partials */
-/* line 2, sass/_common/single.scss */
+/* line 3, sass/_common/single.scss */
 main#single .image-postbit-block {
   margin-bottom: 0;
 }
-/* line 6, sass/_common/single.scss */
+/* line 7, sass/_common/single.scss */
 main#single .postbit-content {
-  padding: 1em;
+  padding: 1.5em;
   margin-bottom: 3em;
   background-color: #f0f0f0;
   box-sizing: border-box;
   border: 1px solid rgba(16, 16, 16, 0.1);
-  border-bottom-left-radius: 2em;
-  border-bottom-right-radius: 2em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
 }
 
 /* line 2, sass/_common/author.scss */
@@ -696,6 +722,17 @@ main#author section.author-info .meta h1 {
 /* line 18, sass/_common/author.scss */
 main#author section.author-info .meta .profile-user-roles {
   padding-bottom: 0.5em;
+}
+
+/* line 2, sass/_common/postbit-content.scss */
+.postbit-content-main h1 {
+  margin-bottom: 1em;
+}
+/* line 7, sass/_common/postbit-content.scss */
+.postbit-content-main figure figcaption {
+  background-color: whitesmoke;
+  border: 1px solid rgba(16, 16, 16, 0.1);
+  text-align: center;
 }
 
 @media screen and (min-width: 900px) {
@@ -832,7 +869,7 @@ main#author section.author-info .meta .profile-user-roles {
   }
 }
 /* global styles */
-/* line 54, sass/style.scss */
+/* line 57, sass/style.scss */
 body {
   font-family: 'Work Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -842,29 +879,29 @@ body {
   background-color: whitesmoke;
   position: relative;
 }
-/* line 63, sass/style.scss */
+/* line 66, sass/style.scss */
 body div.container {
   width: 100%;
   position: relative;
 }
-/* line 67, sass/style.scss */
+/* line 70, sass/style.scss */
 body div.container div.main-container {
   width: 100%;
 }
-/* line 70, sass/style.scss */
+/* line 73, sass/style.scss */
 body div.container div.main-container main {
   max-width: 900px;
   margin: auto;
   padding-top: 3em;
 }
 
-/* line 81, sass/style.scss */
+/* line 84, sass/style.scss */
 ::-moz-selection {
   color: white;
   background: #658b5f;
 }
 
-/* line 86, sass/style.scss */
+/* line 89, sass/style.scss */
 ::selection {
   color: white;
   background: #658b5f;

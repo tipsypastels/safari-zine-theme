@@ -1,0 +1,32 @@
+.image-banner {
+  height: 25em;
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+
+  background-size: cover;
+  background-position: center;
+
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+
+  .image-banner-shading {
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+      to bottom,
+      transparent, 
+      mix(transparent, black, 10%)
+    );
+
+    img.image-banner-embedded-image {
+      height: 88%;
+      width: auto;
+    }
+  }
+}

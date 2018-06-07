@@ -1,16 +1,18 @@
 // used for section headings
 h1, .h1 {
-  font-family: 'Comfortaa';
   font-size: 2em;
+
+  &.line-height { line-height: 2em; }
 }
 
 // used for card titles
 h2, .h2 {
   display: block;
-  font-weight: bold;
   font-size: 1.7em;
   text-decoration: none;
   color: inherit;
+
+  &.line-height { line-height: 1.7em; }
 }
 
 // used for card categories and other misc single-word text
@@ -23,4 +25,6 @@ h3, .h3 {
   margin-top: 1em;
   margin-bottom: 0;
   border-bottom: 1px dashed $grey;
+
+  &.line-height { line-height: 90%; }
 }

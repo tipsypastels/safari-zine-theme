@@ -1,0 +1,25 @@
+/* line 1, ../sass/_common/banner.scss */
+.image-banner {
+  height: 25em;
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+/* line 13, ../sass/_common/banner.scss */
+.image-banner .image-banner-shading {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9));
+}
+/* line 27, ../sass/_common/banner.scss */
+.image-banner .image-banner-shading img.image-banner-embedded-image {
+  height: 88%;
+  width: auto;
+}

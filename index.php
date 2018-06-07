@@ -1,16 +1,17 @@
 <?php 
   get_header();
   $exclude_from_latest = [];
+  $paged = get_query_var('paged');
 ?>
 
 <main id="index">
-  <h1 class="image-postbit-title">Featured Articles</h1><div class="rule"></div>
-  <section id="posts-featured" class="flex wraps image-postbit-block">
+  <?php if(!$paged): ?>
+    <h1 class="image-postbit-title">Featured Articles</h1><div class="rule"></div>
+    <section id="posts-featured" class="flex wraps image-postbit-block">
 
-    <?php
-      $paged = get_query_var('paged');
+      <?php
+        
 
-      if (!$paged) {
         $feat = new WP_Query([
           'category_name' => 'featured',
           'posts_per_page' => 3
@@ -34,11 +35,17 @@
 
         /* ends the WP_Query */
         wp_reset_postdata();
-      }
-    ?>
-  </section>
+      ?>
+    </section>
+  <?php endif; ?>
 
-  <h1 class="image-postbit-title">Latest Articles</h1><div class="rule"></div>
+  <h1 class="image-postbit-title">
+    <?php if ($paged) {
+      echo "Latest Page $paged";
+    } else {
+      echo "Latest Articles";
+    } ?>
+  </h1><div class="rule"></div>
   <section id="posts-latest" class="flex wraps image-postbit-block">
 
     <?php

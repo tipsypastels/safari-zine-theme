@@ -32,7 +32,7 @@ function user_roles($roles) { ?>
   </div>
 <?php }
 
-function image_postbit($href, $img, $title, $excerpt, $date, $author, $categories, $content, $class = "") { ?>
+function image_postbit($href, $img, $title, $excerpt, $date, $author, $categories, $content_cb, $class = "") { ?>
   <a class="image-postbit <?php echo $class ?>" href="<?php echo $href ?>" 
     style="background-image: url(<?php echo $img ?>)">
     <div class="image-postbit-shading">
@@ -50,22 +50,23 @@ function image_postbit($href, $img, $title, $excerpt, $date, $author, $categorie
   </a>
 <?php }
 
-function image_only_postbit($img, $class = "image-only") { ?>
-  <div class="image-postbit <?php echo $class ?>" style="background-image: url(<?php echo $img ?>)">
-    <div class="image-postbit-shading">
-      <img class="postbit-embedded-image" src="<?php echo $img ?>">
+function image_banner($img, $class = "") { ?>
+  <div class="image-banner <?php echo $class ?>" style="background-image: url(<?php echo $img ?>)">
+    <div class="image-banner-shading">
+      <img class="image-banner-embedded-image" src="<?php echo $img ?>">
     </div>
   </div>
 <?php }
 
-function postbit_content($href, $img, $title, $excerpt, $date, $author, $categories, $content, $class = "") { ?>
-  <div class="postbit-content $class">
+function postbit_content($href, $img, $title, $excerpt, $date, $author, $categories, $content_cb, $class = "") { ?>
+  <div class="postbit-content <?php echo $class ?>">
+    <h2 class="line-height"><?php echo $title ?></h2>
     <?php if ($excerpt): ?>
       <?php echo $excerpt ?>
       <div class="rule"></div>
     <?php endif; ?>
 
-    <?php echo $content ?>
+    <div class="postbit-content-main"><?php $content_cb() ?></div>
   </div>
 <?php }
 

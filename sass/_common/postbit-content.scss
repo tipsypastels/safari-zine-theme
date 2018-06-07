@@ -1,0 +1,13 @@
+.postbit-content-main {
+  h1 {
+    margin-bottom: 1em;
+  }
+
+  figure {
+    figcaption {
+      background-color: $grey;
+      border: 1px solid $dark-transparent-grey;
+      text-align: center;
+    }
+  }
+}

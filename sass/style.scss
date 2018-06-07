@@ -23,6 +23,7 @@ Description: A theme for the Safari Zine.
 @import '_common/header';
 @import '_common/footer';
 @import '_common/postbit';
+@import '_common/banner';
 @import '_common/aside';
 
 /* page partials */
@@ -30,6 +31,8 @@ Description: A theme for the Safari Zine.
 @import '_common/single';
 @import '_common/author';
 @import '_common/page';
+
+@import '_common/postbit-content';
 
 @media screen and (min-width: $mobile-breakpoint) {
   @import '_desktop/d-util';

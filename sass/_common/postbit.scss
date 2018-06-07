@@ -2,6 +2,7 @@
   font-size: 2em;
   margin-bottom: 1em;
   text-align: center;
+  font-family: 'Comfortaa';
 
   & + .rule {
     height: 0.15em;
@@ -54,6 +55,7 @@
         height: 100%;
 
         color: $grey;
+        font-weight: bold;
 
         display: flex;
         flex-direction: column;
@@ -73,26 +75,6 @@
 
         p {
           min-height: 30%;
-        }
-      }
-    }
-
-    &.image-only {
-      .image-postbit-shading {
-        align-items: center;
-        justify-content: center;
-
-        background: linear-gradient(
-          to bottom,
-          transparent, 
-          mix(transparent, black, 30%)
-        );
-
-        img.postbit-embedded-image {
-          height: 90%;
-          width: auto;
-
-          border-radius: 2em;
         }
       }
     }

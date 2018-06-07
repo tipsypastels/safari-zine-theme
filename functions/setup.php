@@ -2,6 +2,8 @@
 
 function scratch_setup() {
   add_theme_support('post-thumbnails');
+  add_theme_support('html5', array('gallery', 'caption'));
+
   register_nav_menus([
     'header-menu' => 'Header Menu',
     'modal-menu-about' => 'Modal Menu About',
@@ -34,5 +36,4 @@ function remove_default_excerpt_behavior() {
 }
 
 add_action('init', 'remove_default_excerpt_behavior');
-
 ?>
