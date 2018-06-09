@@ -7,9 +7,6 @@
   background-size: cover;
   background-position: center;
 
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-
   .image-banner-shading {
     height: 100%;
     
@@ -25,7 +22,7 @@
     );
 
     img.image-banner-embedded-image {
-      height: 88%;
+      height: 100%;
       width: auto;
     }
   }

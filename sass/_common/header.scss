@@ -33,21 +33,23 @@ header#wrapper {
     }
 
     .menu-opener {
-      line-height: 1.6em;
-      font-size: 2em;
       cursor: pointer;
       width: 30px;
       text-align: center;
 
-      i.fa {
+      position: relative;
+
+      & > i.fa.menu-opener-icon {
         transition: 0.5s;
         color: $very-dark-green;
+        line-height: 1.6em;
+        font-size: 2em;
       }
     }
   }
 }
 
-body.modal-open .menu-opener i.fa {
+body.modal-open .menu-opener i.fa.menu-opener-icon {
   transform: rotate(180deg);
   &:before { content: '\f00d' }
 }

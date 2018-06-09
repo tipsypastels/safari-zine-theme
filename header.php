@@ -12,5 +12,4 @@
   <body>
     <?php include('header-navbar.php'); ?>
     <div class="container flex">
-      <?php include('aside.php'); ?>
       <div class="main-container">

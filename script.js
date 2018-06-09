@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
   const toggleModal = () => {
-    $('aside#modal').toggleClass('active');
+    $('aside#modal').slideToggle(200);
     $('body').toggleClass('modal-open');
   }
 

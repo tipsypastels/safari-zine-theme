@@ -58,15 +58,26 @@ function image_banner($img, $class = "") { ?>
   </div>
 <?php }
 
-function postbit_content($href, $img, $title, $excerpt, $date, $author, $categories, $content_cb, $class = "") { ?>
+function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_href, $categories, $content_cb, $class = "") { ?>
   <div class="postbit-content <?php echo $class ?> ">
+    <?php foreach($categories as $category):
+        $id = get_cat_ID($category->name);
+        $url = get_category_link($id);
+      ?>
+      <a class="category category-<?php echo $category->slug ?>-name" href="<?php echo $url ?>"><?php echo $category->name ?></a>
+    <?php endforeach ?>
     <h2 class="line-height"><?php echo $title ?></h2>
-    <?php if ($excerpt): ?>
+
+    <?php if($excerpt): ?>
       <?php echo $excerpt ?>
       <div class="rule"></div>
     <?php endif; ?>
 
     <div class="postbit-content-main"><?php $content_cb() ?></div>
+
+    <div class="rule"></div>
+
+    <a class="author" href="<?php echo $author_href ?>"><?php fa('pencil') ?> Written by <?php echo $author ?></a>
   </div>
 <?php }
 

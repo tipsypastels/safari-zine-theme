@@ -22,7 +22,8 @@
     </div>
 
     <div class="menu-opener">
-      <?php fa('bars') ?>
+      <?php fa('bars menu-opener-icon') ?>
+      <?php include('aside.php'); ?>
     </div>
   </header>
 </header>

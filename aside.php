@@ -1,8 +1,7 @@
 <aside id="modal">
   <?php
-    site_name(['class' => "vertically-centered", 'logo' => "logo_grey.svg"]);
     
-    $menu_classes = 'button-group about-buttons flex wraps buttons-expand has-invisible-links';
+    $menu_classes = 'flex wraps has-invisible-links';
 
     wp_nav_menu([
       'menu' => 'modal-menu-about',
@@ -28,5 +27,4 @@
       'container' => false
     ]);
   ?>
-
 </aside>

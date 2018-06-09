@@ -1,5 +1,5 @@
 /*
-Error: Undefined variable: "$grey".
+Error: Undefined variable: "$slight-grey".
         on line 8 of C:/xampp/htdocs/Zine/wp-content/themes/safari-zine/sass/_common/postbit-content.scss
 
 3:     margin-bottom: 1em;
@@ -7,7 +7,7 @@ Error: Undefined variable: "$grey".
 5: 
 6:   figure {
 7:     figcaption {
-8:       background-color: $grey;
+8:       background-color: $slight-grey;
 9:       border: 1px solid $dark-transparent-grey;
 10:       text-align: center;
 11:     }
@@ -86,4 +86,4 @@ D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$grey\".\A         on line 8 of C:/xampp/htdocs/Zine/wp-content/themes/safari-zine/sass/_common/postbit-content.scss\A \A 3:     margin-bottom: 1em;\A 4:   }\A 5: \A 6:   figure {\A 7:     figcaption {\A 8:       background-color: $grey;\A 9:       border: 1px solid $dark-transparent-grey;\A 10:       text-align: center;\A 11:     }\A 12:   }\A 13: }"; }
+  content: "Error: Undefined variable: \"$slight-grey\".\A         on line 8 of C:/xampp/htdocs/Zine/wp-content/themes/safari-zine/sass/_common/postbit-content.scss\A \A 3:     margin-bottom: 1em;\A 4:   }\A 5: \A 6:   figure {\A 7:     figcaption {\A 8:       background-color: $slight-grey;\A 9:       border: 1px solid $dark-transparent-grey;\A 10:       text-align: center;\A 11:     }\A 12:   }\A 13: }"; }
