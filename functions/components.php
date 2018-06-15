@@ -50,14 +50,6 @@ function image_postbit($href, $img, $title, $excerpt, $date, $author, $categorie
   </a>
 <?php }
 
-function image_banner($img, $class = "") { ?>
-  <div class="image-banner <?php echo $class ?>" style="background-image: url(<?php echo $img ?>)">
-    <div class="image-banner-shading">
-      <img class="image-banner-embedded-image" src="<?php echo $img ?>">
-    </div>
-  </div>
-<?php }
-
 function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_href, $categories, $content_cb, $class = "") { ?>
   <div class="postbit-content <?php echo $class ?> ">
     <?php foreach($categories as $category):
@@ -70,8 +62,10 @@ function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_
 
     <?php if($excerpt): ?>
       <?php echo $excerpt ?>
-      <div class="rule"></div>
     <?php endif; ?>
+
+    <div class="post-thumbnail" style="background-image: url(<?php echo $img ?>)"></div>
+    <div class="rule"></div>
 
     <div class="postbit-content-main"><?php $content_cb() ?></div>
 

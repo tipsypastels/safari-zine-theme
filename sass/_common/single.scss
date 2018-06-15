@@ -17,6 +17,15 @@ main#single {
 		}
 	}
 
+	div.post-thumbnail {
+		margin: 1em 0;
+		width: 100%;
+
+		background-size: cover;
+		background-position: center;
+		min-height: 40em;
+	}
+
 	.author {
 		font-style: italic;
 		color: inherit;

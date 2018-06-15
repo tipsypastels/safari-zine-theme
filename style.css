@@ -709,6 +709,14 @@ main#single .category:not(:last-of-type):after {
   content: ', ';
 }
 /* line 20, sass/_common/single.scss */
+main#single div.post-thumbnail {
+  margin: 1em 0;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 40em;
+}
+/* line 29, sass/_common/single.scss */
 main#single .author {
   font-style: italic;
   color: inherit;
@@ -716,11 +724,11 @@ main#single .author {
   display: block;
   text-align: right;
 }
-/* line 28, sass/_common/single.scss */
+/* line 37, sass/_common/single.scss */
 main#single .image-postbit-block {
   margin-bottom: 0;
 }
-/* line 32, sass/_common/single.scss */
+/* line 41, sass/_common/single.scss */
 main#single .postbit-content {
   padding: 1.5em;
   margin-bottom: 3em;

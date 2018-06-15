@@ -1,11 +1,6 @@
 <?php get_header() ?>
 
 <?php while(have_posts()) : the_post() ?>
-  <?php
-    image_banner(
-      get_the_post_thumbnail_url()
-    );
-  ?>
   <main id="single">
     <section id="single-post-body">
       <?php
