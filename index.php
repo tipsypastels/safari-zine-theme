@@ -2,6 +2,9 @@
   get_header();
   $exclude_from_latest = [];
   $paged = get_query_var('paged');
+
+
+//  echo phpinfo();
 ?>
 
 <main id="index">
