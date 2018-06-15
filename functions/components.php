@@ -61,7 +61,7 @@ function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_
     <h2 class="line-height"><?php echo $title ?></h2>
 
     <?php if($excerpt): ?>
-      <?php echo $excerpt ?>
+      <div class="post-excerpt"><?php echo $excerpt ?></div>
     <?php endif; ?>
 
     <div class="post-thumbnail" style="background-image: url(<?php echo $img ?>)"></div>

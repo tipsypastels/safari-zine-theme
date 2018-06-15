@@ -709,6 +709,10 @@ main#single .category:not(:last-of-type):after {
   content: ', ';
 }
 /* line 20, sass/_common/single.scss */
+main#single .post-excerpt {
+  font-size: 1.1em;
+}
+/* line 24, sass/_common/single.scss */
 main#single div.post-thumbnail {
   margin: 1em 0;
   width: 100%;
@@ -716,7 +720,7 @@ main#single div.post-thumbnail {
   background-position: center;
   min-height: 40em;
 }
-/* line 29, sass/_common/single.scss */
+/* line 33, sass/_common/single.scss */
 main#single .author {
   font-style: italic;
   color: inherit;
@@ -724,11 +728,11 @@ main#single .author {
   display: block;
   text-align: right;
 }
-/* line 37, sass/_common/single.scss */
+/* line 41, sass/_common/single.scss */
 main#single .image-postbit-block {
   margin-bottom: 0;
 }
-/* line 41, sass/_common/single.scss */
+/* line 45, sass/_common/single.scss */
 main#single .postbit-content {
   padding: 1.5em;
   margin-bottom: 3em;
