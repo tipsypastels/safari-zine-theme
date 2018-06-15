@@ -40,6 +40,7 @@ add_action('init', 'remove_default_excerpt_behavior');
 function filter_site_upload_size_limit($size) {
   return 60 * 1024 * 1024;
 }
+
 add_filter('upload_size_limit', 'filter_site_upload_size_limit', 20);
 
 ?>
