@@ -1,5 +1,5 @@
 <header id="wrapper">
-  <header id="content" class="flex wraps one-growing-element slight-mobile-margin">
+  <header id="content" class="flex wraps one-growing-element slight-mobile-margin slight-small-computer-margin">
     <?php site_name(['class' => "vertically-centered"]) ?>
 
     <div id="navbar-wrapper" class="grows centered">

@@ -732,8 +732,16 @@ main#author section.author-info .meta .profile-user-roles {
     margin: auto;
   }
 }
+/* if we need more stuff for this make a folder */
+@media screen and (max-width: 1000px) {
+  /* line 58, sass/style.scss */
+  .slight-small-computer-margin {
+    margin-left: 0.75em !important;
+    margin-right: 0.75em !important;
+  }
+}
 /* global styles */
-/* line 57, sass/style.scss */
+/* line 65, sass/style.scss */
 body {
   font-family: 'Work Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -747,7 +755,7 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-/* line 72, sass/style.scss */
+/* line 80, sass/style.scss */
 body div.container {
   width: 100%;
   position: relative;
@@ -757,30 +765,30 @@ body div.container {
   border-top-right-radius: 3em;
   border-top: 3px solid #658b5f;
 }
-/* line 83, sass/style.scss */
+/* line 91, sass/style.scss */
 body div.container div.main-container {
   width: 100%;
 }
-/* line 86, sass/style.scss */
+/* line 94, sass/style.scss */
 body div.container div.main-container main {
   max-width: 900px;
   margin: auto;
   padding-top: 3em;
 }
 
-/* line 97, sass/style.scss */
+/* line 105, sass/style.scss */
 ::-moz-selection {
   color: white;
   background: #658b5f;
 }
 
-/* line 102, sass/style.scss */
+/* line 110, sass/style.scss */
 ::selection {
   color: white;
   background: #658b5f;
 }
 
-/* line 107, sass/style.scss */
+/* line 115, sass/style.scss */
 #wpadminbar {
   background: transparent !important;
 }
