@@ -31,22 +31,6 @@ a {
     flex-wrap: wrap;
   }
 
-  &.responsive-two-columns {
-    justify-content: space-between;
-
-    & > * {
-      width: 49%;
-    }
-  }
-
-  &.responsive-three-columns {
-    justify-content: space-around;
-
-    & > * {
-      width: 33.333333%;
-    }
-  }
-
   &.wraps-on-computer {
     @media screen and (min-width: $mobile-breakpoint) {
       flex-direction: column;

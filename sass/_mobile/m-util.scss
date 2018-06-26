@@ -1,16 +1,4 @@
 .flex {
-  &.responsive-two-columns {
-    & > * {
-      width: 100%;
-    }
-  }
-
-  &.responsive-three-columns {
-    & > * {
-      width: 100%;
-    }
-  }
-
   &.wraps-on-mobile {
     flex-direction: column;
   }

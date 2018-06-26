@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 Theme Name: safari-zine
 Author: Safari Zone Design Team
@@ -80,99 +79,83 @@ a {
 }
 
 /* line 5, sass/_common/util.scss */
-.flex, .card .thumbnail.expanded div.thumbnail-image-wrapper, .expanding-author-credit {
+.flex {
   display: flex;
 }
 /* line 8, sass/_common/util.scss */
-.flex > .vertically-centered, .card .thumbnail.expanded div.thumbnail-image-wrapper > .vertically-centered, .expanding-author-credit > .vertically-centered, .card .thumbnail.expanded .flex > div.thumbnail-image-wrapper, .card .thumbnail.expanded div.thumbnail-image-wrapper > div.thumbnail-image-wrapper, .card .thumbnail.expanded .expanding-author-credit > div.thumbnail-image-wrapper {
+.flex > .vertically-centered {
   align-items: auto;
   align-self: center;
 }
 /* line 14, sass/_common/util.scss */
-.flex.one-growing-element > *, .card .thumbnail.expanded div.one-growing-element.thumbnail-image-wrapper > *, .one-growing-element.expanding-author-credit > * {
+.flex.one-growing-element > * {
   flex-grow: 0;
   flex-shrink: 1;
 }
 /* line 19, sass/_common/util.scss */
-.flex.one-growing-element .grows, .card .thumbnail.expanded div.one-growing-element.thumbnail-image-wrapper .grows, .one-growing-element.expanding-author-credit .grows {
+.flex.one-growing-element .grows {
   flex-grow: 1;
   flex-shrink: 0;
 }
 /* line 25, sass/_common/util.scss */
-.flex.vertically-centered, .card .thumbnail.expanded div.thumbnail-image-wrapper, .vertically-centered.expanding-author-credit {
+.flex.vertically-centered {
   align-items: center;
   align-self: auto;
 }
 /* line 30, sass/_common/util.scss */
-.flex.wraps, .card .thumbnail.expanded div.wraps.thumbnail-image-wrapper, .wraps.expanding-author-credit {
+.flex.wraps {
   flex-wrap: wrap;
 }
-/* line 34, sass/_common/util.scss */
-.flex.responsive-two-columns, .card .thumbnail.expanded div.responsive-two-columns.thumbnail-image-wrapper, .responsive-two-columns.expanding-author-credit {
-  justify-content: space-between;
-}
-/* line 37, sass/_common/util.scss */
-.flex.responsive-two-columns > *, .card .thumbnail.expanded div.responsive-two-columns.thumbnail-image-wrapper > *, .responsive-two-columns.expanding-author-credit > * {
-  width: 49%;
-}
-/* line 42, sass/_common/util.scss */
-.flex.responsive-three-columns, .card .thumbnail.expanded div.responsive-three-columns.thumbnail-image-wrapper, .responsive-three-columns.expanding-author-credit {
-  justify-content: space-around;
-}
-/* line 45, sass/_common/util.scss */
-.flex.responsive-three-columns > *, .card .thumbnail.expanded div.responsive-three-columns.thumbnail-image-wrapper > *, .responsive-three-columns.expanding-author-credit > * {
-  width: 33.333333%;
-}
 @media screen and (min-width: 900px) {
-  /* line 50, sass/_common/util.scss */
-  .flex.wraps-on-computer, .card .thumbnail.expanded div.wraps-on-computer.thumbnail-image-wrapper, .wraps-on-computer.expanding-author-credit {
+  /* line 34, sass/_common/util.scss */
+  .flex.wraps-on-computer {
     flex-direction: column;
   }
 }
 
-/* line 57, sass/_common/util.scss */
+/* line 41, sass/_common/util.scss */
 .centered {
   text-align: center;
 }
 
-/* line 61, sass/_common/util.scss */
+/* line 45, sass/_common/util.scss */
 .centered-block {
   margin: auto;
 }
 
-/* line 65, sass/_common/util.scss */
+/* line 49, sass/_common/util.scss */
 .page-width {
   max-width: 1110px;
   margin: auto;
 }
 
-/* line 70, sass/_common/util.scss */
-.has-invisible-links a, ul.vertical-links a, ul.horizontal-links a, .pagination a, .image-postbit-block a {
+/* line 54, sass/_common/util.scss */
+.has-invisible-links a, .pagination a, .image-postbit-block a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 75, sass/_common/util.scss */
+/* line 59, sass/_common/util.scss */
 img.avatar {
   border-radius: 25%;
 }
-/* line 78, sass/_common/util.scss */
+/* line 62, sass/_common/util.scss */
 img.avatar.tiny {
   height: 2em;
   width: 2em;
 }
-/* line 83, sass/_common/util.scss */
+/* line 67, sass/_common/util.scss */
 img.avatar.standard {
   height: 5em;
   width: 5em;
 }
-/* line 88, sass/_common/util.scss */
+/* line 72, sass/_common/util.scss */
 img.avatar.huge {
   height: 10em;
   width: 10em;
 }
 
-/* line 94, sass/_common/util.scss */
+/* line 78, sass/_common/util.scss */
 .hide-on-computer {
   display: none;
 }
@@ -201,228 +184,79 @@ img.avatar.huge {
 }
 
 /* line 26, sass/_common/components.scss */
-.card, .button, .button-group > * {
-  display: block;
-  transition: 0.5s;
-  border-radius: 0.3em;
-  box-shadow: 3px 3px 1px rgba(16, 16, 16, 0.1);
-  position: relative;
-}
-/* line 33, sass/_common/components.scss */
-.card:hover, .button:hover, .button-group > :hover {
-  box-shadow: 5px 5px 1px rgba(16, 16, 16, 0.1);
-}
-
-/* line 38, sass/_common/components.scss */
-.card {
-  color: #23282d;
-  background-color: white;
-  text-decoration: none;
-  overflow: hidden;
-  margin-bottom: 2em;
-}
-@media screen and (max-width: 900px) {
-  /* line 38, sass/_common/components.scss */
-  .card {
-    margin-bottom: 1em;
-  }
-}
-/* line 52, sass/_common/components.scss */
-.card .thumbnail {
-  display: block;
-  background-position: center;
-  background-size: cover;
-  height: 8em;
-  width: 100%;
-}
-/* line 60, sass/_common/components.scss */
-.card .thumbnail.expanded {
-  height: 35em;
-}
-/* line 63, sass/_common/components.scss */
-.card .thumbnail.expanded div.thumbnail-image-wrapper {
-  height: 100%;
-  background-color: rgba(35, 40, 45, 0.5);
-}
-/* line 70, sass/_common/components.scss */
-.card .thumbnail.expanded div.thumbnail-image-wrapper img.thumbnail-image {
-  display: block;
-  margin: auto;
-  height: 90%;
-}
-/* line 79, sass/_common/components.scss */
-.card .content {
-  padding: 2em;
-}
-/* line 82, sass/_common/components.scss */
-.card .content .h2 {
-  padding-top: 0.25em;
-  line-height: 1.1em;
-}
-/* line 87, sass/_common/components.scss */
-.card .content a.category, .card .content h3 {
-  display: inline-block;
-}
-/* line 91, sass/_common/components.scss */
-.card .content .category-featured-name {
-  color: whitesmoke;
-  background-color: rgba(101, 139, 95, 0.8);
-  padding: 0.1em 0.3em;
-  border-radius: 7px;
-}
-
-/* line 100, sass/_common/components.scss */
-.button-group {
-  width: 100%;
-}
-/* line 104, sass/_common/components.scss */
-.button-group.flex.buttons-expand > *, .card .thumbnail.expanded div.button-group.buttons-expand.thumbnail-image-wrapper > *, .button-group.buttons-expand.expanding-author-credit > * {
-  width: 28%;
-}
-
-/* line 114, sass/_common/components.scss */
 .button, .button-group > * {
-  width: max-content;
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
-  padding: 4px 12px;
-  border-bottom: 4px solid #a8a8a8;
-  font-size: 1.15em;
-  text-decoration: none;
   background-color: whitesmoke;
-  color: #23282d;
+  color: #131619;
+  margin: 0 0.5em;
+  padding: 0.25em 0.5em;
+  border-bottom: 4px solid #a8a8a8;
+  border-top-left-radius: 0.15em;
+  border-top-right-radius: 0.15em;
+  transition: 0.25s;
 }
-/* line 129, sass/_common/components.scss */
-.button.primary, .button-group > .primary, .button:hover, .button-group > :hover {
-  background-color: #658b5f;
-  border-bottom-color: #394e36;
-  color: whitesmoke;
-}
-/* line 135, sass/_common/components.scss */
-.button:not(.centered-block), .button-group > :not(.centered-block) {
-  margin-left: 0.25em;
-  margin-right: 0.25em;
-}
-/* line 140, sass/_common/components.scss */
-.button i.fa, .button-group > * i.fa {
-  margin-right: 0.1em;
-}
-
-/* line 147, sass/_common/components.scss */
-ul.vertical-links, ul.horizontal-links {
-  display: block;
-  padding: 0 1em;
-  list-style: none;
-  color: whitesmoke;
-}
-/* line 154, sass/_common/components.scss */
-ul.vertical-links li, ul.horizontal-links li {
-  margin: 0.5em;
-  border-bottom: 1px dashed rgba(245, 245, 245, 0.1);
-}
-/* line 158, sass/_common/components.scss */
-ul.vertical-links li:hover, ul.horizontal-links li:hover {
+/* line 38, sass/_common/components.scss */
+.button:hover, .button-group > :hover {
+  background-color: #dbdbdb;
   border-bottom-color: #658b5f;
 }
-/* line 162, sass/_common/components.scss */
-ul.vertical-links li a, ul.horizontal-links li a {
-  display: block;
-  text-align: center;
-}
 
-/* line 173, sass/_common/components.scss */
-ul.vertical-links li {
-  width: 100%;
-}
-
-/* line 178, sass/_common/components.scss */
-ul.horizontal-links {
-  margin: auto;
-  width: max-content;
-}
-/* line 185, sass/_common/components.scss */
-ul.horizontal-links li {
-  display: inline-block;
-}
-
-/* line 209, sass/_common/components.scss */
-.expanding-author-credit {
-  position: absolute;
-  bottom: 0.5em;
-  right: 0.5em;
-}
-/* line 215, sass/_common/components.scss */
-.expanding-author-credit span.name {
-  display: block;
-  text-align: right;
-  line-height: 2em;
-  width: 0;
-  overflow: hidden;
-  transition: 0.75s;
-}
-/* line 226, sass/_common/components.scss */
-.expanding-author-credit:hover span.name {
-  width: 10em;
-  padding-right: 0.25em;
-}
-
-/* line 232, sass/_common/components.scss */
+/* line 50, sass/_common/components.scss */
 .pagination {
   display: flex;
   margin-bottom: 4em;
 }
-/* line 239, sass/_common/components.scss */
+/* line 57, sass/_common/components.scss */
 .pagination div.pagination-area {
   flex-grow: 1;
   display: block;
 }
-/* line 243, sass/_common/components.scss */
+/* line 61, sass/_common/components.scss */
 .pagination div.pagination-area a.pagination-area-card {
   font-size: 1.7em;
   width: max-content;
   padding: 0.2em 1em;
 }
-/* line 249, sass/_common/components.scss */
+/* line 67, sass/_common/components.scss */
 .pagination div.pagination-area a.pagination-area-card.pagination-area-card-right {
   float: right;
 }
-/* line 253, sass/_common/components.scss */
+/* line 71, sass/_common/components.scss */
 .pagination div.pagination-area a.pagination-area-card .pagination-title {
   line-height: 3em;
   font-weight: 300;
 }
 @media screen and (max-width: 900px) {
-  /* line 260, sass/_common/components.scss */
+  /* line 78, sass/_common/components.scss */
   .pagination div.pagination-area a.pagination-area-card i.fa {
     font-size: 2em;
   }
 }
 
-/* line 278, sass/_common/components.scss */
+/* line 96, sass/_common/components.scss */
 ul.has-social-media-menu span.fontawesome-class {
   border: 1px solid;
 }
-/* line 272, sass/_common/components.scss */
+/* line 90, sass/_common/components.scss */
 ul.has-social-media-menu i.fa-home {
   color: #54436f;
 }
-/* line 272, sass/_common/components.scss */
+/* line 90, sass/_common/components.scss */
 ul.has-social-media-menu i.fa-twitter {
   color: #1da1f2;
 }
-/* line 272, sass/_common/components.scss */
+/* line 90, sass/_common/components.scss */
 ul.has-social-media-menu i.fa-facebook {
   color: #597ab9;
 }
-/* line 272, sass/_common/components.scss */
+/* line 90, sass/_common/components.scss */
 ul.has-social-media-menu i.fa-instagram {
   color: #de5656;
 }
-/* line 272, sass/_common/components.scss */
+/* line 90, sass/_common/components.scss */
 ul.has-social-media-menu i.fa-crosshairs {
   color: #ff6347;
 }
-/* line 272, sass/_common/components.scss */
+/* line 90, sass/_common/components.scss */
 ul.has-social-media-menu i.fa-comments {
   color: #7186d7;
 }
@@ -466,13 +300,13 @@ h3.line-height, .h3.line-height {
 /* component partials */
 /* line 1, sass/_common/header.scss */
 header#wrapper {
-  color: #23282d;
+  color: whitesmoke;
   height: 3em;
-  padding: 2em 0.25em;
+  padding: 0.75em 0.25em;
   z-index: 3;
   position: relative;
-  border-bottom: 1px solid rgba(16, 16, 16, 0.1);
-  background-color: #f0f0f0;
+  transition: 0.25s;
+  overflow-y: hidden;
 }
 /* line 10, sass/_common/header.scss */
 header#wrapper header#content {
@@ -499,29 +333,39 @@ header#wrapper header#content ul#navbar li a {
   padding: 0 0.75em;
 }
 /* line 35, sass/_common/header.scss */
-header#wrapper header#content .menu-opener {
+header#wrapper header#content .menu-marker {
   cursor: pointer;
   width: 30px;
   text-align: center;
-  position: relative;
 }
-/* line 42, sass/_common/header.scss */
-header#wrapper header#content .menu-opener > i.fa.menu-opener-icon {
+/* line 40, sass/_common/header.scss */
+header#wrapper header#content .menu-marker > i.fa.menu-opener-icon {
   transition: 0.5s;
   color: #658b5f;
   line-height: 1.6em;
   font-size: 2em;
 }
-
+/* line 49, sass/_common/header.scss */
+header#wrapper.expanded {
+  height: 7em;
+}
 /* line 52, sass/_common/header.scss */
-body.modal-open .menu-opener i.fa.menu-opener-icon {
-  transform: rotate(180deg);
+header#wrapper.expanded .menu-marker i.fa {
+  transform: rotate(-90deg);
 }
 /* line 54, sass/_common/header.scss */
-body.modal-open .menu-opener i.fa.menu-opener-icon:before {
-  content: "";
+header#wrapper.expanded .menu-marker i.fa:before {
+  content: '\f00d';
 }
 
+@keyframes background-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
 /* line 1, sass/_common/footer.scss */
 footer#footer {
   border-top: 1px solid rgba(16, 16, 16, 0.1);
@@ -660,34 +504,9 @@ footer#footer #footer-legal {
 
 /* line 1, sass/_common/aside.scss */
 aside#modal {
-  display: none;
-  width: 12em;
-  padding: 1em 0;
-  position: absolute;
-  right: 0;
-  top: 3em;
-  background: #f0f0f0;
-  border: 1px solid rgba(16, 16, 16, 0.1);
-}
-/* line 13, sass/_common/aside.scss */
-aside#modal.active {
-  display: block;
-}
-/* line 15, sass/_common/aside.scss */
-aside#modal h3 {
-  text-align: left;
-  padding: 0 1em;
-}
-/* line 20, sass/_common/aside.scss */
-aside#modal li {
   width: 100%;
-  padding: 0 1em;
-  text-align: left;
-}
-/* line 25, sass/_common/aside.scss */
-aside#modal li:hover {
-  color: whitesmoke;
-  background-color: #658b5f;
+  padding: 1em 0;
+  justify-content: space-around;
 }
 
 /* page partials */
@@ -778,7 +597,7 @@ main#author section.author-info .meta .profile-user-roles {
 
 @media screen and (min-width: 900px) {
   /* line 2, sass/_desktop/d-util.scss */
-  .flex.wraps-on-computer, .card .thumbnail.expanded div.wraps-on-computer.thumbnail-image-wrapper, .wraps-on-computer.expanding-author-credit {
+  .flex.wraps-on-computer {
     flex-direction: column;
   }
 
@@ -811,35 +630,27 @@ main#author section.author-info .meta .profile-user-roles {
   }
 }
 @media screen and (max-width: 900px) {
-  /* line 3, sass/_mobile/m-util.scss */
-  .flex.responsive-two-columns > *, .card .thumbnail.expanded div.responsive-two-columns.thumbnail-image-wrapper > *, .responsive-two-columns.expanding-author-credit > * {
-    width: 100%;
-  }
-  /* line 9, sass/_mobile/m-util.scss */
-  .flex.responsive-three-columns > *, .card .thumbnail.expanded div.responsive-three-columns.thumbnail-image-wrapper > *, .responsive-three-columns.expanding-author-credit > * {
-    width: 100%;
-  }
-  /* line 14, sass/_mobile/m-util.scss */
-  .flex.wraps-on-mobile, .card .thumbnail.expanded div.wraps-on-mobile.thumbnail-image-wrapper, .wraps-on-mobile.expanding-author-credit {
+  /* line 2, sass/_mobile/m-util.scss */
+  .flex.wraps-on-mobile {
     flex-direction: column;
   }
 
-  /* line 19, sass/_mobile/m-util.scss */
+  /* line 7, sass/_mobile/m-util.scss */
   .hide-on-mobile, .pagination div.pagination-area a.pagination-area-card .pagination-title {
     display: none;
   }
 
-  /* line 23, sass/_mobile/m-util.scss */
+  /* line 11, sass/_mobile/m-util.scss */
   .hide-on-computer {
     display: initial;
   }
 
-  /* line 27, sass/_mobile/m-util.scss */
+  /* line 15, sass/_mobile/m-util.scss */
   .center-on-mobile {
     text-align: center;
   }
 
-  /* line 31, sass/_mobile/m-util.scss */
+  /* line 19, sass/_mobile/m-util.scss */
   .slight-mobile-margin, .pagination, body div.container div.main-container main {
     margin-left: 0.75em !important;
     margin-right: 0.75em !important;
@@ -859,6 +670,18 @@ main#author section.author-info .meta .profile-user-roles {
   /* line 14, sass/_mobile/m-header.scss */
   header#wrapper header#content #navbar-wrapper {
     flex-grow: 0;
+  }
+  /* line 19, sass/_mobile/m-header.scss */
+  header#wrapper header#content aside#modal ul {
+    margin-bottom: 1em;
+  }
+  /* line 22, sass/_mobile/m-header.scss */
+  header#wrapper header#content aside#modal ul li {
+    margin-bottom: 0.25em;
+  }
+  /* line 29, sass/_mobile/m-header.scss */
+  header#wrapper.expanded {
+    height: 27em;
   }
 
   /* line 3, sass/_mobile/m-footer.scss */
@@ -916,33 +739,42 @@ body {
   font-size: 14px;
   line-height: 19.6px;
   letter-spacing: 0.05em;
-  color: #23282d;
-  background-color: whitesmoke;
   position: relative;
+  background-color: #131619;
+  background-image: url("https://www.safarizone.net/uploads/default/original/2X/2/26a03df4d8a3278c22b1acba62817f99e7ebd855.png");
+  animation-name: background-scroll;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
-/* line 66, sass/style.scss */
+/* line 72, sass/style.scss */
 body div.container {
   width: 100%;
   position: relative;
+  color: #23282d;
+  background-color: whitesmoke;
+  border-top-left-radius: 3em;
+  border-top-right-radius: 3em;
+  border-top: 3px solid #658b5f;
 }
-/* line 70, sass/style.scss */
+/* line 83, sass/style.scss */
 body div.container div.main-container {
   width: 100%;
 }
-/* line 73, sass/style.scss */
+/* line 86, sass/style.scss */
 body div.container div.main-container main {
   max-width: 900px;
   margin: auto;
   padding-top: 3em;
 }
 
-/* line 84, sass/style.scss */
+/* line 97, sass/style.scss */
 ::-moz-selection {
   color: white;
   background: #658b5f;
 }
 
-/* line 89, sass/style.scss */
+/* line 102, sass/style.scss */
 ::selection {
   color: white;
   background: #658b5f;
