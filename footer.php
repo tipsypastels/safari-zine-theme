@@ -28,7 +28,7 @@
         </p>
 
         <p>
-          Safari Zone is not affiliated by Pokémon, Game Freak, or Nintendo. Pokémon is the property of Nintendo and The Pokémon Company International.
+          Safari Zone is not affiliated with Pokémon, Game Freak, or Nintendo. Pokémon is the property of Nintendo and The Pokémon Company International.
         </p>
       </div>
     </footer>
