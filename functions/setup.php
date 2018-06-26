@@ -3,6 +3,7 @@
 function scratch_setup() {
   add_theme_support('post-thumbnails');
   add_theme_support('html5', array('gallery', 'caption'));
+  add_theme_support( 'title-tag' );
 
   register_nav_menus([
     'header-menu' => 'Header Menu',
