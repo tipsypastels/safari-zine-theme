@@ -779,3 +779,8 @@ body div.container div.main-container main {
   color: white;
   background: #658b5f;
 }
+
+/* line 107, sass/style.scss */
+#wpadminbar {
+  background: transparent !important;
+}
