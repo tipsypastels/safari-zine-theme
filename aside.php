@@ -1,7 +1,7 @@
-<aside id="modal">
+<aside id="modal" class="flex wraps-on-mobile">
   <?php
     
-    $menu_classes = 'flex wraps has-invisible-links';
+    $menu_classes = 'flex wraps wraps-on-mobile button-group has-invisible-links';
 
     wp_nav_menu([
       'menu' => 'modal-menu-about',
@@ -10,16 +10,14 @@
     ]);
   ?>
 
-  <h3>Categories</h3>
   <?php
     wp_nav_menu([
       'menu' => 'modal-menu-categories',
-      'menu_class' => $menu_classes,
+      'menu_class' => $menu_classes . ' hide-on-computer',
       'container' => false
     ]);
   ?>
 
-  <h3>Meta</h3>
   <?php
     wp_nav_menu([
       'menu' => 'modal-menu-bottom',

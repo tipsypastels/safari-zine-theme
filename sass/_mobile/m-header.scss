@@ -14,5 +14,19 @@ header#wrapper {
     #navbar-wrapper {
       flex-grow: 0;
     }
+
+    aside#modal {
+      ul {
+        margin-bottom: 1em;
+
+        li {
+          margin-bottom: 0.25em;
+        }
+      }
+    }
+  }
+
+  &.expanded {
+    height: 27em;
   }
 }

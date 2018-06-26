@@ -5,15 +5,14 @@
 // $very-dark-green: darken($dark-green, 15%);
 
 $very-dark-green: #658b5f;
-$dark-green: lighten($very-dark-green, 15%);
-$light-green: lighten($dark-green, 15%);
-$very-light-green: lighten($light-green, 10%);
 
 // $grey: #f1f3f2;
 $grey: darken(white, 4%);
 $slight-grey: darken($grey, 2%);
 $mid-grey: darken($grey, 30%);
 $dark-grey: #23282d;
+$very-dark-grey: darken($dark-grey, 7%);
+
 $transparent-grey: mix($grey, transparent, 10%);
 $dark-transparent-grey: darken($transparent-grey, 90%);
 

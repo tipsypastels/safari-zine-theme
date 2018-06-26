@@ -1,11 +1,11 @@
 header#wrapper {
-  color: $dark-grey;
+  color: $grey;
   height: 3em;
-  padding: 2em 0.25em;
+  padding: 0.75em 0.25em;
   z-index: 3;
   position: relative;
-  border-bottom: 1px solid $dark-transparent-grey;
-  background-color: $slight-grey;
+  transition: 0.25s;
+  overflow-y: hidden;
 
   header#content {
     max-width: $width;
@@ -32,12 +32,10 @@ header#wrapper {
       }
     }
 
-    .menu-opener {
+    .menu-marker {
       cursor: pointer;
       width: 30px;
       text-align: center;
-
-      position: relative;
 
       & > i.fa.menu-opener-icon {
         transition: 0.5s;
@@ -47,9 +45,18 @@ header#wrapper {
       }
     }
   }
+
+  &.expanded {
+    height: 7em;
+
+    .menu-marker i.fa {
+      transform: rotate(-90deg);
+      &:before { content: '\f00d'; }
+    }
+  }
 }
 
-body.modal-open .menu-opener i.fa.menu-opener-icon {
-  transform: rotate(180deg);
-  &:before { content: '\f00d' }
+@keyframes background-scroll {
+  0% { background-position: 0 0 }
+  100% { background-position: 100% 100% }
 }
