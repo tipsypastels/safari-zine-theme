@@ -1,6 +1,8 @@
 <link rel="icon" href="http://zine.safarizone.net/wp-content/uploads/2018/06/cropped-logo-32x32.png" sizes="32x32" />
 <link rel="icon" href="http://zine.safarizone.net/wp-content/uploads/2018/06/cropped-logo-192x192.png" sizes="192x192" />
 
+<meta name='theme-color' content='#131619'>
+
 <meta name='author' content='bobandbill' />
 <meta name='designer' content='Flower_Child' />
 <meta name='contact' content='zine@safarizone.net' />

@@ -5,7 +5,7 @@ header#wrapper {
   z-index: 3;
   position: relative;
   transition: 0.25s;
-  overflow-y: hidden;
+  overflow: hidden;
 
   header#content {
     max-width: $width;
