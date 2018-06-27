@@ -48,7 +48,7 @@
       echo "Latest Articles";
     } ?>
   </h1><div class="rule"></div>
-  <section id="posts-latest" class="flex wraps image-postbit-block">
+  <section id="posts-latest" class="flex wraps image-postbit-block slight-small-computer-margin">
 
     <?php
       
