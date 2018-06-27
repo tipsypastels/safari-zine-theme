@@ -8,18 +8,17 @@
 ?>
 
 <main id="index">
-  <?php if(!$paged): ?>
+  <?php
+    $feat = new WP_Query([
+      'category_name' => 'featured',
+      'posts_per_page' => 3
+    ]);
+  ?>
+  <?php if($feat->have_posts() && !$paged): ?>
     <h1 class="image-postbit-title">Featured Articles</h1><div class="rule"></div>
-    <section id="posts-featured" class="flex wraps image-postbit-block">
+    <section id="posts-featured" class="flex wraps image-postbit-block slight-small-computer-margin">
 
       <?php
-        
-
-        $feat = new WP_Query([
-          'category_name' => 'featured',
-          'posts_per_page' => 3
-        ]);
-
         while($feat->have_posts()) { $feat->the_post();
           $exclude_from_latest[] = get_the_ID();
           $author_id = get_the_author_meta('ID');
