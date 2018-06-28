@@ -7,7 +7,7 @@
 
 <meta property="og:title" content="Safari Zine">
 <meta property="og:description" content="marcin can filld this out">
-<meta property="og:image" content="http://zine.safarizone.net/wp-content/uploads/2018/06/logo_thick-300x283.png">
+<meta property="og:image" content="http://zine.safarizone.net/wp-content/uploads/2018/06/logo_negative-300x283.png">
 <meta property="og:url" content="http://zine.safarizone.net">
 <meta name="twitter:card" content="summary_large_image">
 
