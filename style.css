@@ -6,7 +6,7 @@ Description: A theme for the Safari Zine.
 /* PICK ONE */
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:700");
-/* line 5, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,45 +28,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../usr/share/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, D:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -301,7 +301,7 @@ h3.line-height, .h3.line-height {
 /* line 1, sass/_common/header.scss */
 header#wrapper {
   color: whitesmoke;
-  height: 3em;
+  height: 6em;
   padding: 0.75em 0.25em;
   z-index: 3;
   position: relative;
@@ -314,46 +314,53 @@ header#wrapper header#content {
   margin: auto;
 }
 /* line 14, sass/_common/header.scss */
-header#wrapper header#content .site-name {
-  font-size: 1.8em;
+header#wrapper header#content div#header-main-bar {
+  height: 6em;
+  align-items: center;
+}
+/* line 18, sass/_common/header.scss */
+header#wrapper header#content div#header-main-bar .site-name {
+  font-size: 2.3em;
   display: flex;
   align-items: center;
 }
-/* line 19, sass/_common/header.scss */
-header#wrapper header#content .site-name svg {
+/* line 23, sass/_common/header.scss */
+header#wrapper header#content div#header-main-bar .site-name svg {
   margin-right: 0.25em;
+  height: 1.5em;
+  width: 1.5em;
 }
-/* line 25, sass/_common/header.scss */
-header#wrapper header#content ul#navbar li {
+/* line 31, sass/_common/header.scss */
+header#wrapper header#content div#header-main-bar ul#navbar li {
   display: inline-block;
 }
-/* line 28, sass/_common/header.scss */
-header#wrapper header#content ul#navbar li a {
+/* line 34, sass/_common/header.scss */
+header#wrapper header#content div#header-main-bar ul#navbar li a {
   line-height: 3em;
   padding: 0 0.75em;
 }
-/* line 35, sass/_common/header.scss */
-header#wrapper header#content .menu-marker {
+/* line 41, sass/_common/header.scss */
+header#wrapper header#content div#header-main-bar .menu-marker {
   cursor: pointer;
   width: 30px;
   text-align: center;
 }
-/* line 40, sass/_common/header.scss */
-header#wrapper header#content .menu-marker > i.fa.menu-opener-icon {
+/* line 46, sass/_common/header.scss */
+header#wrapper header#content div#header-main-bar .menu-marker > i.fa.menu-opener-icon {
   transition: 0.5s;
   color: #658b5f;
   line-height: 1.6em;
   font-size: 2em;
 }
-/* line 49, sass/_common/header.scss */
+/* line 56, sass/_common/header.scss */
 header#wrapper.expanded {
-  height: 7em;
+  height: 11em;
 }
-/* line 52, sass/_common/header.scss */
+/* line 59, sass/_common/header.scss */
 header#wrapper.expanded .menu-marker i.fa {
   transform: rotate(-90deg);
 }
-/* line 54, sass/_common/header.scss */
+/* line 61, sass/_common/header.scss */
 header#wrapper.expanded .menu-marker i.fa:before {
   content: '\f00d';
 }
@@ -790,5 +797,5 @@ body div.container div.main-container main {
 
 /* line 115, sass/style.scss */
 #wpadminbar {
-  background: transparent !important;
+  background: #131619 !important;
 }
