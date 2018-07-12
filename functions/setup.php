@@ -16,7 +16,7 @@ function scratch_setup() {
 add_action('after_setup_theme', 'scratch_setup');
 
 function scratch_styles_and_scripts() {
-  wp_enqueue_style('main-stylesheet', get_stylesheet_directory_uri() . 'css/style.css');
+  wp_enqueue_style('main-stylesheet', get_stylesheet_directory_uri() . '/css/style.css');
   wp_enqueue_script('jquery');
   wp_enqueue_script('our-scripts', get_stylesheet_directory_uri() . '/script.js');
 }
