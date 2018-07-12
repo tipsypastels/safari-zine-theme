@@ -14,7 +14,7 @@ function site_name(array $array = []) {
 
   ?>
   <a target="<?php echo $target ?>" class="site-name <?php echo $class ?>" href="<?php echo $href ?>">
-    <?php echo file_get_contents(__DIR__ . "/../$logo") ?>
+    <?php echo file_get_contents(__DIR__ . "/../images/logo/$logo") ?>
     <div><?php echo $name ?></div>
   </a>
 <?php }

@@ -4,8 +4,6 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include('metadata.php') ?>
-
     <script src="https://use.fontawesome.com/c2f8b0ab87.js"></script>
     <?php
       if (!function_exists('_wp_render_title_tag')) {
