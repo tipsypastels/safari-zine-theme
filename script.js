@@ -7,14 +7,16 @@
     $("html, body").animate({ scrollTop: 0 }, 'slow');
   });
 
-  $(window).scroll(() => {
+  const on_scroll = () => {
     var body   = $("body");
     var scroll = $(window).scrollTop();
-    alert('hi daks');
 
     (scroll > 100) ? 
       body.addClass('docked') : 
       body.removeClass('docked');
-  });
+  };
+
+  $(window).scroll(on_scroll);
+  $(window).bind('touchmove', on_scroll);
 });
 
