@@ -23,7 +23,7 @@
     last_scroll = scroll;
   };
 
-  /* don't do on mobile */
   $(window).scroll(on_scroll);
+  $(window).on({ touchmove: on_scroll });
 });
 
