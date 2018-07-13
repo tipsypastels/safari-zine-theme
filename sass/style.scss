@@ -34,10 +34,7 @@ body {
   --header-height: $header-default-height;
   --header-inner-height: $header-default-height;
 
-  &.docked {
-    --header-height: $header-docked-height;
-    --header-inner-height: $header-docked-height;
-  }
+  
 
   &.header-expanded {
     --header-height: $header-expanded-height;

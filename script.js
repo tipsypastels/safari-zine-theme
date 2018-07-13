@@ -24,6 +24,5 @@
   };
 
   $(window).scroll(on_scroll);
-  $(window).on({ touchmove: on_scroll });
 });
 
