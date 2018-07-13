@@ -12,10 +12,17 @@
             'name'       => 'Safari Zone',
             'target'     => '_blank',
             'menu'       => 'footer-social-media',
-            'menu_class' => 'has-invisible-links has-social-media-menu inline-list',
+            'menu_class' => 'has-invisible-links has-social-media-menu inline-list hide-on-mobile',
             'menu_cont'  => false
           ]);
+
+          wp_nav_menu([
+            'menu' => 'footer-social-media',
+            'menu_class' => 'centered-block has-invisible-links has-social-media-menu inline-list hide-on-computer',
+            'container' => false
+          ]);
         ?>
+
       </footer>
 
       <footer id="footer-lower" class="flex vertically-centered">
