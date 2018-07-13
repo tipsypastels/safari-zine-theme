@@ -24,7 +24,7 @@ header#wrapper {
     margin: auto;
 
     div#header-main-bar {
-      height: var(--header-height);
+      height: var(--header-inner-height);
       transition: 0.25s;
       align-items: center;
 
@@ -37,6 +37,7 @@ header#wrapper {
           margin-right: 0.25em;
           height: 1.5em;
           width: 1.5em;
+          transition: 0.25s;
         }
       }
 

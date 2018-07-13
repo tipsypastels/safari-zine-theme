@@ -69,14 +69,21 @@ body {
   background-color: $grey;
   margin: 0;
 
-  --header-height: 6em;
+  /* we need two variables because when expanded, the outer should expand
+     without expanding the inner, or it would push down the hidden buttons
+  */
+
+  --header-height: $header-default-height;
+  --header-inner-height: $header-default-height;
 
   &.docked {
-    --header-height: 4em;
+    --header-height: $header-docked-height;
+    --header-inner-height: $header-docked-height;
   }
 
   &.header-expanded {
-    --header-height: 11em;
+    --header-height: $header-expanded-height;
+    --header-inner-height: $header-default-height;
   }
 
   div.container {
