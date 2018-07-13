@@ -1,9 +1,11 @@
 header#wrapper {
   color: $grey;
-  height: 6em;
+  height: var(--header-height);
+  width: 100%;
+  
   padding: 0.75em 0.25em;
   z-index: 3;
-  position: relative;
+  position: fixed;
   transition: 0.25s;
   overflow: hidden;
 
@@ -22,7 +24,8 @@ header#wrapper {
     margin: auto;
 
     div#header-main-bar {
-      height: 6em;
+      height: var(--header-height);
+      transition: 0.25s;
       align-items: center;
 
       .site-name {
@@ -57,9 +60,7 @@ header#wrapper {
     }
   }
 
-  &.expanded {
-    height: 11em;
-
+  body.header-expanded & {
     .menu-marker i.fa {
       transform: rotate(-90deg);
       &:before { content: '\f00d'; }

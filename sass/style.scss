@@ -10,9 +10,6 @@ Description: A theme for the Safari Zine.
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:700');
 
-@import 'compass';
-@import 'compass/reset';
-
 /* utility partials */
 @import '_common/vars';
 @import '_common/util';
@@ -72,6 +69,16 @@ body {
   background-color: $grey;
   margin: 0;
 
+  --header-height: 6em;
+
+  &.docked {
+    --header-height: 4em;
+  }
+
+  &.header-expanded {
+    --header-height: 11em;
+  }
+
   div.container {
     width: 100%;
     position: relative;
@@ -80,6 +87,10 @@ body {
 
     div.main-container {
       width: 100%;
+
+      /* account for the header being always fixed */
+      padding-top: var(--header-height);
+      transition: 0.25s;
 
       main {
         @extend .slight-mobile-margin;
