@@ -10,6 +10,7 @@
   $(window).scroll(() => {
     var body   = $("body");
     var scroll = $(window).scrollTop();
+    alert('hi daks');
 
     (scroll > 100) ? 
       body.addClass('docked') : 
