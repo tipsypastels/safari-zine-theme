@@ -1,0 +1,6 @@
+header#wrapper {
+  body.scrolling-down & {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

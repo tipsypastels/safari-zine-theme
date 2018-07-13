@@ -16,48 +16,6 @@ Description: A theme for the Safari Zine.
 @import '_common/components';
 @import '_common/texts';
 
-/* component partials */
-@import '_common/header';
-@import '_common/footer';
-@import '_common/postbit';
-@import '_common/banner';
-@import '_common/aside';
-
-/* page partials */
-@import '_common/index';
-@import '_common/single';
-@import '_common/author';
-@import '_common/page';
-
-@import '_common/postbit-content';
-
-@media screen and (min-width: $mobile-breakpoint) {
-  @import '_desktop/d-util';
-
-  @import '_desktop/d-postbit';
-
-  @import '_desktop/d-author';
-}
-
-@media screen and (max-width: $mobile-breakpoint) {
-  @import '_mobile/m-util';
-  @import '_mobile/m-components';
-
-  @import '_mobile/m-header';
-  @import '_mobile/m-footer';
-  @import '_mobile/m-postbit';
-
-  @import '_mobile/m-author';
-}
-
-/* if we need more stuff for this make a folder */
-@media screen and (max-width: $width) {
-  .slight-small-computer-margin {
-    margin-left: 1.25em !important;
-    margin-right: 1.25em !important;
-  }
-}
-
 /* global styles */
 body {
   font-family: 'Work Sans', Helvetica, Arial, sans-serif;
@@ -121,3 +79,46 @@ body {
 }
 
 #wpadminbar { background: $very-dark-grey !important; }
+
+/* component partials */
+@import '_common/header';
+@import '_common/footer';
+@import '_common/postbit';
+@import '_common/banner';
+@import '_common/aside';
+
+/* page partials */
+@import '_common/index';
+@import '_common/single';
+@import '_common/author';
+@import '_common/page';
+
+@import '_common/postbit-content';
+
+@media screen and (min-width: $mobile-breakpoint) {
+  @import '_desktop/d-util';
+
+  @import '_desktop/d-header';
+  @import '_desktop/d-postbit';
+
+  @import '_desktop/d-author';
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  @import '_mobile/m-util';
+  @import '_mobile/m-components';
+
+  @import '_mobile/m-header';
+  @import '_mobile/m-footer';
+  @import '_mobile/m-postbit';
+
+  @import '_mobile/m-author';
+}
+
+/* if we need more stuff for this make a folder */
+@media screen and (max-width: $width) {
+  .slight-small-computer-margin {
+    margin-left: 1.25em !important;
+    margin-right: 1.25em !important;
+  }
+}

@@ -65,11 +65,6 @@ header#wrapper {
       &:before { content: '\f00d'; }
     }
   }
-
-  body.scrolling-down & {
-    opacity: 0;
-    pointer-events: none;
-  }
 }
 
 @keyframes background-scroll {

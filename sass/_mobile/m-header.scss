@@ -1,3 +1,13 @@
+body {
+  &.docked {
+    --header-height: $mob-header-docked-height;
+  }
+
+  &.header-expanded {
+    --header-height: $mob-header-expanded-height;
+  }
+}
+
 header#wrapper {
   padding: 1em 0.25em;
 
@@ -5,10 +15,7 @@ header#wrapper {
   header#content {
     .site-name {
       flex-grow: 1;
-      justify-content: center;
-
-      /* account for centering of the logo */
-      margin-left: 30px;
+      justify-content: flex-start;
     }
 
     #navbar-wrapper {
