@@ -1,3 +1,9 @@
+body {
+  &.header-expanded {
+    --header-height: $mob-header-expanded-height;
+  }
+}
+
 header#wrapper {
   padding: 1em 0.25em;
   position: absolute;
