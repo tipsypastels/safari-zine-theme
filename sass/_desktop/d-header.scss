@@ -1,5 +1,5 @@
 body {
-  &.docked {
+  &.docked:not(.header-expanded) {
     --header-height: $header-docked-height;
     --header-inner-height: $header-docked-height;
   }
