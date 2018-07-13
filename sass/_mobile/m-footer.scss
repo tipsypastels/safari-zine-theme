@@ -1,6 +1,11 @@
 footer#footer {
-  #footer-upper ul {
-    li.non-essential-link {
+  #footer-upper {
+    div.site-name {
+      width: max-content;
+      margin: auto;
+    }
+
+    ul li.non-essential-link {
       span.fontawesome-text {
         display: none;
       }
