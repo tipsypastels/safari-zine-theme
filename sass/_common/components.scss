@@ -1,16 +1,45 @@
 // PART 0: GENERIC ELEMENTS
 
 .site-name {
-  color: inherit;
-  font-weight: bold;
-  text-decoration: none;
-  font-family: 'Comfortaa';
-  font-size: 1.8em;
   display: flex;
   align-items: center;
+  
+  .site-name-contents {
+    a.site-title {
+      color: inherit;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: 'Comfortaa';
+    }
+  }
 
-  svg {
-    margin-right: 0.25em;
+  &:not(.dont-multiply-title-size) {
+    a.site-title { font-size: 1.8em }
+  }
+
+  &.two-lines {
+    flex-direction: column;
+    justify-content: center;
+
+    svg {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 0.25em;
+    }
+  }
+
+  &.has-menu,
+  &.big-logo {
+    svg {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  &:not(.two-lines) {
+    svg {
+      margin-right: 0.25em;
+    }
   }
 }
 

@@ -12,7 +12,7 @@
       <title><?php wp_title( '|', true, 'right' ); ?></title>
       <?php
         }
-        add_action( 'wp_head', 'theme_slug_render_title' );
+        add_action('wp_head', 'theme_slug_render_title');
       }
     ?>
     <?php wp_head(); ?>

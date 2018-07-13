@@ -2,21 +2,48 @@
 
 function site_name(array $array = []) {
   $defaults = [
-    'class'  => '',
-    'logo'   => 'logo.svg',
-    'name'   => 'Safari Zine',
-    'href'   => get_home_url(),
-    'target' => '_self'
+    'class'      => '',
+    'logo'       => 'logo.svg',
+    'name'       => 'Safari Zine',
+    'href'       => get_home_url(),
+    'target'     => '_self',
+    'menu'       => null,
+    'menu_class' => 'inline-list',
+    'menu_cont'  => false,
+    'only_logo'  => false
   ];
   $array = array_merge($defaults, array_intersect_key($array, $defaults));
 
-  list($class, $logo, $name, $href, $target) = array_values($array);
+  list($class, $logo, $name, 
+       $href, $target, $menu, 
+       $menu_class, $menu_cont,
+       $only_logo) = array_values($array);
+
+  $a_settings = "target='$target' href='$href'";
+  $has_menu = $menu ? "has-menu" : "no-menu";
 
   ?>
-  <a target="<?php echo $target ?>" class="site-name <?php echo $class ?>" href="<?php echo $href ?>">
-    <?php echo file_get_contents(__DIR__ . "/../images/logo/$logo") ?>
-    <div><?php echo $name ?></div>
-  </a>
+  <div class="site-name <?php echo $class ?> <?php echo $has_menu ?>">
+    <a <?php echo $a_settings ?>>
+      <?php echo file_get_contents(__DIR__ . "/../images/logo/$logo") ?>
+    </a>
+
+    <?php if(!$only_logo): ?>
+      <div class="site-name-contents">
+        <a class="site-title" <?php echo $a_settings ?>>
+          <?php echo $name ?>
+        </a>
+
+        <?php if($menu) {
+          wp_nav_menu([
+            'menu'           => $menu,
+            'menu_class'     => $menu_class,
+            'container' => $menu_cont
+          ]);
+        } ?>
+      </div>
+    <?php endif; ?>
+  </div>
 <?php }
 
 function user_roles($roles) { ?>

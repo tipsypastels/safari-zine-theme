@@ -1,36 +1,66 @@
 footer#footer {
+  background-color: $grey;
   border-top: 1px solid $dark-transparent-grey;
-  background-color: $slight-grey;
-  padding: 2em 0.25em;
+  padding-top: 3em;
 
-  #footer-sm {
-    text-align: center;
+  footer#footer-upper {
+    width: max-content;
+    margin: auto;
+    padding-bottom: 1em;
 
-    h4 {
-      font-family: Comfortaa;
-      padding-bottom: 0.5em;
-    }
+    a.site-title {
+      position: relative;
 
-    a.site-name { 
-      justify-content: center;
-    }
+      &:before {
+        @extend .h4;
 
-    li {
-      display: inline-block;
+        /* i decided it wasn't worth monkey patching the site_name function for
+           this one use case, but this is a bit messy too :/
+        */
 
-      a {
-        line-height: 3em;
-        padding: 0 0.75em;
+        content: 'Brought to you by';
+        position: absolute;
+        top: -1.2em;
       }
     }
   }
 
-  #footer-legal {
-    width: 42em;
-    max-width: 80%;
-    margin: auto;
-    border-top: 1px solid $dark-transparent-grey;
-    padding: 1em 1.5em 0 1.5em;
-    text-align: center;
+  footer#footer-lower {
+    background-color: $very-dark-grey;
+    color: $grey;
+    padding: 1.5em 3em;
+
+    position: relative;
+
+    #back-to-top {
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 3em;
+      background-color: $grey;
+      text-align: center;
+
+      border-bottom-left-radius: 0.5em;
+      border-bottom-right-radius: 0.5em;
+
+      cursor: pointer;
+
+      i.fa {
+        color: $dark-grey;
+        font-size: 2em;
+        transition: 0.25s;
+      }
+
+      &:hover i.fa {
+        color: $very-dark-green;
+      }
+    }
+
+    .footer-zine-logo {
+      padding: 0 1.5em;
+    }
   }
 }

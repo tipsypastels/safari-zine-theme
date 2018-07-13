@@ -69,24 +69,14 @@ body {
   letter-spacing: 0.05em;
   position: relative;
 
-  background-color: $very-dark-grey;
-  background-image: url("https://www.safarizone.net/uploads/default/original/2X/2/26a03df4d8a3278c22b1acba62817f99e7ebd855.png");
-
-  animation-name: background-scroll;
-  animation-duration: 60s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  background-color: $grey;
+  margin: 0;
 
   div.container {
     width: 100%;
     position: relative;
     color: $dark-grey;
     background-color: $grey;
-
-    border-top-left-radius: 3em;
-    border-top-right-radius: 3em;
-
-    border-top: 3px solid $very-dark-green;
 
     div.main-container {
       width: 100%;

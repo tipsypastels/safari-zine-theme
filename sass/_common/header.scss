@@ -7,6 +7,16 @@ header#wrapper {
   transition: 0.25s;
   overflow: hidden;
 
+  border-bottom: 3px solid $very-dark-green;
+
+  background-color: $very-dark-grey;
+  background-image: url("https://www.safarizone.net/uploads/default/original/2X/2/26a03df4d8a3278c22b1acba62817f99e7ebd855.png");
+
+  animation-name: background-scroll;
+  animation-duration: 60s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
   header#content {
     max-width: $width;
     margin: auto;
@@ -27,15 +37,9 @@ header#wrapper {
         }
       }
 
-      ul#navbar {
-        li {
-          display: inline-block;
-
-          a {
-            line-height: 3em;
-            padding: 0 0.75em;
-          }
-        }
+      ul#navbar li a {
+        line-height: 3em;
+        padding: 0 0.75em;
       }
 
       .menu-marker {

@@ -2,4 +2,10 @@
   &.wraps-on-computer {
     flex-direction: column;
   }
+
+  &.two-columns-on-computer {
+    & > * {
+      width: 50%;
+    }
+  }
 }
