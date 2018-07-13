@@ -36,3 +36,22 @@ h4, .h4 {
 .stylized {
   font-family: "Comfortaa";
 }
+
+.standard-title {
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+  font-family: 'Comfortaa';
+
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 1.7em;
+    margin: auto;
+    margin-top: 1em;
+
+    background-color: $very-dark-green;
+
+  }
+}

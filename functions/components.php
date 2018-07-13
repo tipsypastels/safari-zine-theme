@@ -77,15 +77,26 @@ function image_postbit($href, $img, $title, $excerpt, $date, $author, $categorie
   </a>
 <?php }
 
-function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_href, $categories, $content_cb, $class = "") { ?>
-  <div class="postbit-content <?php echo $class ?> ">
-    <?php foreach($categories as $category):
+/*
+<?php foreach($categories as $category):
         $id = get_cat_ID($category->name);
         $url = get_category_link($id);
       ?>
       <a class="category category-<?php echo $category->slug ?>-name" href="<?php echo $url ?>"><?php echo $category->name ?></a>
     <?php endforeach ?>
-    <h2 class="line-height"><?php echo $title ?></h2>
+*/
+
+function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_href, $categories, $content_cb, $class = "") { ?>
+  <div class="single-post-content <?php echo $class ?> ">
+    <?php
+      site_name([
+        'class'     => 'very-big-logo logo-at-single-post-top',
+        'logo'      => 'logo_black.svg',
+        'only_logo' => true,
+        'href'      => '#'
+      ])
+    ?>
+    <h2 class="standard-title"><?php echo $title ?></h2>
 
     <?php if($excerpt): ?>
       <div class="post-excerpt"><?php echo $excerpt ?></div>

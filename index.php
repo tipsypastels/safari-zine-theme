@@ -15,7 +15,7 @@
     ]);
   ?>
   <?php if($feat->have_posts() && !$paged): ?>
-    <h1 class="image-postbit-title">Featured Articles</h1><div class="rule"></div>
+    <h1 class="standard-title">Featured Articles</h1>
     <section id="posts-featured" class="flex wraps image-postbit-block slight-small-computer-margin">
 
       <?php
@@ -41,13 +41,13 @@
     </section>
   <?php endif; ?>
 
-  <h1 class="image-postbit-title">
+  <h1 class="standard-title">
     <?php if ($paged) {
       echo "Latest Page $paged";
     } else {
       echo "Latest Articles";
     } ?>
-  </h1><div class="rule"></div>
+  </h1>
   <section id="posts-latest" class="flex wraps image-postbit-block slight-small-computer-margin">
 
     <?php

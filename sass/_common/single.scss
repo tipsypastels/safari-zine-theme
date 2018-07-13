@@ -1,9 +1,22 @@
 main#single {
-	
-	h2 {
-		font-size: 3em;
-		line-height: 1.1em;
-		margin-bottom: 0.25em;
+
+	.logo-at-single-post-top {
+		margin: auto;
+		margin-top: 3em;
+		width: max-content;
+
+		svg * {
+			transition: 0.20s;
+		}
+
+		&:hover svg * {
+			stroke: $very-dark-green !important;
+		}
+	}
+
+	h2.standard-title {
+		font-size: 4em;
+		line-height: 1.2em;
 	}
 
 	.category {
@@ -42,7 +55,7 @@ main#single {
 		margin-bottom: 0;
 	}
 
-	.postbit-content {
+	.single-post-content {
 		padding: 1.5em;
 		margin-bottom: 3em;
 	}

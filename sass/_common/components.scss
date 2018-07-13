@@ -36,6 +36,13 @@
     }
   }
 
+  &.very-big-logo {
+    svg {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
   &:not(.two-lines) {
     svg {
       margin-right: 0.25em;
