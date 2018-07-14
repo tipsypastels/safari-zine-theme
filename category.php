@@ -4,7 +4,7 @@
 ?>
 
 <main id="index">
-  <h1 class="image-postbit-title"><?php echo $category->name ?></h1><div class="rule"></div>
+  <h1 class="standard-title"><?php echo $category->name ?></h1>
   <section id="posts-latest" class="flex wraps image-postbit-block">
 
     <?php

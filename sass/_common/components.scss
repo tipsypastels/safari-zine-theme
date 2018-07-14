@@ -99,9 +99,9 @@
 
       .pagination-title {
         @extend .hide-on-mobile; 
-
+        @extend .stylized;
+        
         line-height: 3em;
-        font-weight: 300;
       }
 
       i.fa {
