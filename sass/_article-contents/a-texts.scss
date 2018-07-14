@@ -1,0 +1,40 @@
+& {
+  font-size: 17px;
+  line-height: 1.55em;
+}
+
+p {
+  margin: 1em;
+  margin-bottom: 1.5em;
+}
+
+h1, h2 {
+  margin-top: 2em;
+}
+
+h2 {
+  @extend .standard-title;
+}
+
+h4 {
+  @extend .stylized;
+  font-size: 1.5em;
+}
+
+blockquote {
+  background-color: mix(transparent, black, 90%);
+  padding: 1em;
+
+  p:first-of-type:before {
+    content: '❝';
+    font-size: 3em;
+    color: $very-dark-green;
+  }
+
+  p:last-of-type:after {
+    content: '❞';
+    font-size: 3em;
+    float:right;
+    color: $very-dark-green;
+  }
+}

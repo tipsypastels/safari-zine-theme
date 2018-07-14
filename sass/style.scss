@@ -5,7 +5,7 @@ Description: A theme for the Safari Zine.
 */
 
 /* PICK ONE */
-// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 // @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:700');
@@ -18,7 +18,7 @@ Description: A theme for the Safari Zine.
 
 /* global styles */
 body {
-  font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 19.6px;
   letter-spacing: 0.05em;
@@ -90,8 +90,6 @@ body {
 @import '_common/page';
 @import '_common/err-404';
 
-@import '_common/postbit-content';
-
 @media screen and (min-width: $mobile-breakpoint) {
   @import '_desktop/d-util';
 
@@ -118,4 +116,9 @@ body {
     margin-left: 1.25em !important;
     margin-right: 1.25em !important;
   }
+}
+
+.article-contents {
+  @import '_article-contents/a-texts';
+  @import '_article-contents/a-lists';
 }
