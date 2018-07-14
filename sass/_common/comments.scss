@@ -1,0 +1,26 @@
+#discourse-comments {
+  margin-bottom: 3em;
+
+  .join-discussion {
+    margin-bottom: 2em;
+  }
+
+  article.discourse-comment {
+    width: 40em;
+    max-width: 100%;
+    margin-bottom: 1.5em;
+    
+
+    .avatar {
+      margin-right: 1em;
+    }
+
+    .discourse-comment-content {
+      .discourse-comment-body {
+        p:first-child {
+          margin-top: 0.25em;
+        }
+      }
+    }
+  }
+}

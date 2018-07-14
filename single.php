@@ -33,6 +33,14 @@
         ]);
       ?>
     </section>
+
+    <section id="single-post-comments">
+      <?php
+        if (comments_open() || get_comments_number()) {
+          comments_template();
+        }
+      ?>
+    </section>
   </main>
 <?php endwhile; ?>
 

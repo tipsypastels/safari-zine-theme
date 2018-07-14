@@ -17,9 +17,19 @@ h1 {
   font-size: 3em;
 }
 
+h3, h4 {
+  @extend .stylized;
+}
+
+h3 {
+  font-size: 2em;
+
+  /* cancel out some of the silly default styles */
+  text-transform: initial;
+  letter-spacing: initial;
+}
 
 h4 {
-  @extend .stylized;
   font-size: 1.5em;
 }
 

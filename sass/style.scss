@@ -81,6 +81,7 @@ body {
 @import '_common/postbit';
 @import '_common/banner';
 @import '_common/aside';
+@import '_common/comments';
 
 /* page partials */
 @import '_common/index';
@@ -121,4 +122,5 @@ body {
 .article-contents {
   @import '_article-contents/a-texts';
   @import '_article-contents/a-lists';
+  @import '_article-contents/a-img';
 }
