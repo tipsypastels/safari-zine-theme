@@ -28,16 +28,21 @@ blockquote {
   border-left: 4px solid lighten($mid-grey, 15%);
   padding: 1em;
 
-  p:first-of-type:before {
-    content: '❝';
-    font-size: 3em;
-    color: $very-dark-green;
-  }
+  // p:first-of-type:before {
+  //   content: '❝';
+  //   font-size: 3em;
+  //   color: $very-dark-green;
+  // }
 
-  p:last-of-type:after {
-    content: '❞';
-    font-size: 3em;
-    float:right;
-    color: $very-dark-green;
+  // p:last-of-type:after {
+  //   content: '❞';
+  //   font-size: 3em;
+  //   float:right;
+  //   color: $very-dark-green;
+  // }
+
+  p:first-of-type:first-letter {
+    @extend .formalized;
+    font-size: 2em;
   }
 }

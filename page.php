@@ -1,35 +1,39 @@
 <?php get_header() ?>
 
-<main id="page">
-  <?php while(have_posts()) : the_post() ?>
-    <section id="single-post-header" class="flex wraps image-postbit-block no-bottom-curve">
+<?php while(have_posts()) : the_post() ?>
+  <main id="single">
+    <section id="single-post-body">
       <?php
-        $params = [
+        $author_id = get_the_author_meta('ID');
+        
+        postbit_content(
           get_the_permalink(),
           get_the_post_thumbnail_url(),
           get_the_title(),
           get_the_excerpt(),
           get_the_date(),
           get_the_author(),
+          $author_id,
           get_the_category(),
-          get_the_content(),
+          'the_content', # get a callback
           'single'
-        ];
-
-        image_only_postbit(
-          get_the_post_thumbnail_url()
         );
+
+        $pagination_classes = "
+          page-links has-invisible-links
+          centered-block using-max-content
+          float-on-computer float-right
+        ";
+
+        wp_link_pages([
+          'before'      => "<div class='$pagination_classes'>Pages",
+          'after'       => '</div>',
+          'link_before' => '<span class="page-number">',
+          'link_after'  => '</span>',
+        ]);
       ?>
     </section>
-
-    <section id="single-post-body">
-      <?php
-        postbit_content(
-          ...$params
-        );
-      ?>
-    </section>
-  <?php endwhile; ?>
-</main>
+  </main>
+<?php endwhile; ?>
 
 <?php get_footer();?>

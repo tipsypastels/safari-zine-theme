@@ -22,7 +22,9 @@
       
       <?php user_bit($author, $author_id); ?>
 
-      <div class="post-thumbnail" style="background-image: url(<?php echo $img ?>)"></div>
+      <?php if($img): ?>
+        <div class="post-thumbnail" style="background-image: url(<?php echo $img ?>)"></div>
+      <?php endif; ?>
       <div class="article-contents"><?php $content_cb() ?></div>
 
     </div>
