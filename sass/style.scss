@@ -102,6 +102,7 @@ body {
 @media screen and (max-width: $mobile-breakpoint) {
   @import '_mobile/m-util';
   @import '_mobile/m-components';
+  @import '_mobile/m-texts';
 
   @import '_mobile/m-header';
   @import '_mobile/m-footer';

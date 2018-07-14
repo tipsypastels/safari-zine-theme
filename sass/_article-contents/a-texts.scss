@@ -23,6 +23,7 @@ h4 {
 
 blockquote {
   background-color: mix(transparent, black, 90%);
+  border-left: 4px solid lighten($mid-grey, 15%);
   padding: 1em;
 
   p:first-of-type:before {
