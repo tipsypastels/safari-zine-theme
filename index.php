@@ -49,7 +49,7 @@
     <?php
       
       $paginated_query = new WP_Query([
-        "posts_per_page" => 9,
+        "posts_per_page" => get_option('posts_per_page'),
         "paged" => $paged
       ]);
 

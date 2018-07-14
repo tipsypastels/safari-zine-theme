@@ -71,6 +71,8 @@
 }
 
 .button-group {
+  list-style-type: none;
+  
   & > * {
     @extend .button;
   }
