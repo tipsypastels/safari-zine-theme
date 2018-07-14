@@ -10,11 +10,13 @@ p {
 
 h1, h2 {
   margin-top: 2em;
-}
-
-h2 {
   @extend .standard-title;
 }
+
+h1 {
+  font-size: 3em;
+}
+
 
 h4 {
   @extend .stylized;

@@ -18,6 +18,19 @@
           'the_content', # get a callback
           'single'
         );
+
+        $pagination_classes = "
+          page-links has-invisible-links
+          centered-block using-max-content
+          float-on-computer float-right
+        ";
+
+        wp_link_pages([
+          'before'      => "<div class='$pagination_classes'>Pages",
+          'after'       => '</div>',
+          'link_before' => '<span class="page-number">',
+          'link_after'  => '</span>',
+        ]);
       ?>
     </section>
   </main>

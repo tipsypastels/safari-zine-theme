@@ -51,4 +51,29 @@ main#single {
 	.single-post-content {
 		margin-bottom: 3em;
 	}
+
+	.page-links {
+		@extend .stylized;
+		font-size: 1.5em;
+
+		margin-bottom: 3em;
+
+		span.page-number {
+			font-size: 2.2em;
+		}
+
+		& > span.page-number { // currently selected page
+			color: $very-dark-green;
+			cursor: not-allowed;
+		}
+
+		a, & > span.page-number {
+			border-bottom: 2px solid transparent;
+			transition: 0.25s;
+
+			&:hover {
+				border-bottom-color: $very-dark-green;
+			}
+		}
+	}
 }
