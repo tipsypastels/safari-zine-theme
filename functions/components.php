@@ -90,7 +90,7 @@ function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_
   <div class="single-post-content <?php echo $class ?> ">
     <?php
       site_name([
-        'class'     => 'very-big-logo logo-at-single-post-top',
+        'class'     => 'very-big-logo logo-at-single-post-top centered-block using-max-content',
         'logo'      => 'logo_black.svg',
         'only_logo' => true,
         'href'      => '#'

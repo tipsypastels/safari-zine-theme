@@ -44,6 +44,10 @@ a {
 
 .centered-block {
   margin: auto;
+
+  &.using-max-content {
+    width: max-content;
+  }
 }
 
 .page-width {

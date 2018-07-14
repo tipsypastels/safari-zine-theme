@@ -24,7 +24,7 @@ body {
   letter-spacing: 0.05em;
   position: relative;
 
-  background-color: $grey;
+  background-color: $very-dark-grey;
   margin: 0;
 
   /* we need two variables because when expanded, the outer should expand
@@ -88,6 +88,7 @@ body {
 @import '_common/single';
 @import '_common/author';
 @import '_common/page';
+@import '_common/err-404';
 
 @import '_common/postbit-content';
 
