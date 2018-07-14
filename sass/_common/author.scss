@@ -1,23 +1,5 @@
 main#author {
-  section.author-info {
-    margin-bottom: 4em;
-
-    .avatar-block {
-      padding-right: 1em;
-    }
-
-    .meta {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      h1 {
-        padding-bottom: 0.25em;
-      }
-
-      .profile-user-roles {
-        padding-bottom: 0.5em;
-      }
-    }
+  .author-description {
+    margin-bottom: 5em;
   }
 }

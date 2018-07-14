@@ -55,6 +55,7 @@ a {
   margin: auto;
 }
 
+a.has-invisible-links,
 .has-invisible-links a {
   color: inherit;
   text-decoration: none;
@@ -66,6 +67,11 @@ img.avatar {
   &.tiny {
     height: 2em;
     width: 2em;
+  }
+
+  &.small {
+    height: 4em;
+    width: 4em;
   }
 
   &.standard {
@@ -90,4 +96,8 @@ ul {
 
 ul.inline-list li {
   display: inline-block;
+}
+
+img.block-image {
+  display: block;
 }

@@ -6,25 +6,13 @@
 ?>
 
 <main id="author">
-  <section class="author-info flex one-growing-element">
-    <div class="avatar-block">
-      <img class="avatar huge" src="<?php echo $avatar ?>">
-    </div>
+  <img class="avatar huge block-image centered-block" src="<?php echo $avatar ?>">
+  <h1 class="standard-title huge small-margin"><?php echo $curauth->display_name ?></h1>
+  <p class="author-description centered-block using-max-content">
+    <?php echo $curauth->description ?>
+  </p>
 
-    <div class="meta grows">
-      <h1><?php echo $curauth->display_name ?></h1>
-
-      <?php
-        user_roles($curauth->roles);
-      ?>
-
-      <p>
-        <?php echo $curauth->description ?>
-      </p>
-    </div>
-  </section>
-
-  <h1 class="image-postbit-title">Articles by <?php echo $curauth->display_name ?></h1><div class="rule"></div>
+  <h1 class="standard-title">Articles by <?php echo $curauth->display_name ?></h1><div class="rule"></div>
   <section id="posts-author" class="flex wraps image-postbit-block">
 
     <?php

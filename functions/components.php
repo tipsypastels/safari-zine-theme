@@ -46,36 +46,7 @@ function site_name(array $array = []) {
   </div>
 <?php }
 
-function user_roles($roles) { ?>
-  <div class="profile-user-roles">
-    <?php foreach($roles as $role) { ?>
-      <div class="user-role">
-        <?php fa('pencil-square') ?>
-        <span class="fontawesome-class">
-          <?php echo ucfirst($role) ?>
-        </span>
-      </div>
-    <?php } ?>
-  </div>
-<?php }
 
-function image_postbit($href, $img, $title, $excerpt, $date, $author, $categories, $content_cb, $class = "") { ?>
-  <a class="image-postbit <?php echo $class ?>" href="<?php echo $href ?>" 
-    style="background-image: url(<?php echo $img ?>)">
-    <div class="image-postbit-shading">
-      <div class="image-postbit-content">
-        <div class="title-wrapper">
-          <h2><?php echo $title ?></h2>
-        </div>
-
-        <?php if ($excerpt): ?>
-          <div class="rule"></div>
-          <p><?php echo $excerpt ?></p>
-        <?php endif; ?>
-      </div>
-    </div>
-  </a>
-<?php }
 
 /*
 <?php foreach($categories as $category):
@@ -86,32 +57,7 @@ function image_postbit($href, $img, $title, $excerpt, $date, $author, $categorie
     <?php endforeach ?>
 */
 
-function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_href, $categories, $content_cb, $class = "") { ?>
-  <div class="single-post-content <?php echo $class ?> ">
-    <?php
-      site_name([
-        'class'     => 'very-big-logo logo-at-single-post-top centered-block using-max-content',
-        'logo'      => 'logo_black.svg',
-        'only_logo' => true,
-        'href'      => '#'
-      ])
-    ?>
-    <h2 class="standard-title"><?php echo $title ?></h2>
 
-    <?php if($excerpt): ?>
-      <div class="post-excerpt"><?php echo $excerpt ?></div>
-    <?php endif; ?>
-
-    <div class="post-thumbnail" style="background-image: url(<?php echo $img ?>)"></div>
-    <div class="rule"></div>
-
-    <div class="postbit-content-main"><?php $content_cb() ?></div>
-
-    <div class="rule"></div>
-
-    <a class="author" href="<?php echo $author_href ?>"><?php fa('pencil') ?> Written by <?php echo $author ?></a>
-  </div>
-<?php }
 
 function paginate($dir, $word, $url) { ?>
   <div class="pagination-area">

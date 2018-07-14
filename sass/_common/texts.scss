@@ -43,6 +43,16 @@ h4, .h4 {
   text-align: center;
   font-family: 'Comfortaa';
 
+  &.huge {
+    font-size: 4em;
+    line-height: 1.2em;
+  }
+
+  &.small-margin {
+    margin-top: 0.35em;
+    margin-bottom: 0.5em;
+  }
+
   &:after {
     content: "";
     display: block;

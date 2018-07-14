@@ -4,6 +4,8 @@
   <main id="single">
     <section id="single-post-body">
       <?php
+        $author_id = get_the_author_meta('ID');
+        
         postbit_content(
           get_the_permalink(),
           get_the_post_thumbnail_url(),
@@ -11,7 +13,7 @@
           get_the_excerpt(),
           get_the_date(),
           get_the_author(),
-          get_author_posts_url(get_the_author_meta('ID')),
+          $author_id,
           get_the_category(),
           'the_content', # get a callback
           'single'

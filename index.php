@@ -27,11 +27,7 @@
             get_the_permalink(),
             get_the_post_thumbnail_url(),
             get_the_title(),
-            get_the_excerpt(),
-            get_the_date(),
-            get_the_author(),
-            get_the_category(),
-            get_the_content()
+            get_the_excerpt()
           );
         }
 
@@ -68,11 +64,7 @@
           get_the_permalink(),
           get_the_post_thumbnail_url(),
           get_the_title(),
-          get_the_excerpt(),
-          get_the_date(),
-          get_the_author(),
-          get_the_category(),
-          get_the_content()
+          get_the_excerpt()
         );
       }
 
