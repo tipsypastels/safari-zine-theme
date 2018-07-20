@@ -1,15 +1,23 @@
 #discourse-comments {
   margin-bottom: 3em;
 
-  .join-discussion {
-    margin-bottom: 2em;
+  .discourse-comments-title {
+    border-bottom: 1px solid $transparent-grey;
+    margin-bottom: 1.5em;
+
+    h2 {
+      @extend .stylized;
+      font-size: 2.3em;
+    }
   }
 
   article.discourse-comment {
-    width: 40em;
-    max-width: 100%;
     margin-bottom: 1.5em;
-    
+
+    &:not(:last-of-type) {
+      padding-bottom: 0.25em;
+      border-bottom: 1px solid $transparent-grey;
+    }
 
     .avatar {
       margin-right: 1em;
@@ -19,6 +27,14 @@
       .discourse-comment-body {
         p:first-child {
           margin-top: 0.25em;
+        }
+
+        img {
+          max-width: 90%;
+          height: auto;
+
+          // why is this even a thing
+          & + .meta { display: none; }
         }
       }
     }

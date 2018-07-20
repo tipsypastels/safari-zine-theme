@@ -52,32 +52,6 @@
 
 // PART 1: COMPONENTS
 
-.button {
-  background-color: $grey;
-  color: $very-dark-grey;
-  margin: 0 0.5em;
-  padding: 0.25em 0.5em;
-  border-bottom: 4px solid $mid-grey;
-
-  border-top-left-radius: 0.15em;
-  border-top-right-radius: 0.15em;
-
-  transition: 0.25s;
-
-  &:hover {
-    background-color: darken($grey, 10%);
-    border-bottom-color: $very-dark-green;
-  }
-}
-
-.button-group {
-  list-style-type: none;
-  
-  & > * {
-    @extend .button;
-  }
-}
-
 .pagination {
   @extend .has-invisible-links;
   @extend .slight-mobile-margin;

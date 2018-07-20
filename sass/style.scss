@@ -58,6 +58,10 @@ body {
         max-width: $main-width;
         margin: auto;
         padding-top: 3em;
+
+        section[id] {
+          @extend .clearfix;
+        }
       }
     }
   }
@@ -76,6 +80,7 @@ body {
 #wpadminbar { background: $very-dark-grey !important; }
 
 /* component partials */
+@import '_common/buttons';
 @import '_common/header';
 @import '_common/footer';
 @import '_common/postbit';
@@ -95,6 +100,7 @@ body {
 
   @import '_desktop/d-header';
   @import '_desktop/d-postbit';
+  @import '_desktop/d-footer';
 
   @import '_desktop/d-author';
 }

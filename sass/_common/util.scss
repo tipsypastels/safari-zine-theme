@@ -101,3 +101,9 @@ ul.inline-list li {
 img.block-image, a.block-link {
   display: block;
 }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

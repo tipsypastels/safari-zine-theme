@@ -16,9 +16,23 @@
     </a>
   <?php }
 
+  function categories_list($categories) {
+    if($categories): ?>
+      <div class="post-categories has-invisible-links">
+        <?php foreach($categories as $category):
+          $id = get_cat_ID($category->name);
+          $url = get_category_link($id);
+        ?>
+          <a class="category category-<?php echo $category->slug ?>-name" href="<?php echo $url ?>"><?php echo $category->name ?></a>
+        <?php endforeach ?>
+      </div>
+    <?php endif;
+  }
+
   function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_id, $categories, $content_cb, $class = "") { ?>
     <div class="single-post-content <?php echo $class ?> ">
       <h2 class="standard-title huge"><?php echo $title ?></h2>
+      <div class="centered post-date"><?php echo $date ?></div>
       
       <?php user_bit($author, $author_id); ?>
 
