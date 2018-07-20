@@ -1,6 +1,5 @@
 & {
-  font-size: 17px;
-  line-height: 1.55em;
+  @extend .large-text;
 }
 
 p {
@@ -34,8 +33,7 @@ h4 {
 }
 
 blockquote {
-  border-left: 4px solid $very-dark-green;
-  padding: 0.1em 1em;
+  @extend .quotelike;
 
   p:first-of-type:first-letter {
     @extend .formalized;

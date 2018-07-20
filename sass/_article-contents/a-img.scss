@@ -1,3 +1,11 @@
 img {
   margin: 1em;
 }
+
+figure {
+  margin: auto;
+
+  figcaption {
+    @extend .quotelike;
+  }
+}

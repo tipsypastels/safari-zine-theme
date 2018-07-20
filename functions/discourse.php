@@ -39,3 +39,22 @@ function custom_discourse_comment($input) {
 }
 
 add_filter('discourse_comment_html', 'custom_discourse_comment');
+
+function custom_discourse_no_replies($input) {
+  ob_start(); ?>
+
+  <div id="discourse-comments" class="discourse-comments-area">
+    <a class="discourse-comments-title flex vertically-centered one-growing-element has-invisible-links" href="{topic_url}" target="_blank">
+      <h2 class="grows block-link">Discussion</h2>
+      <div><button class="button-alt">Comment <?php fa('reply') ?></button></div>
+    </a>
+
+    <span class="large-text">No comments yet! Be the first to comment <a target="_blank" href="{topic_url}">on our forums!</a></span>
+  </div>
+
+  <?php
+    $output = ob_get_clean();
+    return $output;
+}
+
+add_filter('discourse_no_replies_html', 'custom_discourse_no_replies');

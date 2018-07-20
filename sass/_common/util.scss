@@ -107,3 +107,8 @@ img.block-image, a.block-link {
   display: table;
   clear: both;
 }
+
+.quotelike {
+  border-left: 4px solid $very-dark-green;
+  padding: 0.1em 1em;
+}
