@@ -16,6 +16,7 @@
           $author_id,
           get_the_category(),
           'the_content', # get a callback
+          'edit_post_link', # callback to generate an edit link
           'single'
         );
 

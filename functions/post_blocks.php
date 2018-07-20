@@ -29,10 +29,16 @@
     <?php endif;
   }
 
-  function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_id, $categories, $content_cb, $class = "") { ?>
+  function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_id, $categories, $content_cb, $edit_link_cb = null, $class = "") { ?>
+
     <div class="single-post-content <?php echo $class ?> ">
       <h2 class="standard-title huge"><?php echo $title ?></h2>
-      <div class="centered post-date"><?php echo $date ?></div>
+      <div class="centered post-date">
+        <?php echo $date ?>
+        <?php if (is_user_logged_in() && $edit_link_cb): ?>
+          | <span class="has-invisible-links"><?php $edit_link_cb('Edit') ?></span>
+        <?php endif; ?>
+      </div>
       
       <?php user_bit($author, $author_id); ?>
 
