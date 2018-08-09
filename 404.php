@@ -5,7 +5,7 @@
 
   <?php
     site_name([
-      "class"     => "very-big-logo centered-block using-max-content",
+      "class"     => "very-big-logo centered-block max-content",
       "logo"      => "logo_black.svg",
       "only_logo" => true
     ]);

@@ -22,7 +22,7 @@
 
         $pagination_classes = "
           page-links has-invisible-links
-          centered-block using-max-content
+          centered-block max-content
           float-on-computer float-right
         ";
 

@@ -44,11 +44,11 @@ a {
 
 .centered-block {
   margin: auto;
+}
 
-  &.using-max-content {
-    width: -moz-fit-content;
-    width: max-content;
-  }
+.max-content {
+  width: -moz-fit-content;
+  width: max-content;
 }
 
 .page-width {
