@@ -46,6 +46,7 @@ a {
   margin: auto;
 
   &.using-max-content {
+    width: -moz-fit-content;
     width: max-content;
   }
 }
