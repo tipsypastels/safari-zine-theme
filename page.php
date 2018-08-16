@@ -4,16 +4,14 @@
   <main id="single">
     <section id="single-post-body">
       <?php
-        $author_id = get_the_author_meta('ID');
-        
         postbit_content(
           get_the_permalink(),
           get_the_post_thumbnail_url(),
           get_the_title(),
           get_the_excerpt(),
           get_the_date(),
-          get_the_author(),
-          $author_id,
+          null, # posts don't display an author
+          null, # ^
           get_the_category(),
           'the_content', # get a callback
           'edit_post_link', # callback to generate an edit link
