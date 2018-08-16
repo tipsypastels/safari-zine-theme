@@ -1,67 +1,67 @@
 main#single {
-	.standard-title.huge {
-		margin-bottom: 0.25em;
-	}
+  .standard-title.huge {
+    margin-bottom: 0.25em;
+  }
 
-	.post-date, .post-categories {
-		@extend .stylized;
-		font-size: 1.2em;
-	}
+  .post-date, .post-categories {
+    @extend .stylized;
+    font-size: 1.2em;
+  }
 
-	.post-date {
-		margin-bottom: 2em;
-		color: $very-dark-green;
-	}
+  .post-date {
+    margin-bottom: 2em;
+    color: $very-dark-green;
+  }
 
-	.user-bit {
-		margin-bottom: 1em;
-	}
+  .user-bit {
+    margin-bottom: 1em;
+  }
 
-	.post-categories {
-		&:before {
-			content: "Categories: ";
-		}
-	}
+  .post-categories {
+    &:before {
+      content: "Categories: ";
+    }
+  }
 
-	div.post-thumbnail {
-		margin: 1em 0;
-		width: 100%;
+  div.post-thumbnail {
+    margin: 1em 0;
+    width: 100%;
 
-		background-size: cover;
-		background-position: center;
-		min-height: 40em;
-	}
+    background-size: cover;
+    background-position: center;
+    min-height: 40em;
+  }
 
-	.image-postbit-block {
-		margin-bottom: 0;
-	}
+  .image-postbit-block {
+    margin-bottom: 0;
+  }
 
-	.single-post-content {
-		margin-bottom: 3em;
-	}
+  .single-post-content {
+    margin-bottom: 3em;
+  }
 
-	.page-links {
-		@extend .stylized;
-		font-size: 1.5em;
+  .page-links {
+    @extend .stylized;
+    font-size: 1.5em;
 
-		margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 
-		span.page-number {
-			font-size: 2.2em;
-		}
+    span.page-number {
+      font-size: 2.2em;
+    }
 
-		& > span.page-number { // currently selected page
-			color: $very-dark-green;
-			cursor: not-allowed;
-		}
+    & > span.page-number { // currently selected page
+      color: $very-dark-green;
+      cursor: not-allowed;
+    }
 
-		a, & > span.page-number {
-			border-bottom: 2px solid transparent;
-			transition: 0.25s;
+    a, & > span.page-number {
+      border-bottom: 2px solid transparent;
+      transition: 0.25s;
 
-			&:hover {
-				border-bottom-color: $very-dark-green;
-			}
-		}
-	}
+      &:hover {
+        border-bottom-color: $very-dark-green;
+      }
+    }
+  }
 }
