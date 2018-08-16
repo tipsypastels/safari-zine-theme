@@ -1,5 +1,13 @@
 img {
   margin: 1em;
+
+  &.alignleft {
+    float: left;
+  }
+
+  &.alignright {
+    float: right;
+  }
 }
 
 figure {
