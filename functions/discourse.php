@@ -81,4 +81,4 @@ function discourse_publish_format($input) {
     return $output;
 }
 
-add_filter('discourse_publish_format_html', 'discourse_publish_format')
+add_filter('discourse_publish_format_html', 'discourse_publish_format');
