@@ -58,3 +58,27 @@ function custom_discourse_no_replies($input) {
 }
 
 add_filter('discourse_no_replies_html', 'custom_discourse_no_replies');
+
+function discourse_publish_format($input) {
+  ob_start(); ?>
+    <div class="zine-new-article">
+      <div class="zine-header" style="background-image: url({featuredimage})">
+      </div>
+
+      <div class="zine-title">
+        <h1>{title}</h1>
+      </div>
+
+      <div class="zine-body clearfix">
+        <p>{excerpt}</p>
+
+        <a class="zine-btn" href="https://zine.safarizone.net">More Safari Zine</a>
+        <a class="zine-btn" href="{blogurl}">Read Article</a>
+      </div>
+    </div>
+  <?php
+    $output = ob_get_clean();
+    return $output;
+}
+
+add_filter('discourse_publish_format_html', 'discourse_publish_format')
