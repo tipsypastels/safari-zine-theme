@@ -6,7 +6,7 @@
       <div id="navbar-wrapper" class="grows centered">
         <?php
           wp_nav_menu([
-            'menu' => 'header-menu',
+            'menu' => 'header-featured-links',
             'menu_class' => 'centered-block has-invisible-links hide-on-mobile inline-list',
             'menu_id' => 'navbar'
           ]);

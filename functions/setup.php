@@ -6,10 +6,9 @@ function scratch_setup() {
   add_theme_support( 'title-tag' );
 
   register_nav_menus([
-    'header-menu' => 'Header Menu',
-    'modal-menu-about' => 'Modal Menu About',
-    'modal-menu-categories' => 'Modal Menu Categories',
-    'modal-menu-bottom' => 'Modal Menu Bottom',
+    'header-featured-links' => 'Header Featured Links',
+    'header-about-links' => 'Header "About" Links (Dropdown)',
+    'header-staffing-links' => 'Header Staffing Links (Dropdown)',
     'footer-social-media' => 'Footer Social Media'
   ]);
 }

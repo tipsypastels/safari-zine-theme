@@ -3,4 +3,12 @@ aside#modal {
   padding: 1em 0;
 
   justify-content: space-around;
+
+  /* the only case icons will ever show up here is
+     for the mobile modal (which drops down) and 
+     should only display icons when it's part of the header (desktop)
+     but not mobile (aside) */
+  i.fa {
+    display: none;
+  }
 }
