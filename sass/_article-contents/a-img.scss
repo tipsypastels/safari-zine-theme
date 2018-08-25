@@ -19,9 +19,15 @@ img {
 
 figure {
   margin: auto;
+  max-width: 100%;
 
   figcaption {
     @extend .quotelike;
     font-size: 0.7em;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }
