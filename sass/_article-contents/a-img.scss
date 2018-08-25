@@ -8,6 +8,11 @@ img {
   &.alignright {
     float: right;
   }
+
+  &.aligncenter {
+    display: block;
+    margin: auto;
+  }
 }
 
 figure {
@@ -15,5 +20,6 @@ figure {
 
   figcaption {
     @extend .quotelike;
+    font-size: 0.7em;
   }
 }
