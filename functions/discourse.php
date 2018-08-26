@@ -64,7 +64,6 @@ function discourse_publish_format($input) {
   ob_start(); ?>
     <div class="zine-new-article">
       <div class="zine-header" style="background-image: url({featuredimage})">
-        <a class="zine-logo" href="https://zine.safarizone.net"></a>
       </div>
       <div class="zine-title">
         <h1>{title}</h1>
