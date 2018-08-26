@@ -59,19 +59,17 @@ function custom_discourse_no_replies($input) {
 
 add_filter('discourse_no_replies_html', 'custom_discourse_no_replies');
 
+// we can't use line breaks bc fuck discourse html parser :/
 function discourse_publish_format($input) {
   ob_start(); ?>
     <div class="zine-new-article">
       <div class="zine-header" style="background-image: url({featuredimage})">
       </div>
-
       <div class="zine-title">
         <h1>{title}</h1>
       </div>
-
       <div class="zine-body clearfix">
         <p>{excerpt}</p>
-
         <a class="zine-btn" href="https://zine.safarizone.net">More Safari Zine</a>
         <a class="zine-btn" href="{blogurl}">Read Article</a>
       </div>
