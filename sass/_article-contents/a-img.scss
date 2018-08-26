@@ -1,6 +1,9 @@
 img {
   margin: 1em;
 
+  max-width: 100%;
+  height: auto;
+
   /* margin-top: 0 for both of these so we can
      align them with the top of the text that they
      float next to, rather than being pushed down 1em
