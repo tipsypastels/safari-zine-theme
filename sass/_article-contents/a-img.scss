@@ -1,12 +1,19 @@
 img {
   margin: 1em;
 
+  /* margin-top: 0 for both of these so we can
+     align them with the top of the text that they
+     float next to, rather than being pushed down 1em
+  */
+  
   &.alignleft {
     float: left;
+    margin-top: 0;
   }
 
   &.alignright {
     float: right;
+    margin-top: 0;
   }
 
   &.aligncenter {
