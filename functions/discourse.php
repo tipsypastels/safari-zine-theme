@@ -70,8 +70,8 @@ function discourse_publish_format($input) {
       </div>
       <div class="zine-body clearfix">
         <p>{excerpt}</p>
-        <a class="zine-btn" href="https://zine.safarizone.net">More Safari Zine</a>
-        <a class="zine-btn" href="{blogurl}">Read Article</a>
+        <a target="_blank" class="zine-btn" href="https://zine.safarizone.net">More Safari Zine</a>
+        <a target="_blank" class="zine-btn" href="{blogurl}">Read Article</a>
       </div>
     </div>
   <?php
