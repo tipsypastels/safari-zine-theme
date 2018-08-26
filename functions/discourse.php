@@ -62,9 +62,8 @@ add_filter('discourse_no_replies_html', 'custom_discourse_no_replies');
 function discourse_publish_format($input) {
   ob_start(); ?>
     <div class="zine-new-article">
-      <div class="zine-header" style="background-image: url({featuredimage})">
-      </div>
-
+      {featuredimage}
+      
       <div class="zine-title">
         <h1>{title}</h1>
       </div>
