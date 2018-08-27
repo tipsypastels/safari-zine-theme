@@ -8,7 +8,7 @@
 <main id="author">
   <img class="avatar huge block-image centered-block" src="<?php echo $avatar ?>">
   <h1 class="standard-title huge small-margin"><?php echo $curauth->display_name ?></h1>
-  <p class="author-description centered-block max-content">
+  <p class="author-description centered-block">
     <?php echo $curauth->description ?>
   </p>
 

@@ -16,7 +16,7 @@
   <?php }
 
   function format_description($description) {
-    $max_length = 120;
+    $max_length = 170;
     $continue = '...';
 
     if (strlen($description) <= $max_length) {
