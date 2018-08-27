@@ -10,8 +10,20 @@
       <img class="avatar small" src="<?php echo $avatar ?>">
       <div class="user-bit-contents">
         <h2 class="username stylized"><?php echo $username ?></h2>
-        <p class="description"><?php echo $description ?></p>
+        <p class="description"><?php echo format_description($description) ?></p>
       </div>
     </a>
   <?php }
+
+  function format_description($description) {
+    $max_length = 120;
+    $continue = '...';
+
+    if (strlen($description) <= $max_length) {
+      return $description;
+    }  else {
+      $crop_to = $max_length - strlen($continue);
+      return substr($description, 0, $crop_to) . $continue;
+    }
+  }
 ?>
