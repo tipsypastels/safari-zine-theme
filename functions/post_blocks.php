@@ -29,7 +29,7 @@
     <?php endif;
   }
 
-  function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_id, $categories, $content_cb, $edit_link_cb = null, $class = "") { ?>
+  function postbit_content($href, $img, $title, $excerpt, $date, $author, $author_id, $categories, $content_cb, $edit_link_cb = null, $class = "", $meta = []) { ?>
 
     <div class="single-post-content <?php echo $class ?> ">
       <h2 class="standard-title huge"><?php echo $title ?></h2>
@@ -42,11 +42,33 @@
       
       <?php user_bit($author, $author_id); ?>
 
-      <?php if($img): ?>
-        <div class="post-thumbnail" style="background-image: url(<?php echo $img ?>)"></div>
-      <?php endif; ?>
+      <?php if ($img) {
+        featured_image($img, $meta);
+      } ?>
       <div class="article-contents"><?php $content_cb() ?></div>
 
     </div>
   <?php }
+
+  function featured_image($img, $meta = []) {
+    $meta_size = $meta['featimg-bgsize'];
+    $meta_color = $meta['featimg-bgcolour'];
+
+    $classes = 'post-thumbnail ';
+    $style = "background-image: url($img);";
+
+    if ($meta_size) {
+      $classes .= 'expanded-background ';
+      $style .= "--size: $meta_size[0];"; 
+    }
+
+    if ($meta_color) {
+      $classes .= 'set-background-color';
+      $style .= "--color: $meta_color[0];";
+    }
+
+    ?>
+      <div class="<?php echo $classes ?>" style="<?php echo $style ?>"></div>
+    <?php
+  }
 ?>
