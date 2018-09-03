@@ -8,9 +8,8 @@
             <h2><?php echo $title ?></h2>
           </div>
 
-          <?php if ($excerpt): ?>
-            <p><?php echo $excerpt ?></p>
-          <?php endif; ?>
+          <?php if (!$excerpt) $excerpt = "-"; ?>
+          <p><?php echo $excerpt ?></p>
         </div>
       </div>
     </a>
