@@ -28,12 +28,7 @@ img {
     margin-bottom: 1em;
   }
 
-  /* if the image is an ONLY child of a p tag,
-     it will already have the p's padding and doesn't
-     need any more
-  */
-
-  p & {
+  &.alignnone {
     margin-left: 0;
     margin-right: 0;
   }
