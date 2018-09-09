@@ -1,0 +1,123 @@
+main#dex {
+  .standard-title.huge {
+
+    .dexnum {
+      opacity: 0.4;
+      font-size: 0.56em;
+    }
+  }
+
+  .article-thumbnail-wrapper {
+    margin-bottom: 2em;
+  }
+
+  .article-thumbnail {
+    height: 30em;
+  }
+
+  .needs-article-thumbnail {
+    @extend .placeholder-block;
+
+    &.large {
+      --height: 30em;
+    }
+  }
+
+  .fimg-author {
+    @extend .has-invisible-links;
+    @extend .quotelike;
+    @extend .max-content;
+
+    display: block;
+    margin: auto;
+  }
+
+  .altforms-block {
+    margin-bottom: 1em;
+    margin-right: 1.7em;
+
+    width: 230px;
+
+    /* i hate myself */
+    float: left;
+    
+    .altform {
+      @extend .stylized;
+
+      width: 63%;
+
+      margin: 1em;
+      margin-bottom: 0;
+      text-align: center;
+
+      .altform-image {
+        width: 100%;
+        height: 124px;
+
+        background-size: cover;
+      }
+
+      .altform-title {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+      }
+    }
+  }
+
+  .dex-entry-wrapper {
+    margin-bottom: 1em;
+
+    .dex-entry-region, .dex-entry-pokemon-category {
+      @extend .max-content;
+      @extend .stylized;
+
+      color: $grey;
+      background-color: var(--highlight);
+      user-select: none;
+
+      padding: 0.5em 0.75em;
+      border-top-left-radius: 0.5em;
+      border-top-right-radius: 0.5em;
+      margin: 0 1em;
+    }
+
+    .dex-entry-content {
+      @extend .bubblelike;
+    }
+  }
+
+  .types-and-stats-block {
+    display: flex;
+    align-items: center;
+
+    .pokemon-type {
+      padding: 0.5em 0.75em;
+      border-radius: 0.5em;
+    }
+
+    .stats-block {
+      @extend .max-content;
+
+      display: flex;
+
+      .stat {
+        @extend .stylized;
+
+        color: $grey;
+        user-select: none;
+
+        padding: 0.5em 0.75em;
+        border-radius: 0.5em;
+        margin: 0 0.25em;
+      }
+    }
+  }
+}
+
+main#dex section.articles-featuring {
+  margin-top: 5em;
+
+  .needs-articles {
+    @extend .placeholder-block;
+  }
+}

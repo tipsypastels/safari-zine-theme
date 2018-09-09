@@ -15,9 +15,17 @@ function scratch_setup() {
 add_action('after_setup_theme', 'scratch_setup');
 
 function scratch_styles_and_scripts() {
-  wp_enqueue_style('main-stylesheet', get_stylesheet_directory_uri() . '/css/style.css');
+  $dir = get_stylesheet_directory_uri();
+  wp_enqueue_style('main-stylesheet', $dir . '/css/style.css');
   wp_enqueue_script('jquery');
-  wp_enqueue_script('our-scripts', get_stylesheet_directory_uri() . '/script.js');
+  wp_enqueue_script('our-scripts', $dir . '/js/script.js');
+
+  global $post;
+
+  if (is_post_type_archive(['dex'])) {
+    wp_enqueue_script('dex-index', $dir . '/js/dex-index.js');
+  }
+
 }
 
 add_action('wp_enqueue_scripts', 'scratch_styles_and_scripts');

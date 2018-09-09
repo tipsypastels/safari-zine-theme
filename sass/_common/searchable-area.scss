@@ -1,0 +1,36 @@
+.searchable-area {
+  margin-bottom: 2em;
+
+  .search-bar {
+    @extend .stylized;
+    font-size: 1.3em;
+
+    display: block;
+    background: transparent;
+    
+    border: 1px solid $mid-grey;
+    box-sizing: border-box;
+    outline: none;
+    
+    width: 100%;
+    padding: 0.5em 0.75em;
+    border-radius: 10px;
+  }
+
+  div.search-results {
+    margin-top: 1em;
+    list-style-type: none;
+
+    &.hide {
+      a.search-item:not(.show) {
+        display: none !important;
+      }
+    }
+
+    a.search-item {
+      @extend .has-invisible-links;
+
+      display: block;
+    }
+  }
+}

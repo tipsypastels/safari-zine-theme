@@ -89,6 +89,7 @@ body {
 @import '_common/banner';
 @import '_common/aside';
 @import '_common/comments';
+@import '_common/searchable-area';
 
 /* page partials */
 @import '_common/index';
@@ -96,6 +97,11 @@ body {
 @import '_common/author';
 @import '_common/page';
 @import '_common/err-404';
+
+/* pokedex partials */
+@import '_common/pokedex/index';
+@import '_common/pokedex/single';
+@import '_common/pokedex/components';
 
 @media screen and (min-width: $mobile-breakpoint) {
   @import '_desktop/d-util';

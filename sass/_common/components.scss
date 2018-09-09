@@ -90,6 +90,49 @@
   }
 }
 
+.fancy-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 2px solid var(--highlight);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+
+  padding-bottom: 0.75em;
+
+  .title {
+    @extend .h2;
+    @extend .stylized;
+
+    width: 100%;
+    text-align: center;
+
+    color: $grey !important;
+    background-color: var(--highlight);
+    padding: 0.33em 0.5em;
+  }
+}
+
+.placeholder-block {
+  height: var(--height, 5em);
+
+  background-color: $slight-grey;
+  border: 2px dashed $mid-grey;
+  
+  will-change: border-color;
+  transition: 0.25s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-color: var(--highlight);
+  }
+}
+
 // SOCIAL MEDIA
 
 @mixin sm-link($fa, $var) {

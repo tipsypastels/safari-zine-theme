@@ -1,0 +1,63 @@
+main#dex-index {
+  .welcome-area {
+    display: none;
+    margin: auto;
+    margin-bottom: 2.5em;
+    width: 100%;
+
+    justify-content: center;
+
+    .welcome-carnivine {
+      svg {
+        width: 80px;
+        height: 80px;
+        opacity: 0.4;
+        transform: rotate(-10deg);
+
+        transition: 0.25s;
+        will-change: opacity;
+
+        cursor: default;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }    
+    .welcome-bubble {
+      @extend .bubblelike;
+
+      margin-left: 1em;
+    }
+  }
+
+  .searchable-area {
+    .search-results {
+      &:not(.hide) {
+        .search-item:nth-child(even) {
+          background-color: $slight-grey;
+        }
+      }
+
+      .search-item {
+        display: flex;
+        align-items: center;
+
+        padding: 0.5em 1em;
+
+        &:hover {
+          background-color: var(--highlight) !important;
+          color: $grey;
+          border-radius: 10px;
+        }
+
+        .title-block {
+          @extend .stylized;
+
+          margin-left: 0.5em;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}

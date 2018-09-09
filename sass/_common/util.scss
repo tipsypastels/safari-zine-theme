@@ -38,6 +38,10 @@ a {
   }
 }
 
+.flex-spacer {
+  flex-grow: 1;
+}
+
 .centered {
   text-align: center;
 }
@@ -110,6 +114,15 @@ img.block-image, a.block-link {
 }
 
 .quotelike {
-  border-left: 4px solid $very-dark-green;
+  border-left: 4px solid var(--highlight);
   padding: 0.1em 1em;
+}
+
+.bubblelike {
+  border: 4px solid var(--highlight);
+  border-radius: 0.5em;
+  padding: 0.5em 0.75em;
+
+  background-color: mix(white, $grey, 50%);
+  font-size: 115%;
 }

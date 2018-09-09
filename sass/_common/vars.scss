@@ -31,3 +31,67 @@ $facebook: #597ab9;
 $instagram: #de5656;
 $showdown: #ff6347;
 $discord: #7186d7;
+
+$pokedex-colors: (
+  green: $very-dark-green,
+  purple: invert($very-dark-green),
+  blue: adjust-hue($very-dark-green, 90),
+  red: saturate(adjust-hue($very-dark-green, -110), 0.3),
+  black: $very-dark-grey,
+  brown: adjust-hue($very-dark-green, -110),
+  yellow: saturate(adjust-hue($very-dark-green, -60), 0.3)
+);
+
+body {
+  --highlight: $very-dark-green;
+}
+
+.override-highlight {
+  @each $name, $color in $pokedex-colors {
+    &.#{$name} {
+      --highlight: $color;
+    }
+  }
+}
+
+$type-colors: (
+  grass: 'green',
+  poison: 'purple',
+  water: 'blue',
+  fire: 'red',
+  dark: 'black',
+  flying: saturate(adjust-hue($very-dark-green, 90), 0.3),
+  dragon: darken(invert($very-dark-green), 20%),
+  ground: 'brown',
+  psychic: saturate(adjust-hue($very-dark-green, -130), 0.3)
+);
+
+@each $type, $color in $type-colors {
+  .type-#{$type} {
+    @if type-of($color) == string {
+      background-color: map-get($pokedex-colors, $color);
+    } @else {
+      background-color: $color;
+    }
+  }
+}
+
+$stat-colors: (
+  hp: 'red',
+  atk: saturate(adjust-hue($very-dark-green, -90), 0.35),
+  def: 'yellow',
+  spa: 'green',
+  spd: 'blue',
+  spe: 'purple',
+  bst: darken(invert($very-dark-green), 20%)
+);
+
+@each $stat, $color in $stat-colors {
+  .stat.stat-#{$stat} {
+    @if type-of($color) == string {
+      background-color: map-get($pokedex-colors, $color);
+    } @else {
+      background-color: $color;
+    }
+  }
+}

@@ -4,7 +4,7 @@ function site_name(array $array = []) {
   $defaults = [
     'class'      => '',
     'logo'       => 'logo.svg',
-    'name'       => 'Safari Zine',
+    'name'       => get_bloginfo('name'),
     'href'       => get_home_url(),
     'target'     => '_self',
     'menu'       => null,
@@ -46,30 +46,17 @@ function site_name(array $array = []) {
   </div>
 <?php }
 
-
-
-/*
-<?php foreach($categories as $category):
-        $id = get_cat_ID($category->name);
-        $url = get_category_link($id);
-      ?>
-      <a class="category category-<?php echo $category->slug ?>-name" href="<?php echo $url ?>"><?php echo $category->name ?></a>
-    <?php endforeach ?>
-*/
-
-
-
 function paginate($dir, $word, $url) { ?>
   <div class="pagination-area">
     <a class="pagination-area-card pagination-area-card-<?php echo $dir ?>" href="<?php echo $url ?>">
       <?php if ($dir === 'left') {
         fa('arrow-circle-left');
         ?> 
-          <span class="pagination-title"><?php echo $word ?> Posts</span>
+          <span class="pagination-title"><?php echo $word ?></span>
         <?php
       } else if ($dir === 'right') {
         ?> 
-          <span class="pagination-title"><?php echo $word ?> Posts</span>
+          <span class="pagination-title"><?php echo $word ?></span>
         <?php       
         fa('arrow-circle-right');
       } ?>

@@ -47,7 +47,7 @@
       if (get_previous_posts_link(null, $paginated_query->max_num_pages)) {
         paginate(
           "left", 
-          "Newer",
+          "Newer Posts",
           get_previous_posts_page_link($paginated_query->max_num_pages)
         );
       }
@@ -55,14 +55,12 @@
       if (get_next_posts_link(null, $paginated_query->max_num_pages)) {
         paginate(
           "right", 
-          "Older",
+          "Older Posts",
           get_next_posts_page_link($paginated_query->max_num_pages)
         );
       }
     ?>
   </section>
 </main>
-
-<?php get_footer();?>
 
 <?php get_footer();?>

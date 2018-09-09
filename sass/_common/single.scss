@@ -23,24 +23,6 @@ main#single {
     }
   }
 
-  div.post-thumbnail {
-    margin: 1em 0;
-    width: 100%;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 40em;
-
-    &.expanded-background {
-      background-size: var(--size);
-    }
-
-    &.set-background-color {
-      background-color: var(--color);
-    }
-  }
-
   .image-postbit-block {
     margin-bottom: 0;
   }
@@ -72,5 +54,23 @@ main#single {
         border-bottom-color: $very-dark-green;
       }
     }
+  }
+}
+
+.article-thumbnail {
+  margin: 1em 0;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40em;
+
+  &.expanded-background {
+    background-size: var(--size);
+  }
+
+  &.set-background-color {
+    background-color: var(--color);
   }
 }

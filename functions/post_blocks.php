@@ -53,7 +53,7 @@
     $meta_size = $meta['featimg-bgsize'];
     $meta_color = $meta['featimg-bgcolour'];
 
-    $classes = 'post-thumbnail ';
+    $classes = 'article-thumbnail ';
     $style = "background-image: url($img);";
 
     if ($meta_size) {
