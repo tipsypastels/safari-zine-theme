@@ -16,14 +16,29 @@ jQuery(document).ready(function($) {
     $searchResults.removeClass('hide');
   }
 
+  let trySearch = (data, search) => {
+    search = search.split(' ');
+
+    // efficiency matters
+
+    for (let i = 0; i < search.length; i++) {
+      let valid = data.includes(search[i]);
+      if (!valid) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
   let startSearch = () => {
     $searchResults.addClass('hide');
 
     $searchResults.children().each(function() {
-      let search = $searchBar.val().toLowerCase();
-      let data = $(this).data('searchable');
+      let data = $(this).data('searchable')
+      let search = $searchBar.val().toLowerCase()
 
-      if (data.includes(search)) {
+      if (trySearch(data, search)) {
         $(this).addClass('show');
       } else {
         $(this).removeClass('show');
@@ -31,7 +46,7 @@ jQuery(document).ready(function($) {
     });
   }
 
-  $searchBar.keyup(function() {
+  $searchBar.on('select change paste keyup', function() {
     if (searchBarEmpty()) {
       endSearch();
     } else {

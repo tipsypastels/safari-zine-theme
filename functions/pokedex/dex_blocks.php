@@ -12,9 +12,8 @@ function format_types($type1, $type2, $none = 'No Secondary') {
 
 function format_single_type($type) {
   $slug = strtolower($type);
-  $icon = $type_icons[$slug];
-
-  return "<div class='pokemon-type type-$slug'>$type</div>";
+  $link = get_dex_query_link(['type' => $type]);
+  return "<a href='$link' class='pokemon-type type-$slug'>$type</a>";
 }
 
 function format_stats($stats) {
@@ -31,6 +30,7 @@ function format_stats($stats) {
     } else {
       $keys[] = $item;
     }
+    
     $i++;
   }
 
@@ -46,6 +46,23 @@ function format_stats($stats) {
   <?php endforeach;
 }
 
+function menu_sprite($img, $title = "", $url = null) {
+  if ($url): ?>
+    <a class="has-invisible-links" href="<?php echo $url ?>">
+  <?php endif; ?>
+
+  <img 
+    alt="<?php echo $title ?> Menu Sprite"
+    title="<?php echo $title?>"
+    class="menu-sprite"
+    src="<?php echo $img ?>"
+  >
+
+  <?php if ($url): ?>
+    </a>
+  <?php endif;
+}
+
 function format_dex_entry($category, $text, $region) { ?>
   <div class="dex-entry-wrapper">
     <div class="flex">
@@ -55,8 +72,10 @@ function format_dex_entry($category, $text, $region) { ?>
 
       <div class="flex-spacer"></div>
 
-      <div class="dex-entry-region">
-        <?php echo $region ?> Pokédex
+      <div class="dex-entry-region has-invisible-links">
+        <a href="<?php echo get_dex_query_link(['region' => $region]); ?>">
+          <?php echo $region ?> Pokédex
+        </a>
       </div>
     </div>
     

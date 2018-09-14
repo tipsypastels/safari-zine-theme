@@ -49,6 +49,10 @@ function altforms_for_pokemon($article_id, $dexnum) {
   }
 }
 
+function evolutions_for_pokemon($evolutions) {
+  
+}
+
 function articles_featuring($pokemon) {
   $query = new WP_Query([
     'post_type' => 'post',

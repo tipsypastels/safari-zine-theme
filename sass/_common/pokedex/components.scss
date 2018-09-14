@@ -1,4 +1,6 @@
 .types-block {
+  @extend .has-invisible-links;
+  
   display: flex;
   justify-content: center;
 

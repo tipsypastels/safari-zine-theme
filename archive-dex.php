@@ -14,27 +14,32 @@
     </div>
   </section>
   <section class="searchable-area">
-    <input type="text" class="search-bar" placeholder="Search Pokémon Geographic">
+    <input type="text" class="search-bar" placeholder="Search Pokémon Geographic" value="<?php echo search_bar_default_value() ?>">
 
     <div class="search-results">
-      <?php while(have_posts()): the_post() ?>
-        <a 
+      <?php while(have_posts()): the_post();
+        $search_data = generate_search_data_fields(
+          get_the_title(),
+          get_field('type1'),
+          get_field('type2'),
+          get_field('regions')
+        );
+
+        ?> <div
           class="search-item" 
-          href="<?php the_permalink() ?>" 
-          data-searchable="
-            <?php echo strtolower(get_the_title()) ?> <?php echo strtolower(get_field('type1')) ?> <?php echo strtolower(get_field('type2')) ?>
-          "
+          data-searchable="<?php echo $search_data ?>"
         >
-        <!-- we can't use newlines in ^ because they affect the search :/
-             stripping out them client side would affect the speed -->
-
           <div class="icon-block">
-            <img src="<?php the_field('menu_sprite') ?>">
+            <?php menu_sprite(
+              get_field('menu_sprite'),
+              get_the_title(),
+              get_the_permalink()
+            ); ?>
           </div>
 
-          <div class="title-block">
+          <a class="title-block" href="<?php the_permalink() ?>">
             <?php the_title() ?>
-          </div>
+          </a>
 
           <div class="types-block">
             <?php
@@ -44,7 +49,7 @@
               );
             ?>
           </div>
-        </a>
+        </div>
       <?php endwhile; ?>
     </div>
   </section>

@@ -1,5 +1,29 @@
-main#dex {
+main#dex section.back-to-dex-index {
+  @extend .max-content;
+
+  margin: auto;
+  margin-top: 0.83em;
+
+  a.index-link {
+    @extend .formalized;
+  }
+
+  i.fa {
+    display: block;
+    margin: 0 0.5em;
+  }
+
+  div.menu-sprite {
+    width: 48px;
+    height: 32px;
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+}
+
+main#dex section.dex-entry-content {
   .standard-title.huge {
+    margin-top: 0.25em;
 
     .dexnum {
       opacity: 0.4;
@@ -111,6 +135,45 @@ main#dex {
         margin: 0 0.25em;
       }
     }
+  }
+
+  .evolutions-and-altforms {
+    margin-top: 2em;
+
+    .evolution-list {
+      .evolution-family-chain {
+        border-radius: 0.5em;
+        user-select: none;
+
+        color: $grey;
+        background-color: var(--highlight);
+
+        &:not(:last-of-type) {
+          margin-right: 1em;
+        }
+
+        .evolution {
+          i.fa {
+            margin: 0 0.5em;
+          }
+
+          span.no-relevant-article {
+            @extend .stylized;
+          }
+
+          a.relevant-article {
+            @extend .has-invisible-links;
+            @extend .stylized;
+
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .biography {
+    margin-top: 2em;
   }
 }
 

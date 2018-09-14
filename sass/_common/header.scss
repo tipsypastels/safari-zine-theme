@@ -12,11 +12,6 @@ header#wrapper {
   background-color: $very-dark-grey;
   background-image: url("https://www.safarizone.net/uploads/default/original/2X/2/26a03df4d8a3278c22b1acba62817f99e7ebd855.png");
 
-  animation-name: background-scroll;
-  animation-duration: 60s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-
   header#content {
     max-width: $width;
     margin: auto;

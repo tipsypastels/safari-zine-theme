@@ -22,14 +22,12 @@
     list-style-type: none;
 
     &.hide {
-      a.search-item:not(.show) {
+      .search-item:not(.show) {
         display: none !important;
       }
     }
 
-    a.search-item {
-      @extend .has-invisible-links;
-
+    .search-item {
       display: block;
     }
   }

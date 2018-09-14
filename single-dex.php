@@ -5,7 +5,17 @@
     override-highlight 
     <?php echo strtolower(get_field('color')) ?>
   ">
-    <section id="single-post-body">
+    <section class="back-to-dex-index flex vertically-centered has-invisible-links">
+      <a class="index-link" href="<?php echo get_post_type_archive_link('dex') ?>">
+        Pokémon Geographic
+      </a>
+
+      <?php fa('arrow-right') ?>
+
+      <?php menu_sprite(get_field('menu_sprite')) ?>
+    </section>
+
+    <section class="dex-entry-content">
       <h1 class="standard-title huge">
         <?php the_title() ?>
         <span class="dexnum">
@@ -61,7 +71,7 @@
       <?php format_dex_entry(
         get_field('pokemon_category'),
         get_field('pokedex_entry'),
-        get_field('pokedex_entry_region')
+        get_field('region')
       ); ?>
 
       <div class="types-and-stats-block">
@@ -79,7 +89,16 @@
         </div>
       </div>
 
-      <div class="biography">
+      <div class="evolutions-and-altforms">
+        <?php if(get_field('evolves_from') || get_field('evolutions')) {
+          format_evolutions(
+            get_the_ID(),
+            get_field('evolves_from')
+          );
+        } ?>
+      </div>
+
+      <div class="biography article-contents">
         <?php the_field('biography') ?>
       </div>
     </section>
@@ -94,7 +113,6 @@
 
     <section class="pagination">
       <?php
-        
         paginate_pokedex($dexnum, -1);
         paginate_pokedex($dexnum,  1);
       ?>

@@ -12,5 +12,6 @@
   require 'functions/pokedex/setup.php';
   require 'functions/pokedex/pagination.php';
   require 'functions/pokedex/dex_blocks.php';
+  require 'functions/pokedex/evolution.php';
 
 ?>

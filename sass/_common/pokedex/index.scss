@@ -1,8 +1,7 @@
 main#dex-index {
   .welcome-area {
-    display: none;
     margin: auto;
-    margin-bottom: 2.5em;
+    margin-bottom: 1em;
     width: 100%;
 
     justify-content: center;
@@ -23,10 +22,12 @@ main#dex-index {
           opacity: 1;
         }
       }
-    }    
+    }
+
     .welcome-bubble {
       @extend .bubblelike;
 
+      border: 1px solid $mid-grey;
       margin-left: 1em;
     }
   }
@@ -43,7 +44,10 @@ main#dex-index {
         display: flex;
         align-items: center;
 
-        padding: 0.5em 1em;
+        // we want to pad the .title-blocks vertically instead
+        // so the clickable link area expands with them
+
+        padding: 0 1em;
 
         &:hover {
           background-color: var(--highlight) !important;
@@ -53,8 +57,11 @@ main#dex-index {
 
         .title-block {
           @extend .stylized;
+          @extend .has-invisible-links;
 
           margin-left: 0.5em;
+          padding: 1.4em 0;
+
           flex-grow: 1;
         }
       }
