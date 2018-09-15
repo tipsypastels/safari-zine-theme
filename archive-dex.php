@@ -22,7 +22,7 @@
           get_the_title(),
           get_field('type1'),
           get_field('type2'),
-          get_field('regions')
+          get_field('region')
         );
 
         ?> <div
