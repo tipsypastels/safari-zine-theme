@@ -33,13 +33,16 @@ $showdown: #ff6347;
 $discord: #7186d7;
 
 $pokedex-colors: (
-  green: $very-dark-green,
-  purple: invert($very-dark-green),
-  blue: adjust-hue($very-dark-green, 90),
   red: saturate(adjust-hue($very-dark-green, -110), 0.3),
+  blue: adjust-hue($very-dark-green, 90),
+  yellow: saturate(adjust-hue($very-dark-green, -60), 0.3),
+  green: $very-dark-green,
   black: $very-dark-grey,
   brown: adjust-hue($very-dark-green, -110),
-  yellow: saturate(adjust-hue($very-dark-green, -60), 0.3)
+  purple: invert($very-dark-green),
+  gray: darken($mid-grey, 10%),
+  white: lighten($mid-grey, 3%),
+  pink: lighten(saturate(adjust-hue($very-dark-green, -130), 0.3), 10%)
 );
 
 body {
@@ -55,15 +58,24 @@ body {
 }
 
 $type-colors: (
+  normal: 'white',
+  fire: 'red',
+  fighting: 'brown',
+  water: 'blue',
+  flying: saturate(adjust-hue($very-dark-green, 90), 0.3),
   grass: 'green',
   poison: 'purple',
-  water: 'blue',
-  fire: 'red',
-  dark: 'black',
-  flying: saturate(adjust-hue($very-dark-green, 90), 0.3),
-  dragon: darken(invert($very-dark-green), 20%),
+  electric: 'yellow',
   ground: 'brown',
-  psychic: saturate(adjust-hue($very-dark-green, -130), 0.3)
+  psychic: saturate(adjust-hue($very-dark-green, -130), 0.3),
+  rock: adjust-hue($very-dark-green, -120),
+  ice: lighten(adjust-hue($very-dark-green, 90), 20%),
+  bug: adjust-hue($very-dark-green, -50deg),
+  dragon: darken(invert($very-dark-green), 20%),
+  ghost: darken(invert($very-dark-green), 10%),
+  dark: 'black',
+  steel: 'gray',
+  fairy: 'pink'
 );
 
 @each $type, $color in $type-colors {
