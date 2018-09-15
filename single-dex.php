@@ -35,7 +35,7 @@
             $fimg_artist = [
               $fimg_data['artist_forum_username'],
               get_the_title(),
-              $fimg_data['artist_posessive_pronoun']
+              $fimg_data['artist_possessive_pronoun']
             ];
 
             $has_transparent_background = $fimg_data['has_transparent_background'];
