@@ -57,33 +57,39 @@ main#dex section.dex-entry-content {
   }
 
   .altforms-block {
+    @extend .max-content;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: auto;
     margin-bottom: 1em;
-    margin-right: 1.7em;
 
-    width: 230px;
-
-    /* i hate myself */
-    float: left;
-    
     .altform {
       @extend .stylized;
 
-      width: 63%;
-
-      margin: 1em;
-      margin-bottom: 0;
+      margin: 0 1em;
       text-align: center;
 
-      .altform-image {
-        width: 100%;
-        height: 124px;
+      // wrapper around the icon
+      a.has-invisible-links {
+        @extend .flex;
 
-        background-size: cover;
+        align-items: center;
+        height: 100%;
       }
 
-      .altform-title {
-        margin-top: 0.25em;
-        margin-bottom: 0.25em;
+      .altform-body {
+        margin-left: 0.5em;
+
+        .altform-title {
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
+        }
+
+        .types-block {
+          justify-content: flex-start;
+        }
       }
     }
   }
@@ -182,5 +188,47 @@ main#dex section.articles-featuring {
 
   .needs-articles {
     @extend .placeholder-block;
+  }
+}
+
+main#dex section.gallery {
+  margin-top: 5em;
+
+  .gallery-wrapper {
+    -webkit-column-count: 3;
+    -webkit-column-gap: 0;
+    -webkit-column-fill: auto;
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    column-count: 3;
+    column-gap: 0;
+    column-fill: auto;
+
+    .gallery-item {
+      @extend .has-invisible-links;
+
+      padding: 10px;
+      display: block;
+
+      -webkit-column-break-inside: avoid;
+      -moz-column-break-inside: avoid;
+      column-break-inside: avoid;
+
+      &:hover {
+        background-color: darken($grey, 5%);
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .credit {
+        @extend .quotelike;
+        @extend .stylized;
+
+        margin-top: 0.5em;
+      }
+    }
   }
 }

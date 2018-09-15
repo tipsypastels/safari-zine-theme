@@ -5,7 +5,7 @@
     <?php site_name([
       'logo' => 'logo_black.svg',
       'only_logo' => true,
-      'href' => '#',
+      'href' => get_post_type_archive_link('dex'),
       'class' => 'welcome-carnivine'
     ]); ?>
 

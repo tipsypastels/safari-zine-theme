@@ -30,7 +30,7 @@ function format_stats($stats) {
     } else {
       $keys[] = $item;
     }
-    
+
     $i++;
   }
 
@@ -107,18 +107,14 @@ function fimg_artist_bit($username, $title, $pronoun) {
 }
 
 function altforms_block($query) { ?>
-  <div class="altforms-block fancy-block"> 
-    <div class="title">
-      Other Forms
-    </div>
-
+  <div class="altforms-block"> 
     <?php
       while($query->have_posts()) { 
         $query->the_post();
         altform(
           get_the_permalink(),
           get_the_title(),
-          get_field('featured_image'),
+          get_field('menu_sprite'),
           get_field('type1'),
           get_field('type2')
         );
@@ -129,16 +125,33 @@ function altforms_block($query) { ?>
 }
 
 function altform($url, $title, $image, $type1, $type2) { ?>
-  <a class="altform has-invisible-links" href="<?php echo $url ?>">
-    <?php if ($image): ?>
-      <div class="altform-image" style="background-image: url(<?php echo $image ?>)">
+  <div class="altform flex vertically-centered has-invisible-links">
+    <?php if ($image):
+      menu_sprite($image, $title, $url);
+    endif; ?>
+    <div class="altform-body">
+      <div class="altform-title">
+        <a href="<?php echo $url ?>">
+          <?php echo $title ?>
+        </a>
       </div>
-    <?php endif; ?>
-    <div class="altform-title">
-      <?php echo $title ?>
+      <?php format_types($type1, $type2) ?>
     </div>
-    <?php format_types($type1, $type2) ?>
-  </a>
+  </div>
 <?php }
+
+function gallery_images($images) { ?>
+  <div class="gallery-wrapper"><?php
+    foreach($images as $img_info):
+      $profie = "https://www.safarizone.net/u/$img_info[artist_forum_username]";
+      ?><a href="<?php echo $profile ?>" class="gallery-item">
+        <img src="<?php echo $img_info['image'] ?>">
+        <div class="credit">
+          By <?php echo $img_info['artist_forum_username'] ?>
+        </div>
+      </a>
+    <?php endforeach;
+  ?></div><?php
+}
 
 ?>

@@ -16,7 +16,6 @@ main#dex-index {
         transition: 0.25s;
         will-change: opacity;
 
-        cursor: default;
 
         &:hover {
           opacity: 1;
@@ -53,6 +52,11 @@ main#dex-index {
           background-color: var(--highlight) !important;
           color: $grey;
           border-radius: 10px;
+
+          .pokemon-type {
+            color: var(--highlight);
+            background: $grey;
+          }
         }
 
         .title-block {

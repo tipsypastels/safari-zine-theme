@@ -25,48 +25,43 @@
 
       <div class="article-thumbnail-wrapper">
         <?php 
-          $fimg = get_field('featured_image');
-          $fimg_mode = get_field('featimg_mode');
+          $meta = [];
 
-          /*
-            the official artworks also have transparent backgrounds
-            so we put them in an implicit sprite mode
-          */
+          if (have_rows('gallery_images')) {
+            $gallery_images = get_field('gallery_images');
 
-          if ($fimg) {
-            $meta = [];
-
-            if ($fimg_mode === 'sprite' || $fimg_mode === 'placeholder') {
-              $meta['featimg-bgsize'] = ['auto 80%'];
-            }
-
-            featured_image($fimg, $meta);
-
-            if ($fimg_mode === 'placeholder') {
-              dex_needs_fimg();
-            }
-          } else {
-            dex_needs_fimg('large');
-          }
-        ?>
-
-        <?php
-          $fimg_author = get_field('featimg_author');
-
-          if ($fimg_mode !== 'placeholder' && $fimg_author) {
-            fimg_artist_bit(
-              $fimg_author, 
+            $fimg_data = $gallery_images[array_rand($gallery_images)];
+            $fimg = $fimg_data['image'];
+            $fimg_artist = [
+              $fimg_data['artist_forum_username'],
               get_the_title(),
-              get_field('featimg_author_pronoun')
-            );
+              $fimg_data['artist_posessive_pronoun']
+            ];
+
+            $has_transparent_background = $fimg_data['has_transparent_background'];
+
+            $is_placeholder = false;
+          } else {
+            $fimg = get_field('placeholder_image');
+
+            $is_placeholder = true;
+          }
+
+          if ($is_placeholder || $has_transparent_background) {
+            $meta['featimg-bgsize'] = ['auto 80%'];
+          }
+
+          featured_image($fimg, $meta);
+
+          altforms_for_pokemon(get_the_ID(), get_field('dexnum'));
+
+          if ($is_placeholder) {
+            dex_needs_fimg();
+          } else if ($fimg_artist) {
+            fimg_artist_bit(...$fimg_artist);
           }
         ?>
       </div>
-
-      <?php
-        $dexnum = get_field('dexnum');
-        altforms_for_pokemon(get_the_ID(), $dexnum);
-      ?>
 
       <?php format_dex_entry(
         get_field('pokemon_category'),
@@ -111,10 +106,20 @@
       <?php articles_featuring(get_the_title()); ?>
     </section>
 
+    <?php if(have_rows('gallery_images')): ?>
+      <section class="gallery">
+        <h2 class="standard-title">
+          <?php the_title() ?> Fanart Gallery
+        </h2>
+
+        <?php gallery_images(get_field('gallery_images')) ?>
+      </section>
+    <?php endif; ?>
+
     <section class="pagination">
       <?php
-        paginate_pokedex($dexnum, -1);
-        paginate_pokedex($dexnum,  1);
+        paginate_pokedex(get_field('dexnum'), -1);
+        paginate_pokedex(get_field('dexnum'),  1);
       ?>
     </section>
   </main>

@@ -69,10 +69,12 @@ $type-colors: (
 @each $type, $color in $type-colors {
   .type-#{$type} {
     @if type-of($color) == string {
-      background-color: map-get($pokedex-colors, $color);
+      --highlight: map-get($pokedex-colors, $color);
     } @else {
-      background-color: $color;
+      --highlight: $color;
     }
+
+    background-color: var(--highlight);
   }
 }
 
