@@ -143,8 +143,8 @@ function altform($url, $title, $image, $type1, $type2) { ?>
 function gallery_images($images) { ?>
   <div class="gallery-wrapper"><?php
     foreach($images as $img_info):
-      $profie = "https://www.safarizone.net/u/$img_info[artist_forum_username]";
-      ?><a href="<?php echo $profile ?>" class="gallery-item">
+      $profile = "https://www.safarizone.net/u/$img_info[artist_forum_username]";
+      ?><a target="_blank" href="<?php echo $profile ?>" class="gallery-item">
         <img src="<?php echo $img_info['image'] ?>">
         <div class="credit">
           By <?php echo $img_info['artist_forum_username'] ?>
