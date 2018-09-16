@@ -23,6 +23,12 @@
         </span>
       </h1>
 
+      <span class="edit-link centered has-invisible-links">
+        <?php if (is_user_logged_in()) {
+          edit_post_link('Edit');
+        } ?>
+      </span>
+
       <div class="article-thumbnail-wrapper">
         <?php 
           $meta = [];

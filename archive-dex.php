@@ -10,7 +10,7 @@
     ]); ?>
 
     <div class="welcome-bubble">
-      Welcome to <strong>Book of Pocket Monsters</strong>! This is a placeholder because i just code i don't write blah blah blah. Got fanart of a Pokémon you want to contribute? Click <a href="#">here</a>!
+      Welcome to the Book of Pocket Monsters! This is an online Pokédex, featuring information, guides, creative works and trivia on every Pokémon. Got fanart or ideas for a Pokémon you want to contribute? <a target="_blank" href="#">Click here</a>!
     </div>
   </section>
   <section class="searchable-area">

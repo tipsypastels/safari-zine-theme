@@ -28,17 +28,12 @@ body {
 
   overflow-x: hidden;
 
-  /* we need two variables because when expanded, the outer should expand
-     without expanding the inner, or it would push down the hidden buttons
-  */
+  --shape-backgrounds: url("https://www.safarizone.net/uploads/default/original/2X/2/26a03df4d8a3278c22b1acba62817f99e7ebd855.png");
 
-  --header-height: $header-default-height;
-  --header-inner-height: $header-default-height;
+  --header-height: $header-height;
 
-
-  &.header-expanded {
-    --header-height: $header-expanded-height;
-    --header-inner-height: $header-default-height;
+  &.docked {
+    --header-height: $header-small-height;
   }
 
   div.container {

@@ -18,6 +18,7 @@
     <?php wp_head(); ?>
   </head>
   <body>
+    <?php include('aside.php'); ?>
     <?php include('header-navbar.php'); ?>
     <div class="container flex">
       <div class="main-container">

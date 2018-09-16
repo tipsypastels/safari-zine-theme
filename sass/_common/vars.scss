@@ -19,11 +19,11 @@ $transparent-grey: lighten($dark-transparent-grey, 30%);
 $mobile-breakpoint: 900px;
 $width: 1000px;
 $main-width: 900px;
+$header-border: 2px dashed rgba($grey, 0.05);
 
-$header-default-height: 7em;
-$header-docked-height: 3.6em;
-$header-expanded-height: 11em;
-$mob-header-expanded-height: 36.5em;
+$header-height: 9.5em;
+$header-small-height: 7.5em;
+$sidebar-width: 280px;
 
 $forums: #54436f;
 $twitter: #1da1f2;

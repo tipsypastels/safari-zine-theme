@@ -4,20 +4,24 @@ header#wrapper {
   width: 100%;
   
   padding: 0.75em 0.25em;
+  padding-bottom: 0;
+
   z-index: 3;
   position: fixed;
   transition: 0.25s;
-  overflow: hidden;
 
   background-color: $very-dark-grey;
-  background-image: url("https://www.safarizone.net/uploads/default/original/2X/2/26a03df4d8a3278c22b1acba62817f99e7ebd855.png");
+  background-image: var(--shape-backgrounds);
+
+  display: flex;
+  flex-direction: column;
 
   header#content {
+    width: 100%;
     max-width: $width;
     margin: auto;
 
     div#header-main-bar {
-      height: var(--header-inner-height);
       transition: 0.25s;
       align-items: center;
 
@@ -32,11 +36,6 @@ header#wrapper {
           width: 1.5em;
           transition: 0.25s;
         }
-      }
-
-      ul#navbar li a {
-        line-height: 3em;
-        padding: 0 0.75em;
       }
 
       .menu-marker {
@@ -54,10 +53,41 @@ header#wrapper {
     }
   }
 
-  body.header-expanded & {
+  body.sidebar-open & {
     .menu-marker i.fa {
       transform: rotate(-90deg);
       &:before { content: '\f00d'; }
+    }
+  }
+
+  header#lower-navbar {
+    border-top: $header-border;
+
+    ul#navbar {
+      @extend .flex;
+
+      max-width: $width * 1.18;
+      margin: auto;
+
+      li {
+        flex-grow: 1;
+        text-align: center;
+
+        &:not(:first-of-type) {
+          border-left: $header-border;
+        }
+
+        &:hover {
+          background-color: lighten($very-dark-grey, 3%);
+        }
+
+        a {
+          @extend .stylized;
+
+          padding: 0.75em 0;
+          display: block;
+        }
+      }
     }
   }
 }

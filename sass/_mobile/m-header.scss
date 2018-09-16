@@ -1,7 +1,5 @@
 body {
-  &.header-expanded {
-    --header-height: $mob-header-expanded-height;
-  }
+  --header-height: $header-small-height !important;
 }
 
 header#wrapper {
@@ -14,23 +12,5 @@ header#wrapper {
       flex-grow: 1;
       justify-content: flex-start;
     }
-
-    #navbar-wrapper {
-      flex-grow: 0;
-    }
-
-    aside#modal {
-      ul {
-        margin-bottom: 1em;
-
-        li {
-          margin-bottom: 0.25em;
-        }
-      }
-    }
-  }
-
-  &.expanded {
-    height: 27em;
   }
 }

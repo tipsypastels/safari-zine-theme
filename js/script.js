@@ -1,7 +1,13 @@
  jQuery(document).ready(function($) {
   $(".menu-marker").click(() => {
-    $("body").toggleClass("header-expanded");
+    $("body").toggleClass("sidebar-open");
   });
+
+  $("#aside-wrapper").click(e => {
+    if ($(e.target).hasClass('onclick-close-sidebar')) {
+      $("body").removeClass("sidebar-open");
+    }
+  })
 
   $("#back-to-top").click(() => {
     $("html, body").animate({ scrollTop: 0 }, 'slow');

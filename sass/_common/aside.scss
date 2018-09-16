@@ -1,14 +1,64 @@
-aside#modal {
+#aside-wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+
   width: 100%;
-  padding: 1em 0;
+  height: 100%;
+  overflow: hidden;
 
-  justify-content: space-around;
+  display: flex;
 
-  /* the only case icons will ever show up here is
-     for the mobile modal (which drops down) and 
-     should only display icons when it's part of the header (desktop)
-     but not mobile (aside) */
-  i.fa {
-    display: none;
+  pointer-events: none;
+  transition: 0.25s;
+  will-change: background-color;
+
+  aside#sidebar {
+    width: 0;
+    overflow: hidden;
+    padding-top: 1em;
+
+    background-color: $very-dark-grey;
+    background-image: var(--shape-backgrounds);
+
+    will-change: width, padding;
+    transition: 0.25s;
+
+    /* this prevnets the elements inside from 
+       being resized, making the animation ugly */
+    div#aside-content {
+      width: $sidebar-width;
+    }
+  }
+}
+
+body.sidebar-open #aside-wrapper {
+  pointer-events: auto;
+  background-color: rgba($very-dark-grey, 0.4);
+
+  aside#sidebar {
+    width: $sidebar-width;
+    padding: 1em;
+  }
+}
+
+div#aside-content {
+  color: $grey;
+  margin-top: 4em;
+
+  .sidebar-main-title {
+    @extend .stylized;
+    @extend .centered;
+
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+
+  p.about-zine {
+    font-size: 15px;
+  }
+
+  #mobile-main-navbar {
+    margin: 1em 0;
   }
 }

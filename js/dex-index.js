@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
     for (let i = 0; i < search.length; i++) {
       /* for flags, we want to only match the exact value
          otherwise num=3 matches 3, 31, 32, etc...
-         for names, (which lack the =), we want to includes match
+         for names, (which lack the =), we want to "includes" match
          so you can progressively filter results as you type
       */
 

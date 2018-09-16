@@ -9,10 +9,15 @@
   border-top-right-radius: 0.15em;
 
   transition: 0.25s;
+  will-change: background-color, border-bottom-color;
 
   &:hover {
     background-color: darken($grey, 10%);
-    border-bottom-color: $very-dark-green;
+    border-bottom-color: darken($mid-grey, 10%);
+  }
+
+  a {
+    display: block;
   }
 }
 

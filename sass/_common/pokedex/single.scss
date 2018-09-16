@@ -24,11 +24,22 @@ main#dex section.back-to-dex-index {
 main#dex section.dex-entry-content {
   .standard-title.huge {
     margin-top: 0.25em;
+    margin-bottom: 0.25em;
 
     .dexnum {
       opacity: 0.4;
       font-size: 0.56em;
     }
+  }
+
+  .edit-link {
+    @extend .stylized;
+
+    color: var(--highlight);
+    font-size: 1.2em;
+
+    display: block;
+    margin-bottom: 2em;
   }
 
   .article-thumbnail-wrapper {

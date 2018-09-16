@@ -36,9 +36,9 @@ function site_name(array $array = []) {
 
         <?php if($menu) {
           wp_nav_menu([
-            'menu'       => $menu,
-            'menu_class' => $menu_class,
-            'container'  => $menu_cont
+            'theme_location' => $menu,
+            'menu_class'     => $menu_class,
+            'container'      => $menu_cont
           ]);
         } ?>
       </div>

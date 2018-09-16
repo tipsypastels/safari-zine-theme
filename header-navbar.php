@@ -1,23 +1,28 @@
-<header id="wrapper">
+<!-- 
+  to manage the heights with a single variable
+  this entire header is now a flex column
+  which means we do need these unfortunate flex grow classes
+-->
+
+<header id="wrapper" class="flex">
+  <div class="flex-grow"></div>
   <header id="content" class="slight-mobile-margin slight-small-computer-margin">
     <div id="header-main-bar" class="flex wraps one-growing-element">
       <?php site_name(['class' => "vertically-centered dont-multiply-title-size"]) ?>
 
-      <div id="navbar-wrapper" class="grows centered">
-        <?php
-          wp_nav_menu([
-            'menu' => 'header-featured-links',
-            'menu_class' => 'centered-block has-invisible-links hide-on-mobile inline-list',
-            'menu_id' => 'navbar'
-          ]);
-        ?>
-      </div>
+      <div class="grows"></div>
 
       <div class="menu-marker">
         <?php fa('bars menu-opener-icon') ?>
       </div>
     </div>
-
-    <?php include('aside.php'); ?>
   </header>
+
+  <header id="lower-navbar" class="hide-on-mobile"><?php
+    wp_nav_menu([
+      'theme_location' => 'header-featured-links',
+      'menu_class' => 'centered-block has-invisible-links inline-list',
+      'menu_id' => 'navbar'
+    ]);
+  ?></header>
 </header>

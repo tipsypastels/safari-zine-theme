@@ -1,10 +1,3 @@
-body {
-  &.docked:not(.header-expanded) {
-    --header-height: $header-docked-height;
-    --header-inner-height: $header-docked-height;
-  }
-}
-
 header#wrapper {
   body.scrolling-down & {
     opacity: 0;

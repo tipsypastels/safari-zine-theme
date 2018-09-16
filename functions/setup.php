@@ -6,10 +6,9 @@ function scratch_setup() {
   add_theme_support( 'title-tag' );
 
   register_nav_menus([
-    'header-featured-links' => 'Header Featured Links',
-    'header-about-links' => 'Header "About" Links (Dropdown)',
-    'header-staffing-links' => 'Header Staffing Links (Dropdown)',
-    'footer-social-media' => 'Footer Social Media'
+    'header-featured-links' => 'header-featured-links',
+    'sidebar-contributing' => 'sidebar-contributing',
+    'footer-social-media' => 'footer-social-media'
   ]);
 }
 add_action('after_setup_theme', 'scratch_setup');

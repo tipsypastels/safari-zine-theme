@@ -17,7 +17,7 @@
           ]);
 
           wp_nav_menu([
-            'menu' => 'footer-social-media',
+            'theme_location' => 'footer-social-media',
             'menu_class' => 'centered-block has-invisible-links has-social-media-menu inline-list hide-on-computer',
             'container' => false
           ]);
