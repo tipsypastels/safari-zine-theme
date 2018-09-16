@@ -17,14 +17,21 @@ function get_dex_query_link($hash) {
   return get_post_type_archive_link('dex') . "?" . $query;
 }
 
-function generate_search_data_fields($name, $type1, $type2, $region) {
+function generate_search_data_fields($name, $dexnum, $type1, $type2, $region, $specialform) {
+
+  // fuck this language and its absurd type casting mechanics
+  $specialform = $specialform ? 'true' : 'false';
+  
   $fields = [
     $name,
+    "num=$dexnum",
+    "dexnum=$dexnum",
     "type=$type1",
     "type=$type2",
     "type1=$type1",
     "type2=$type2",
-    "region=$region"
+    "region=$region",
+    "specialform=$specialform"
   ];
 
   return strtolower(implode(' ', $fields));

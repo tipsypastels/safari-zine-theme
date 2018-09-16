@@ -7,7 +7,7 @@
   ">
     <section class="back-to-dex-index flex vertically-centered has-invisible-links">
       <a class="index-link" href="<?php echo get_post_type_archive_link('dex') ?>">
-        Pokémon Geographic
+        Book of Pocket Monsters
       </a>
 
       <?php fa('arrow-right') ?>
@@ -69,7 +69,7 @@
         get_field('region')
       ); ?>
 
-      <div class="types-and-stats-block">
+      <div class="types-and-stats-block flex-on-desktop">
         <div class="types-block">
           <?php format_types(
             get_field('type1'),
@@ -118,8 +118,9 @@
 
     <section class="pagination">
       <?php
-        paginate_pokedex(get_field('dexnum'), -1);
-        paginate_pokedex(get_field('dexnum'),  1);
+        $dexnum = get_field('dexnum');
+        paginate_pokedex($dexnum, -1);
+        paginate_pokedex($dexnum,  1);
       ?>
     </section>
   </main>

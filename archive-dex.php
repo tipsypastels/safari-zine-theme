@@ -10,19 +10,21 @@
     ]); ?>
 
     <div class="welcome-bubble">
-      Welcome to <strong>Pokémon Geographic</strong>! This is a placeholder because i just code i don't write blah blah blah. Got fanart of a Pokémon you want to contribute? Click <a href="#">here</a>!
+      Welcome to <strong>Book of Pocket Monsters</strong>! This is a placeholder because i just code i don't write blah blah blah. Got fanart of a Pokémon you want to contribute? Click <a href="#">here</a>!
     </div>
   </section>
   <section class="searchable-area">
-    <input type="text" class="search-bar" placeholder="Search Pokémon Geographic" value="<?php echo search_bar_default_value() ?>">
+    <input type="text" class="search-bar" placeholder="Search Book of Pocket Monsters" value="<?php echo search_bar_default_value() ?>">
 
     <div class="search-results">
       <?php while(have_posts()): the_post();
         $search_data = generate_search_data_fields(
           get_the_title(),
+          get_field('dexnum'),
           get_field('type1'),
           get_field('type2'),
-          get_field('region')
+          get_field('region'),
+          get_field('is_special_form')
         );
 
         ?> <div

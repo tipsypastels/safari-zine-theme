@@ -5,11 +5,11 @@
 }
 
 .hide-on-mobile {
-  display: none;
+  display: none !important;
 }
 
 .hide-on-computer {
-  display: initial;
+  display: initial !important;
 }
 
 .center-on-mobile {

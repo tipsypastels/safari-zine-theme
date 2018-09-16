@@ -45,7 +45,7 @@ function altforms_for_pokemon($article_id, $dexnum) {
   ]);
 
   if ($query->have_posts()) {
-    altforms_block($query);
+    altforms_block($dexnum, $query);
   }
 }
 

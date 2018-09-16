@@ -1,3 +1,16 @@
+.stickerlike {
+  @extend .stylized;
+
+  color: $grey;
+  background-color: var(--highlight);
+  text-decoration: none;
+
+  padding: 2px 6px;
+  border-radius: 4px;
+  user-select: none;
+  margin: 0 0.25em;
+}
+
 .types-block {
   @extend .has-invisible-links;
   
@@ -5,12 +18,6 @@
   justify-content: center;
 
   .pokemon-type {
-    @extend .stylized;
-    
-    color: $grey;
-    padding: 2px 6px;
-    border-radius: 4px;
-    user-select: none;
-    margin: 0 0.25em;
+    @extend .stickerlike;
   }
 }

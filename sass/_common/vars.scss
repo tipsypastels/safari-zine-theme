@@ -37,7 +37,7 @@ $pokedex-colors: (
   blue: adjust-hue($very-dark-green, 90),
   yellow: saturate(adjust-hue($very-dark-green, -60), 0.3),
   green: $very-dark-green,
-  black: $very-dark-grey,
+  black: lighten($very-dark-grey, 10%),
   brown: adjust-hue($very-dark-green, -110),
   purple: invert($very-dark-green),
   gray: darken($mid-grey, 10%),

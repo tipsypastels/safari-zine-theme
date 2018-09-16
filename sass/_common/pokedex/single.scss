@@ -54,16 +54,26 @@ main#dex section.dex-entry-content {
 
     display: block;
     margin: auto;
+    max-width: 100%;
   }
 
   .altforms-block {
-    @extend .max-content;
-
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 
     margin: auto;
     margin-bottom: 1em;
+
+    position: relative;
+
+    .altforms-sticker {
+      @extend .stickerlike;
+
+      position: absolute;
+      right: 0;
+    }
 
     .altform {
       @extend .stylized;
@@ -117,7 +127,6 @@ main#dex section.dex-entry-content {
   }
 
   .types-and-stats-block {
-    display: flex;
     align-items: center;
 
     .pokemon-type {

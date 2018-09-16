@@ -106,9 +106,12 @@ function fimg_artist_bit($username, $title, $pronoun) {
   <?php
 }
 
-function altforms_block($query) { ?>
-  <div class="altforms-block"> 
+function altforms_block($dexnum, $query) { ?>
+  <div class="altforms-block flex wraps-on-mobile"> 
     <?php
+      $altforms_to_show = 2;
+      $i = 0;
+
       while($query->have_posts()) { 
         $query->the_post();
         altform(
@@ -118,8 +121,20 @@ function altforms_block($query) { ?>
           get_field('type1'),
           get_field('type2')
         );
+
+        $i++;
+
+        if ($i >= $altforms_to_show) {
+          break;
+        }
       }
     ?>
+    <a 
+      href='<?php echo get_dex_query_link(['num' => $dexnum]); ?>' 
+      class="altforms-sticker"
+    >
+      All Forms...
+    </a>
   </div>
   <?php wp_reset_postdata();
 }

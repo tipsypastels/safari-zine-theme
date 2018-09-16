@@ -1,0 +1,47 @@
+main#dex section.dex-entry-content {
+  .altforms-block {
+    /* WEIRD the extend here makes it apply to desktop too */
+    width: max-content;
+    width: -moz-fit-content;
+
+    margin: auto;
+    margin-bottom: 1em;
+
+    align-items: flex-start;
+
+    .altforms-sticker {
+      position: static;
+      margin: auto;
+    }
+
+    .altform {
+      margin-bottom: 0.75em;
+    }
+  }
+
+  a.fimg-author {
+    padding: 0;
+    padding-left: 0.25em;
+  }
+
+  .types-and-stats-block {
+    .types-block {
+      margin-bottom: 0.25em;
+    }
+
+    .stats-block {
+      width: 100%;
+      flex-wrap: wrap;
+
+      .stat {
+        width: 23%;
+        margin-bottom: 0.25em;
+        text-align: center;
+      }
+
+      .stat-bst {
+        display: none;
+      }
+    }
+  }
+}

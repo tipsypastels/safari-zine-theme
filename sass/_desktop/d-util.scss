@@ -10,8 +10,11 @@
   }
 }
 
+.flex-on-desktop {
+  display: flex;
+}
+
 .float-on-computer {
-  
   &.float-left { float: left; }
   &.float-right { float: right; }
 }
