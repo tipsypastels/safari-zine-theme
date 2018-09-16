@@ -6,7 +6,7 @@
 
 <header id="wrapper" class="flex">
   <div class="flex-grow"></div>
-  <header id="content" class="slight-mobile-margin slight-small-computer-margin">
+  <header id="content">
     <div id="header-main-bar" class="flex wraps one-growing-element">
       <?php site_name(['class' => "vertically-centered dont-multiply-title-size"]) ?>
 

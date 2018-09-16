@@ -3,9 +3,6 @@ header#wrapper {
   height: var(--header-height);
   width: 100%;
   
-  padding: 0.75em 0.25em;
-  padding-bottom: 0;
-
   z-index: 3;
   position: fixed;
   transition: 0.25s;

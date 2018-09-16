@@ -3,14 +3,18 @@ body {
 }
 
 header#wrapper {
-  padding: 1em 0.25em;
   position: absolute;
-
 
   header#content {
     .site-name {
       flex-grow: 1;
       justify-content: flex-start;
+
+      margin-left: 1em;
+    }
+
+    .menu-marker {
+      margin-right: 1em;
     }
   }
 }
