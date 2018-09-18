@@ -72,7 +72,7 @@ function format_dex_entry($category, $text, $region) { ?>
 
       <div class="flex-spacer"></div>
 
-      <div class="dex-entry-region has-invisible-links">
+      <div class="dex-entry-region has-invisible-links hide-on-mobile">
         <a href="<?php echo get_dex_query_link(['region' => $region]); ?>">
           <?php echo $region ?> Pokédex
         </a>
@@ -81,6 +81,15 @@ function format_dex_entry($category, $text, $region) { ?>
     
     <div class="dex-entry-content">
       <?php echo $text ?>
+    </div>
+
+    <div class="flex one-growing-element hide-on-computer">
+      <div class="grows"></div>
+      <div class="dex-entry-region has-invisible-links">
+        <a href="<?php echo get_dex_query_link(['region' => $region]); ?>">
+          <?php echo $region ?> Pokédex
+        </a>
+      </div>
     </div>
 
   </div>

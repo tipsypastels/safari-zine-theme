@@ -16,7 +16,7 @@
     </section>
 
     <section class="dex-entry-content">
-      <h1 class="standard-title huge">
+      <h1 class="standard-title huge line-height">
         <?php the_title() ?>
         <span class="dexnum">
           #<?php the_field('dexnum') ?>
@@ -105,7 +105,7 @@
     </section>
 
     <section class="articles-featuring">
-      <h2 class="standard-title">
+      <h2 class="standard-title line-height">
         Articles Featuring <?php the_title() ?>
       </h2>
 
@@ -114,7 +114,7 @@
 
     <?php if(have_rows('gallery_images')): ?>
       <section class="gallery">
-        <h2 class="standard-title">
+        <h2 class="standard-title line-height">
           <?php the_title() ?> Fanart Gallery
         </h2>
 

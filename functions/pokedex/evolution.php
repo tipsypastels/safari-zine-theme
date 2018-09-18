@@ -48,7 +48,7 @@ function format_single_evolution($pokemon) {
 }
 
 function format_evolutions($article_id, $evolves_from) { ?>
-  <div class="evolution-list flex"><?php
+  <div class="evolution-list flex wraps-on-mobile"><?php
     foreach(generate_evo_trees($article_id, $evolves_from) as $array) {
       format_single_evolution_chain($array);
     }
