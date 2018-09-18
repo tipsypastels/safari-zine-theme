@@ -21,6 +21,14 @@ function generate_search_data_fields($name, $dexnum, $type1, $type2, $region, $s
 
   // fuck this language and its absurd type casting mechanics
   $specialform = $specialform ? 'true' : 'false';
+
+  if ($type1 === 'No Secondary') {
+    $type1 = 'notype';
+  }
+
+  if ($type2 === 'No Secondary') {
+    $type2 = 'notype';
+  }
   
   $fields = [
     $name,
