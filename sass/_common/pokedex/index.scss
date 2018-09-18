@@ -7,6 +7,8 @@ main#dex-index {
     justify-content: center;
 
     .welcome-carnivine {
+      margin-right: 1em;
+      
       svg {
         width: 80px;
         height: 80px;
@@ -27,7 +29,6 @@ main#dex-index {
       @extend .bubblelike;
 
       border: 1px solid $mid-grey;
-      margin-left: 1em;
     }
   }
 
