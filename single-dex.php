@@ -110,17 +110,19 @@
       </h2>
 
       <div class="tiers-and-abilities flex one-growing-element">
-        <div class="abilities flex">
-          <?php foreach(get_field('abilities') as $ability):
-            $tag = $ability['is_hidden_ability'] 
-              ? "<em>$ability[ability_name]</em>"
-              : $ability['ability_name']; ?>
+        <?php if(have_rows('abilities')): ?>
+          <div class="abilities flex">
+            <?php foreach(get_field('abilities') as $ability):
+              $tag = $ability['is_hidden_ability'] 
+                ? "<em>$ability[ability_name]</em>"
+                : $ability['ability_name']; ?>
 
-            <div class="stickerlike">
-              <?php echo $tag ?>
-            </div>
-          <?php endforeach; ?>
-        </div>
+              <div class="stickerlike">
+                <?php echo $tag ?>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        <?php endif; ?>
 
         <div class="grows"></div>
 
