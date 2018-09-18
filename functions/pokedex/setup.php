@@ -58,4 +58,17 @@ function sort_pokemon($query) {
 
 add_action('pre_get_posts', 'sort_pokemon');
 
+function with_dex_featured_image($post_id, $cb) {
+  $gallery = get_field('gallery_images', $post_id);
+  if ($gallery) {
+    $img = $gallery[0]['image'];    
+  } else {
+    $img = get_field('placeholder_image', $post_id);
+  }
+
+  if ($img) {
+    $cb($img);
+  }
+}
+
 ?>
