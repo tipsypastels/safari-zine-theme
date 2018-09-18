@@ -81,8 +81,8 @@ function articles_featuring($title, $species) {
   ]);
 
   if (!$query->have_posts()): ?>
-    <a href="#" class="needs-articles has-invisible-links">
-      There are no articles featuring <?php echo $pokemon ?>. Got a topic you want to write about? Click here!
+    <a href="<?php echo ZINE_CONTRIBUTE_LINK ?>" class="needs-articles has-invisible-links">
+      There are no articles featuring <?php echo $title ?>. Got a topic you want to write about? Click here!
     </a>
 
     <?php return;

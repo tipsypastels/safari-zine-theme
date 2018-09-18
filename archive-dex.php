@@ -10,7 +10,7 @@
     ]); ?>
 
     <div class="welcome-bubble">
-      Welcome to the Book of Pocket Monsters! This is an online Pokédex, featuring information, guides, creative works and trivia on every Pokémon. Got fanart or ideas for a Pokémon you want to contribute? <a target="_blank" href="#">Click here</a>!
+      Welcome to the Book of Pocket Monsters! This is an online Pokédex, featuring information, guides, creative works and trivia on every Pokémon. Got fanart or ideas for a Pokémon you want to contribute? <a target="_blank" href="<?php echo DEX_CONTRIBUTE_LINK ?>">Click here</a>!
     </div>
   </section>
   <section class="searchable-area">

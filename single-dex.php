@@ -146,7 +146,7 @@
               <p>Want to learn more about how to use <?php the_title() ?>? See the linked articles below for tips and movesets!</p>
             </div>
           <?php else: ?>
-            <a href="#" class="needs-battling-summary">
+            <a target="_blank" href="<?php echo DEX_CONTRIBUTE_LINK ?>" class="needs-battling-summary">
               We don't have a battling summary for <?php the_title() ?> yet! Are you a competitive battler? Click here to help us fill this in!
             </a>
           <?php endif; ?>

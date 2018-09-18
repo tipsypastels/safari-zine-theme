@@ -100,7 +100,7 @@ function dex_needs_fimg($class = "") { ?>
     needs-article-thumbnail 
     has-invisible-links 
     <?php echo $class ?>
-  " href="#">
+  " href="<?php echo DEX_CONTRIBUTE_LINK ?>">
     This article needs a custom featured image! Are you an artist or designer? Learn how to contribute one here.
   </a>
 <?php }

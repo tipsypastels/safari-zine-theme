@@ -1,5 +1,8 @@
 <?php
 
+define('ZINE_CONTRIBUTE_LINK', 'https://www.safarizone.net/t/2308');
+define('DEX_CONTRIBUTE_LINK', 'https://www.safarizone.net/t/2452');
+
 function scratch_setup() {
   add_theme_support('post-thumbnails');
   add_theme_support('html5', array('gallery', 'caption'));
