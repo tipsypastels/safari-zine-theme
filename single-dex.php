@@ -126,11 +126,13 @@
 
         <div class="grows"></div>
 
-        <?php $tier = get_field('smogon_tier') ?>
-        <a href="<?php echo get_dex_query_link(['tier' => $tier]); ?>" class="stickerlike">
-          <span class="formalized">Tier:</span>
-          <?php echo $tier; ?>
-        </a>
+        <?php $tier = get_field('smogon_tier');
+        if ($tier): ?>
+          <a href="<?php echo get_dex_query_link(['tier' => $tier]); ?>" class="stickerlike">
+            <span class="formalized">Tier:</span>
+            <?php echo $tier; ?>
+          </a>
+        <?php endif; ?>
       </div>
 
       <div class="battling-summary article-contents">
