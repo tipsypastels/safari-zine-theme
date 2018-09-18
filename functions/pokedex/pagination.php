@@ -49,15 +49,21 @@ function altforms_for_pokemon($article_id, $dexnum) {
   }
 }
 
-function articles_featuring($pokemon) {
+function articles_featuring($title, $species) {
   $query = new WP_Query([
     'post_type' => 'post',
     'meta_query' => [
-      'relation' => 'AND',
+      'relation' => 'OR',
       [
         'key' => 'post_featured_pokemon',
-        'value' => $pokemon,
-        'compare' => 'INCLUDE'
+        'value' => $title,
+        'compare' => 'IN'
+      ],
+
+      [
+        'key' => 'post_featured_pokemon',
+        'value' => $species,
+        'compare' => 'IN'
       ]
     ]
   ]);

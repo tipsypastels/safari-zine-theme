@@ -158,7 +158,7 @@
         Articles Featuring <?php the_title() ?>
       </h2>
 
-      <?php articles_featuring(get_the_title()); ?>
+      <?php articles_featuring(get_the_title(), get_field('species')); ?>
     </section>
 
     <?php if(have_rows('gallery_images')): ?>
