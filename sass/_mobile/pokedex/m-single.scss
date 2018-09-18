@@ -53,8 +53,10 @@ main#dex section.dex-entry-content {
   }
 
   .evolution-family-chain {
+    justify-content: center;
+    margin-right: 0 !important;
+     
     &:not(:last-of-type) {
-      margin-right: 0 !important;
       margin-bottom: 0.25em;
     }
   }
