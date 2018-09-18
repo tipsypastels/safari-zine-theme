@@ -135,11 +135,21 @@
         <?php endif; ?>
       </div>
 
-      <div class="battling-summary article-contents">
-        <?php the_field('battling_summary') ?>
+      <div class="battling-summary">
+        <?php 
+          $battling = get_field('battling_summary');
 
+          if ($battling): ?>
+            <div class="article-contents">
+              <?php echo $battling; ?>
 
-        <p>Want to learn more about how to use <?php the_title() ?>? See the linked articles below for tips and movesets!</p>
+              <p>Want to learn more about how to use <?php the_title() ?>? See the linked articles below for tips and movesets!</p>
+            </div>
+          <?php else: ?>
+            <a href="#" class="needs-battling-summary">
+              We don't have a battling summary for <?php the_title() ?> yet! Are you a competitive battler? Click here to help us fill this in!
+            </a>
+          <?php endif; ?>
       </div>
     </section>
 
