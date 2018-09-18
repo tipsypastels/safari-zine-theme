@@ -24,7 +24,8 @@
           get_field('type1'),
           get_field('type2'),
           get_field('region'),
-          get_field('is_special_form')
+          get_field('is_special_form'),
+          get_field('smogon_tier')
         );
 
         ?> <div

@@ -104,6 +104,41 @@
       </div>
     </section>
 
+    <section class="battling">
+      <h2 class="standard-title line-height">
+        Battling With <?php the_title() ?>
+      </h2>
+
+      <div class="tiers-and-abilities flex one-growing-element">
+        <div class="abilities flex">
+          <?php foreach(get_field('abilities') as $ability):
+            $tag = $ability['is_hidden_ability'] 
+              ? "<em>$ability[ability_name]</em>"
+              : $ability['ability_name']; ?>
+
+            <div class="stickerlike">
+              <?php echo $tag ?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+
+        <div class="grows"></div>
+
+        <?php $tier = get_field('smogon_tier') ?>
+        <a href="<?php echo get_dex_query_link(['tier' => $tier]); ?>" class="stickerlike">
+          <span class="formalized">Tier:</span>
+          <?php echo $tier; ?>
+        </a>
+      </div>
+
+      <div class="battling-summary article-contents">
+        <?php the_field('battling_summary') ?>
+
+
+        <p>Want to learn more about how to use <?php the_title() ?>? See the linked articles below for tips and movesets!</p>
+      </div>
+    </section>
+
     <section class="articles-featuring">
       <h2 class="standard-title line-height">
         Articles Featuring <?php the_title() ?>
