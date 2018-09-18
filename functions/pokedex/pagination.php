@@ -49,21 +49,33 @@ function altforms_for_pokemon($article_id, $dexnum) {
   }
 }
 
+function articles_featuring_posts_where($where) {
+  $where = str_replace(
+    "meta_key = 'post_featured_pokemon_$",
+    "meta_key LIKE 'post_featured_pokemon_%",
+    $where
+  );
+
+  return $where;
+}
+
+add_filter('posts_where', 'articles_featuring_posts_where');
+
 function articles_featuring($title, $species) {
   $query = new WP_Query([
     'post_type' => 'post',
     'meta_query' => [
       'relation' => 'OR',
       [
-        'key' => 'post_featured_pokemon',
+        'key' => 'post_featured_pokemon_$_pokemon_name',
         'value' => $title,
-        'compare' => 'IN'
+        'compare' => 'INCLUDE'
       ],
 
       [
-        'key' => 'post_featured_pokemon',
+        'key' => 'post_featured_pokemon_$_pokemon_name',
         'value' => $species,
-        'compare' => 'IN'
+        'compare' => 'INCLUDE'
       ]
     ]
   ]);
