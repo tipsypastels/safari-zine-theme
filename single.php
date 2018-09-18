@@ -6,8 +6,6 @@
       <?php
         $author_id = get_the_author_meta('ID');
         
-        the_post_thumbnail_url();
-
         postbit_content(
           get_the_permalink(),
           get_the_post_thumbnail_url(),
