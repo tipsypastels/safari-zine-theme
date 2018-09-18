@@ -58,6 +58,16 @@ function sort_pokemon($query) {
 
 add_action('pre_get_posts', 'sort_pokemon');
 
+function dex_article_author_names($name) {
+  if (get_post_type() === 'dex') {
+    return 'Book of Pocket Monsters';
+  }
+
+  return $name;
+}
+
+add_action('the_author', 'dex_article_author_names');
+
 function get_dex_featured_image($post_id) {
   $gallery = get_field('gallery_images', $post_id);
   if ($gallery) {
