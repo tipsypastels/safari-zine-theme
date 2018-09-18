@@ -6,7 +6,7 @@
       'logo' => 'logo_black.svg',
       'only_logo' => true,
       'href' => get_post_type_archive_link('dex'),
-      'class' => 'welcome-carnivine'
+      'class' => 'welcome-carnivine hide-on-mobile'
     ]); ?>
 
     <div class="welcome-bubble">
