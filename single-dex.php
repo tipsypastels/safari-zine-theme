@@ -128,7 +128,7 @@
 
         <?php $tier = get_field('smogon_tier');
         if ($tier): ?>
-          <a href="<?php echo get_dex_query_link(['tier' => $tier]); ?>" class="stickerlike">
+          <a href="<?php echo get_dex_query_link(['tier' => $tier]); ?>" class="stickerlike tier">
             <span class="formalized">Tier:</span>
             <?php echo $tier; ?>
           </a>

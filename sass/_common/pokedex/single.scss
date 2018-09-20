@@ -167,9 +167,12 @@ main#dex section.dex-entry-content {
     margin-top: 2em;
 
     .evolution-list {
+      flex-wrap: wrap;
+
       .evolution-family-chain {
         border-radius: 0.5em;
         user-select: none;
+        margin-bottom: 0.75em;
 
         color: $grey;
         background-color: var(--highlight);
@@ -219,6 +222,7 @@ main#dex section.articles-featuring {
 
   .needs-articles {
     @extend .placeholder-block;
+    margin-bottom: 2em;
   }
 }
 

@@ -61,3 +61,17 @@ main#dex section.dex-entry-content {
     }
   }
 }
+
+main#dex section.battling {
+  .tiers-and-abilities {
+    flex-direction: column-reverse;
+
+    .stickerlike {
+      text-align: center;
+    }
+
+    .tier {
+      margin-bottom: 0.5em;
+    }
+  }
+}
