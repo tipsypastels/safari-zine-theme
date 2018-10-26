@@ -91,6 +91,7 @@
     .list-image {
       height: 80px;
       width: 80px;
+      min-width: 80px;
 
       border-radius: 50%;
       background-size: cover;
@@ -106,6 +107,7 @@
 
       a.h2 {
         @extend .stylized;
+        line-height: 1.1em;
       }
 
       p {

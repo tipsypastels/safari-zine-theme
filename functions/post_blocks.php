@@ -17,7 +17,7 @@
 
   function list_postbit($href, $img, $title, $excerpt, $class = "") { ?>
     <div class="list-postbit <?php echo $class ?>">
-      <a class="list-image" style="background-image: url(<?php echo $img ?>)" href="<?php echo $href ?>">
+      <a class="list-image hide-on-mobile" style="background-image: url(<?php echo $img ?>)" href="<?php echo $href ?>">
       </a>
 
       <div class="list-postbit-content">
