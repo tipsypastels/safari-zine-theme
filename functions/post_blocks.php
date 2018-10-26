@@ -15,6 +15,22 @@
     </a>
   <?php }
 
+  function list_postbit($href, $img, $title, $excerpt, $class = "") { ?>
+    <div class="list-postbit <?php echo $class ?>">
+      <a class="list-image" style="background-image: url(<?php echo $img ?>)" href="<?php echo $href ?>">
+      </a>
+
+      <div class="list-postbit-content">
+        <a class="h2" href="<?php echo $href ?>">
+          <?php echo $title ?>
+        </a>
+
+        <?php if (!$excerpt) $excerpt = "-"; ?>
+        <p><?php echo $excerpt ?></p>
+      </div>
+    </div>
+  <?php }
+
   function categories_list($categories) {
     if($categories): ?>
       <div class="post-categories has-invisible-links">

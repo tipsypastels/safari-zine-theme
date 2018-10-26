@@ -67,3 +67,51 @@
     }
   }
 }
+
+.list-postbit-block {
+  @extend .has-invisible-links;
+
+  .list-postbit {
+    @extend .flex;
+
+    &:nth-child(odd) {
+      background-color: $slight-grey;
+    }
+
+    &:first-of-type {
+      border-top-left-radius: 1em;
+      border-top-right-radius: 1em;
+    }
+
+    width: 100%;
+
+    align-items: center;
+    padding: 1em;
+
+    .list-image {
+      height: 80px;
+      width: 80px;
+
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+
+      margin-right: 1em;
+    }
+
+    .list-postbit-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      a.h2 {
+        @extend .stylized;
+      }
+
+      p {
+        margin: 0;
+        margin-top: 0.25em;
+      }
+    }
+  }
+}
