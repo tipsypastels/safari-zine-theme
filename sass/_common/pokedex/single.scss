@@ -206,6 +206,18 @@ main#dex section.dex-entry-content {
   }
 }
 
+main#dex section.naming {
+  margin: 1em;
+
+  h2 {
+    @extend .stylized;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
 main#dex section.battling {
   margin-top: 5em;
   

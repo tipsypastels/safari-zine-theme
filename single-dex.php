@@ -102,7 +102,26 @@
       <div class="biography article-contents">
         <?php the_field('biography') ?>
       </div>
+
     </section>
+
+    <?php if(get_field('naming_ideas')): ?>
+      <section class="naming">
+        <h2 class="line-height">
+          <?php the_title() ?> Naming Ideas
+        </h2>
+
+        <div class="naming-ideas article-contents">
+          <ul class="naming-ideas-list">
+            <?php foreach(get_field('naming_ideas') as $name_idea): ?>
+              <li>
+                <?php echo $name_idea['name'] ?>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+      </section>
+    <?php endif; ?>
 
     <section class="battling">
       <h2 class="standard-title line-height">
