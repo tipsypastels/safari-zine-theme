@@ -38,6 +38,16 @@ figure {
   margin: auto;
   max-width: 100%;
 
+  &.alignleft {
+    float: left;
+    margin-right: 2em;
+  }
+
+  &.alignright {
+    float: right;
+    margin-left: 2em;
+  }
+
   figcaption {
     @extend .quotelike;
     font-size: 0.7em;
