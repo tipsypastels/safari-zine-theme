@@ -50,6 +50,7 @@ h4, .h4 {
   &.huge {
     font-size: 4em;
     line-height: 1.2em;
+    margin-top: 0.25em;
   }
 
   &.small-margin {
@@ -63,7 +64,7 @@ h4, .h4 {
     height: 2px;
     width: 1.7em;
     margin: auto;
-    margin-top: 1em;
+    margin-top: 0.65em;
 
     background-color: var(--highlight);
 

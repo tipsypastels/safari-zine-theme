@@ -54,7 +54,7 @@ body {
 
         max-width: $main-width;
         margin: auto;
-        padding-top: 3em;
+        padding-top: 1.5em;
 
         section[id] {
           @extend .clearfix;
@@ -116,6 +116,7 @@ body {
   @import '_mobile/m-header';
   @import '_mobile/m-footer';
   @import '_mobile/m-postbit';
+  @import '_mobile/m-single';
 
   @import '_mobile/m-author';
 
